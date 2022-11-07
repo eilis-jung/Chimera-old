@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <!--Simulation types:
+        realTimeSimulation
+        offlineSimulation
+        precomputedSimulation
+        fetchBoundaryConditions -->
+  <SimulationType>realTimeSimulation</SimulationType>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0" z ="0.0"/>
+    <FinalPoint x="15.00" y="30.00" z ="15.00"/>
+    <Spacing>1.0</Spacing>
+  </Grid>
+  <boundaryConditionsFile>Boundary Conditions/3D/bottomTopOutflow.bc</boundaryConditionsFile>
+  <SimulationConfig>
+    <!--<Logging>
+      <LogVelocity>thinPlateTranslatingNoSlip</LogVelocity>
+      <LogCutCells>thinPlateTranslatingNoSlip</LogCutCells>
+    </Logging>-->
+    <TotalTime value="2.0"></TotalTime>
+  </SimulationConfig>
+  <Objects>
+    <CGALObjMesh>
+      <Filename>thinplate.obj</Filename>
+      <Scale x="1.0" y="1.0" z="1.0"></Scale>
+      <position x="7.2345" y="12.5125" z="7.48545"/>
+      <PositionUpdate>
+        <Direction x="1.0" y="1.0" z="0.0"></Direction>
+        <SinFunction amplitude="20" frequency="1"/>
+      </PositionUpdate>
+    </CGALObjMesh>
+  </Objects>
+  <FlowSolverConfig>
+    <FlowSolverType>CutCell</FlowSolverType>
+    <SolidWallType>
+      <!--<FreeSlip></FreeSlip>-->
+      <NoSlip></NoSlip>
+    </SolidWallType>
+    <AdvectionMethod>
+      <!--<SemiLagrangian></SemiLagrangian>-->
+      <FLIP>
+        <PositionIntegration>rungeKutta2</PositionIntegration>
+        <ResampleParticlesCloseToMesh>false</ResampleParticlesCloseToMesh>
+        <ResamplingFactor>0.001</ResamplingFactor>
+        <FixParticlesSampling>true</FixParticlesSampling>
+        <VelocityUpdate>FLIP</VelocityUpdate>
+        <ParticleDensity>128</ParticleDensity>
+      </FLIP>
+      <!--<ModifiedMacCormack></ModifiedMacCormack>-->
+    </AdvectionMethod>
+    <ProjectionMethod>
+      <Platform>CPU</Platform>
+    </ProjectionMethod>
+    <FarFieldMethod>
+      <Standard></Standard>
+    </FarFieldMethod>
+    <PressureMethod>
+      <ConjugateGradient>
+        <Platform>GPU</Platform>
+        <Tolerance>0.001</Tolerance>
+        <MaxIterations>2000</MaxIterations>
+        <Preconditioner>NoPreconditioner</Preconditioner>
+      </ConjugateGradient>
+    </PressureMethod>
+  </FlowSolverConfig>
+</ChimeraConfig>

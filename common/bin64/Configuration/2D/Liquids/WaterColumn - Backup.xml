@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>realTimeSimulation</SimulationType>
+  <boundaryConditionsFile>Boundary Conditions/2D/allFreeSlip.bc</boundaryConditionsFile>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0"/>
+    <FinalPoint x="3" y="3"/> <!--Final point is an approximation, since it can be modified to suit grid spacing-->
+    <Spacing>0.0625</Spacing>
+  </Grid>
+  <LiquidObject>
+    <position x="1.505" y="1.505"></position>
+    <Geometry>
+      <numSubdivisions>50</numSubdivisions>
+      <RectangularLine>
+        <size x="0.5" y="1.0"></size>
+      </RectangularLine>
+    </Geometry>
+  </LiquidObject>
+  <SimulationConfig>
+    <TotalTime value="10"></TotalTime>
+  </SimulationConfig>
+  <FlowSolverConfig>
+    <FlowSolverType>GhostLiquids</FlowSolverType>
+    <SolidWallType>
+      <FreeSlip></FreeSlip>
+      <!--<NoSlip></NoSlip>-->
+    </SolidWallType>
+    <ConvectionMethod>
+      <FLIP>
+        <PositionIntegration>rungeKutta2</PositionIntegration>
+        <ResampleParticlesCloseToMesh>false</ResampleParticlesCloseToMesh>
+        <ResamplingFactor>0.001</ResamplingFactor>
+        <!--<FixParticlesSampling>
+          <FineGridResampling>
+            <Subdivisions>2</Subdivisions>
+          </FineGridResampling>
+          <CellResamplingThreshold>1.1</CellResamplingThreshold>
+        </FixParticlesSampling>-->
+        <VelocityUpdate>FLIP</VelocityUpdate>
+        <ParticleDensity>256</ParticleDensity> <!--per unit of measurement-->
+        <ParticleToGridTransferring>SPH</ParticleToGridTransferring>
+        <ParticleToGridTransferringDC>SPH</ParticleToGridTransferringDC>
+      </FLIP>
+    </ConvectionMethod>
+    <ProjectionMethod>
+      <Plataform>CPU</Plataform>
+    </ProjectionMethod>
+    <FarFieldMethod>
+      <Standard></Standard>
+    </FarFieldMethod>
+    <PressureMethod>
+      <ConjugateGradient>
+        <Plataform>GPU</Plataform>
+        <Tolerance>0.001</Tolerance>
+        <MaxIterations>200</MaxIterations>
+        <Preconditioner>NoPreconditioner</Preconditioner>
+      </ConjugateGradient>
+    </PressureMethod>
+  </FlowSolverConfig>
+</ChimeraConfig>
+

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>realTimeSimulation</SimulationType>
+  <boundaryConditionsFile>Boundary Conditions/2D/leftRightOutflow.bc</boundaryConditionsFile>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0"/>
+    <FinalPoint x="6.0" y="2.0"/> <!--Final point is an approximation, since it can be modified to suit grid spacing-->
+    <Spacing>0.0625</Spacing>
+  </Grid>
+  <SimulationConfig>
+    <TotalTime value="3.125"></TotalTime>
+  </SimulationConfig>
+  <Objects>
+    <RigidObject>
+      <position x="2.65" y="1.01"></position>
+      <Geometry>
+        <lengthSize>1</lengthSize>
+        <numSubdivisions>2</numSubdivisions>
+        <VerticalLine></VerticalLine>
+        <ExtrudeAlongNormalsSize>0.001</ExtrudeAlongNormalsSize>
+      </Geometry>
+      <PositionUpdate>
+        <Direction x="1.0" y="0.0"></Direction>
+        <SinFunction amplitude="1" frequency="1"/>
+      </PositionUpdate>
+    </RigidObject>
+    <RigidObject>
+      <position x="3.31" y="1.01"></position>
+      <Geometry>
+        <lengthSize>1</lengthSize>
+        <numSubdivisions>2</numSubdivisions>
+        <VerticalLine></VerticalLine>
+        <ExtrudeAlongNormalsSize>0.001</ExtrudeAlongNormalsSize>
+      </Geometry>
+      <PositionUpdate>
+        <Direction x="1.0" y="0.0"></Direction>
+        <SinFunction amplitude="1" frequency="1"/>
+      </PositionUpdate>
+    </RigidObject>
+  </Objects>
+  <FlowSolverConfig>
+    <FlowSolverType>CutCell</FlowSolverType>
+    <SolidWallType>
+      <!--<FreeSlip></FreeSlip>-->
+      <NoSlip></NoSlip>
+    </SolidWallType>
+    <AdvectionMethod>
+      <ParticleBasedAdvection>
+        <PositionIntegration>
+          <Method>rungeKutta2</Method>
+        </PositionIntegration>
+        <GridToParticle>
+          <Method mixPIC="0.005">FLIP</Method>
+        </GridToParticle>
+        <ParticleToGrid>
+          <GridArrangement>Nodal</GridArrangement>
+          <Kernel>SPH</Kernel>
+          <KernelDanglingCells>??</KernelDanglingCells>
+        </ParticleToGrid>
+        <Sampler>
+          <ParticlesPerCell>8</ParticlesPerCell>
+          <Type>Poisson</Type>
+          <ResampleParticles>true</ResampleParticles>
+        </Sampler>
+      </ParticleBasedAdvection>
+    </AdvectionMethod>
+    <PressureMethod>
+      <ConjugateGradient>
+        <Platform>CPU</Platform>
+        <Tolerance>0.001</Tolerance>
+        <MaxIterations>350</MaxIterations>
+        <Preconditioner>NoPreconditioner</Preconditioner>
+      </ConjugateGradient>
+    </PressureMethod>
+  </FlowSolverConfig>
+</ChimeraConfig>
+

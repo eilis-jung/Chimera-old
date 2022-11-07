@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>precomputedAnimation</SimulationType>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0" z ="0.0"/>
+    <FinalPoint x="9.00" y="9.00" z ="9.00"/>
+    <Spacing>0.125</Spacing>
+  </Grid>
+  <Animations>
+    <NumFrames>240</NumFrames>
+    <LoadPerFrame>true</LoadPerFrame>
+    <PolygonMeshes>
+      <BaseFilename>sphereHoles</BaseFilename>
+      <LinearInterpolationMethod>
+        <UseParticlesCache>false</UseParticlesCache>
+        <UseCGALAcceleration>false</UseCGALAcceleration>
+        <InterpolationType>mvc</InterpolationType>
+      </LinearInterpolationMethod>
+    </PolygonMeshes>
+    <VelocityFile>sphereHoles</VelocityFile>
+  </Animations>
+  <Objects>
+    <ParticleSystem>
+      <Emitter>
+        <Rectangle px="4.15" py="0.2" pz="4.15" sx="0.75" sy="0.15" sz="0.75"></Rectangle>
+        <MaxAmount>10000</MaxAmount>
+        <InitialAmount>1000</InitialAmount>
+        <SpawnRatio>1000</SpawnRatio>
+        <LifeTime>9999</LifeTime>
+        <LifeVariance>0.0</LifeVariance>
+      </Emitter>
+      <MinBounds px="0.0" py="0.0" pz="0.0"></MinBounds>
+      <MaxBounds px="9.75" py="9.75" pz="9.75"></MaxBounds>
+      <RenderingProperties>
+        <ColorScheme>jet</ColorScheme>
+      </RenderingProperties>
+    </ParticleSystem>
+    <CGALObjMesh>
+      <Filename>sphereHole.obj</Filename>
+      <Scale x="1.0" y="1.0" z="1.0"></Scale>
+      <position x="4.5100820067" y="4.2004554" z="4.510610457"/>
+    </CGALObjMesh>
+  </Objects>
+</ChimeraConfig>
+

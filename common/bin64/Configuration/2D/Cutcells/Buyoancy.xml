@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>realTimeSimulation</SimulationType>
+  <boundaryConditionsFile>Boundary Conditions/2D/bottomInflow.bc</boundaryConditionsFile>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0"/>
+    <FinalPoint x="2" y="4"/> <!--Final point is an approximation, since it can be modified to suit grid spacing-->
+    <Spacing>0.03125</Spacing>
+  </Grid>
+  <SimulationConfig>
+    <TotalTime value="5"></TotalTime>
+  </SimulationConfig>
+  <RigidObject>
+    <position x="0.796875" y="0.55"></position>
+    <Geometry>
+      <lengthSize>0.125</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.953125" y="0.55"></position>
+    <Geometry>
+      <lengthSize>0.125</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="1.109375" y="0.55"></position>
+    <Geometry>
+      <lengthSize>0.125</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <Objects>
+    <!--<TemperatureField>
+      <position x="0.6124" y="0.93726"></position>
+      <Circle>
+        <Radius>0.1</Radius>
+      </Circle>
+      <Value type="falloff"> 100 </Value>
+    </TemperatureField>-->
+  </Objects>
+  <FlowSolverConfig>
+    <FlowSolverType>CutCell</FlowSolverType>
+    <SolidWallType>
+      <FreeSlip></FreeSlip>
+      <!--<NoSlip></NoSlip>-->
+    </SolidWallType>
+    <AdvectionMethod>
+      <ParticleBasedAdvection>
+        <PositionIntegration>
+          <Method>rungeKutta2</Method>
+          <!--<Interpolant>
+            <Method>CubicStreamfunction</Method>
+          </Interpolant>-->
+        </PositionIntegration>
+        <GridToParticle>
+          <Method>FLIP</Method>
+        </GridToParticle>
+        <ParticleToGrid>
+          <GridArrangement>Staggered</GridArrangement>
+          <Kernel>SPH</Kernel>
+        </ParticleToGrid>
+        <Sampler>
+          <ParticlesPerCell>32</ParticlesPerCell>
+          <Type>Stratified</Type>
+          <ResampleParticles>true</ResampleParticles>
+        </Sampler>
+      </ParticleBasedAdvection>
+    </AdvectionMethod>
+    <ProjectionMethod>
+      <Platform>CPU</Platform>
+    </ProjectionMethod>
+    <FarFieldMethod>
+      <Standard></Standard>
+    </FarFieldMethod>
+    <PressureMethod>
+      <ConjugateGradient>
+        <Platform>GPU</Platform>
+        <Tolerance>0.001</Tolerance>
+        <MaxIterations>350</MaxIterations>
+        <Preconditioner>NoPreconditioner</Preconditioner>
+      </ConjugateGradient>
+    </PressureMethod>
+  </FlowSolverConfig>
+</ChimeraConfig>
+

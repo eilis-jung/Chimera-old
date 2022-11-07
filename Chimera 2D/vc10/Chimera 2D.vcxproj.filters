@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Rendering\GLRenderer2D.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Applications\Application2D.cpp">
+      <Filter>Source Files\Applications</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Applications\PrecomputedAnimation2D.cpp">
+      <Filter>Source Files\Applications</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\Applications\Application2D.h">
+      <Filter>Header Files\Applications</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Applications\PrecomputedAnimation2D.h">
+      <Filter>Header Files\Applications</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{15eb565e-ee96-4ec2-b1ab-f2741c6ff66b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{6119e2f4-0d44-4db4-a3f6-6f5b6465ff2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{798fab98-b9b3-4c6b-87bc-064778e14a14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration">
+      <UniqueIdentifier>{7a854b30-d7c8-4505-8c8e-c42e32cb1b70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Boundary Conditions">
+      <UniqueIdentifier>{eddd4789-6f65-424d-be75-1c64e79de9ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Rendering">
+      <UniqueIdentifier>{457b7054-ee8c-471c-adf5-2e7bb6cb6585}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Applications">
+      <UniqueIdentifier>{2d884239-33bb-4cfe-8f97-2f112d224d2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Applications">
+      <UniqueIdentifier>{988f461c-ef14-47ad-9766-5997b72347a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Docs">
+      <UniqueIdentifier>{2200e986-2108-4082-ac66-54b8b1151889}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\CutCells">
+      <UniqueIdentifier>{0a009871-e95a-48d8-839a-8b6da8dfeb91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\CutCells\Lines">
+      <UniqueIdentifier>{cd75f8cc-99be-4ea3-bc40-31d269693840}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\CutCells\Vases">
+      <UniqueIdentifier>{e9e8f92e-70b2-409b-9667-a0b7ef716de1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\CutCells\Pipes">
+      <UniqueIdentifier>{c637ffb2-534c-493e-9ae5-1ed16a98fd7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\CutCells\ClosedMesh">
+      <UniqueIdentifier>{296ecc26-9129-4408-a442-55f8c0d9cfd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\CutCells\Mazes">
+      <UniqueIdentifier>{7f983a9d-0086-433b-bac5-2169f5f511ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\CutCells\Lines\Many Lines">
+      <UniqueIdentifier>{1c165524-586c-4d26-95bf-3ffaa3ee3d5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\Streamfunction">
+      <UniqueIdentifier>{40afbd38-c9bd-4b34-b33e-17544353b3c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\Liquids">
+      <UniqueIdentifier>{28c21b35-b97b-4310-a5ea-95b0ea700c41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\APIC">
+      <UniqueIdentifier>{f427e320-64ef-41de-845e-1d08ca63b3a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\Precomputed Animation">
+      <UniqueIdentifier>{0b1616e2-200c-43c2-8fe6-84acea292099}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\CutCells\ClosedMesh\Circles">
+      <UniqueIdentifier>{ab88561d-ba41-468d-b3c9-ddc8630e88c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\CutCells\ClosedMesh\Gear">
+      <UniqueIdentifier>{9661ae4a-f648-402b-a3d6-1272dd6e6c3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\CutCells\Test">
+      <UniqueIdentifier>{fa7f2a19-2f79-41aa-9fad-d3a51baf357c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\common\bin64\Configuration\2D\ChimeraCFG.xml">
+      <Filter>Resource Files\Configuration</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Configuration\2D\Cutcells\Pipe Complex.xml">
+      <Filter>Resource Files\Configuration\CutCells\Pipes</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Configuration\2D\Cutcells\Pipe Subdivision.xml">
+      <Filter>Resource Files\Configuration\CutCells\Pipes</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Configuration\2D\Cutcells\Horizontal Lines.xml">
+      <Filter>Resource Files\Configuration\CutCells\Lines</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Configuration\2D\Cutcells\Single Line.xml">
+      <Filter>Resource Files\Configuration\CutCells\Lines</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Configuration\2D\Cutcells\Translating Lines.xml">
+      <Filter>Resource Files\Configuration\CutCells\Lines</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Configuration\2D\Cutcells\Vertical Lines Opposing.xml">
+      <Filter>Resource Files\Configuration\CutCells\Lines</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Configuration\2D\Cutcells\Vertical Lines.xml">
+      <Filter>Resource Files\Configuration\CutCells\Lines</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Configuration\2D\Cutcells\Single Vase.xml">
+      <Filter>Resource Files\Configuration\CutCells\Vases</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Boundary Conditions\2D\leftInflow.bc">
+      <Filter>Resource Files\Boundary Conditions</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Boundary Conditions\2D\leftRightInflow.bc">
+      <Filter>Resource Files\Boundary Conditions</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Boundary Conditions\2D\leftRightOutflow.bc">
+      <Filter>Resource Files\Boundary Conditions</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Boundary Conditions\2D\allOutflow.bc">
+      <Filter>Resource Files\Boundary Conditions</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Boundary Conditions\2D\allFreeSlip.bc">
+      <Filter>Resource Files\Boundary Conditions</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Boundary Conditions\2D\bottomInflow.bc">
+      <Filter>Resource Files\Boundary Conditions</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Rotating Line.xml">
+      <Filter>Resource Files\Configuration\CutCells\Lines</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Maze5x5.xml">
+      <Filter>Resource Files\Configuration\CutCells\Mazes</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Maze5x5 Coarse.xml">
+      <Filter>Resource Files\Configuration\CutCells\Mazes</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Jagged Line.xml">
+      <Filter>Resource Files\Configuration\CutCells\Lines</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Many Lines x1.xml">
+      <Filter>Resource Files\Configuration\CutCells\Lines\Many Lines</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Many Lines x2.xml">
+      <Filter>Resource Files\Configuration\CutCells\Lines\Many Lines</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Many Lines x8.xml">
+      <Filter>Resource Files\Configuration\CutCells\Lines\Many Lines</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Many Lines x16.xml">
+      <Filter>Resource Files\Configuration\CutCells\Lines\Many Lines</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Many Lines x64.xml">
+      <Filter>Resource Files\Configuration\CutCells\Lines\Many Lines</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Diagonal Flow.xml">
+      <Filter>Resource Files\Configuration\CutCells\Lines</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Pipe Simple.xml">
+      <Filter>Resource Files\Configuration\CutCells\Pipes</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Stirring.xml">
+      <Filter>Resource Files\Configuration\CutCells\Vases</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Streamfunction\Channel.xml">
+      <Filter>Resource Files\Configuration\Streamfunction</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Liquids\WaterCircle.xml">
+      <Filter>Resource Files\Configuration\Liquids</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Liquids\WaterColumn.xml">
+      <Filter>Resource Files\Configuration\Liquids</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Streamfunction\Box.xml">
+      <Filter>Resource Files\Configuration\Streamfunction</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\APIC\Channel.xml">
+      <Filter>Resource Files\Configuration\APIC</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Streamfunction\Box Single Vortex.xml">
+      <Filter>Resource Files\Configuration\Streamfunction</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Test Line.xml">
+      <Filter>Resource Files\Configuration\CutCells\Lines</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Precomputed Animation\Box Single Vortex.xml">
+      <Filter>Resource Files\Configuration\Precomputed Animation</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Circle Vortices.xml">
+      <Filter>Resource Files\Configuration\CutCells\ClosedMesh\Circles</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Circles - Coarse.xml">
+      <Filter>Resource Files\Configuration\CutCells\ClosedMesh\Circles</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Circles.xml">
+      <Filter>Resource Files\Configuration\CutCells\ClosedMesh\Circles</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Gear Channel.xml">
+      <Filter>Resource Files\Configuration\CutCells\ClosedMesh\Gear</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Gear.xml">
+      <Filter>Resource Files\Configuration\CutCells\ClosedMesh\Gear</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Obstacle Circles.xml">
+      <Filter>Resource Files\Configuration\CutCells\ClosedMesh\Circles</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Buyoancy.xml">
+      <Filter>Resource Files\Configuration\CutCells\Lines</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Simple Circle.xml">
+      <Filter>Resource Files\Configuration\CutCells\Test</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Simple Line.xml">
+      <Filter>Resource Files\Configuration\CutCells\Test</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Precomputed Animation\Zalesask Disk Test.xml">
+      <Filter>Resource Files\Configuration\Precomputed Animation</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Precomputed Animation\Double Gyre.xml">
+      <Filter>Resource Files\Configuration\Precomputed Animation</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Single Circle.xml">
+      <Filter>Resource Files\Configuration\CutCells\ClosedMesh\Circles</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Moving Circle.xml">
+      <Filter>Resource Files\Configuration\CutCells\ClosedMesh\Circles</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Rotating Gear.xml">
+      <Filter>Resource Files\Configuration\CutCells\ClosedMesh\Gear</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Sine Lines.xml">
+      <Filter>Resource Files\Configuration\CutCells\Lines</Filter>
+    </Xml>
+  </ItemGroup>
+</Project>

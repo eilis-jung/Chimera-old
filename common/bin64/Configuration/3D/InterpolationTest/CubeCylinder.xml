@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>interpolationTest</SimulationType>
+  <!--mvc: mean value coordinates
+  sbc: spherical barycentric coordinates-->
+  <InterpolationMethod>mvc</InterpolationMethod>
+  <NumberOfInterpolationPoints>45000</NumberOfInterpolationPoints>
+  <NodeValuesMethod>signedDistance</NodeValuesMethod>
+  <InterpolationPointsInsideMesh>false</InterpolationPointsInsideMesh>
+  <Objects>
+    <CGALObjMesh>
+      <Filename>voxelHole.obj</Filename>
+      <Scale x="1.0" y="1.0" z="1.0"></Scale>
+    </CGALObjMesh>
+  </Objects>
+</ChimeraConfig>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>meshCutter</SimulationType>
+  <Objects>
+    <Grid>
+      <InitialPoint x="0.0" y="0.0" z ="0.0"/>
+      <FinalPoint x="10" y="10" z ="10"/>
+      <Spacing>0.125</Spacing>
+    </Grid>
+    <Mesh>
+      <Filename>torus1.obj</Filename>
+      <Scale x="1.0" y="1.0" z="1.0"></Scale>
+      <position x="4.201" y="4.001" z="4.101"/>
+    </Mesh>
+  </Objects>
+</ChimeraConfig>

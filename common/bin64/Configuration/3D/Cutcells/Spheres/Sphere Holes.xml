@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <!--Simulation types:
+        realTimeSimulation
+        offlineSimulation
+        precomputedSimulation
+        fetchBoundaryConditions -->
+  <SimulationType>realTimeSimulation</SimulationType>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0" z ="0.0"/>
+    <FinalPoint x="9.00" y="9.00" z ="9.00"/>
+    <Spacing>0.5</Spacing>
+  </Grid>
+  <boundaryConditionsFile>Boundary Conditions/3D/jetInflow.bc</boundaryConditionsFile>
+  <SimulationConfig>
+    <Logging>
+      <LogCutCells>sphereHoles</LogCutCells>
+      <LogVelocity>sphereHoles</LogVelocity>
+    </Logging>
+    <TotalTime value="8"></TotalTime>
+  </SimulationConfig>
+  <Objects>
+    <CGALObjMesh>
+      <Filename>sphereHole.obj</Filename>
+      <Scale x="1.0" y="1.0" z="1.0"></Scale>
+      <position x="4.5100820067" y="4.2004554" z="4.510610457"/>
+    </CGALObjMesh>
+  </Objects>
+  <FlowSolverConfig>
+    <FlowSolverType>CutCell</FlowSolverType>
+    <LinearInterpolationMethod>
+      <UseParticlesCache>false</UseParticlesCache>
+      <UseCGALAcceleration>false</UseCGALAcceleration>
+      <InterpolationType>mvc</InterpolationType>
+      <PosterioriProjection>false</PosterioriProjection>
+    </LinearInterpolationMethod>
+    <SolidWallType>
+      <FreeSlip>
+        <MixNodeInterpolation>WeightedNoExtraDimensions</MixNodeInterpolation>
+      </FreeSlip>
+    </SolidWallType>
+    <AdvectionMethod>
+      <FLIP>
+        <PositionIntegration>rungeKutta2</PositionIntegration>
+        <ResampleParticlesCloseToMesh>false</ResampleParticlesCloseToMesh>
+        <ResamplingFactor>0.001</ResamplingFactor>
+        <FixParticlesSampling>
+          <FineGridResampling>
+            <Subdivisions>1</Subdivisions>
+          </FineGridResampling>
+          <CellResamplingThreshold>1.05</CellResamplingThreshold>
+        </FixParticlesSampling>
+        <VelocityUpdate>FLIP</VelocityUpdate>
+        <ParticleDensity>64</ParticleDensity>
+        <VisualizeVelocities>true</VisualizeVelocities>
+      </FLIP>
+    </AdvectionMethod>
+    <ProjectionMethod>
+      <Platform>CPU</Platform>
+    </ProjectionMethod>
+    <PressureMethod>
+      <ConjugateGradient>
+        <Platform>GPU</Platform>
+        <Tolerance>0.0001</Tolerance>
+        <MaxIterations>1000</MaxIterations>
+        <Preconditioner>NoPreconditioner</Preconditioner>
+      </ConjugateGradient>
+    </PressureMethod>
+  </FlowSolverConfig>
+</ChimeraConfig>

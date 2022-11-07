@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{856306A4-D55D-41F9-AC79-333E27A35401}</ProjectGuid>
+    <RootNamespace>Chimera 2D</RootNamespace>
+    <ProjectName>Chimera 2D</ProjectName>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IgnoreImportLibrary>false</IgnoreImportLibrary>
+    <IncludePath>D:\boost_1_49_0;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IgnoreImportLibrary>false</IgnoreImportLibrary>
+    <OutDir>..\..\common\bin64</OutDir>
+    <IntDir>..\..\Intermediate\x64\Chimera2D\Debug\</IntDir>
+    <IncludePath>$(Boost_INCLUDEDIR);$(IncludePath)</IncludePath>
+    <LibraryPath>$(Boost_LIBRARYDIR);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>D:\boost_1_49_0;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\..\common\bin64</OutDir>
+    <IntDir>..\..\Intermediate\x64\Chimera2D\Release\</IntDir>
+    <IncludePath>$(Boost_INCLUDEDIR);$(IncludePath)</IncludePath>
+    <LibraryPath>$(Boost_LIBRARYDIR);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\include;..\..\ChimeraCore\include;..\..\ChimeraMath\include;..\..\ChimeraRendering\include;..\..\ChimeraData\include;..\..\NxuStream2\include;$(PHYSX_SDK)\Foundation\include;$(PHYSX_SDK)\Foundation\include\win;$(PHYSX_SDK)\Physics\include;$(PHYSX_SDK)\PhysXLoader\include;$(PHYSX_SDK)\Cooking\include;$(NVSDKCOMPUTE_ROOT)\C\Common\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>PhysXLoader.lib;Chimera DataD.lib;Chimera RenderingD.lib;Chimera MathD.lib;Chimera CoreD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\common\lib\$(PlatformName)\;$(PHYSX_SDK)\lib\$(PlatformName)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/VERBOSE %(AdditionalOptions)</AdditionalOptions>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\include\;..\..\ChimeraCore\include;..\..\ChimeraPoisson\include;..\..\ChimeraMesh\include;..\..\ChimeraGrids\include;..\..\ChimeraCutCells\include;..\..\ChimeraAdvection\include;..\..\ChimeraSolvers\include;..\..\ChimeraParticles\include;..\..\ChimeraInterpolation\include;..\..\ChimeraBoundaryConditions\include;..\..\ChimeraRendering\include;..\..\ChimeraResources\include;..\..\ChimeraLevelSets\include;..\..\ChimeraWindows\include;..\..\ChimeraSolids\include;..\..\ChimeraEigenWrapper\include;..\..\ChimeraIO\include;..\..\ChimeraCGALWrapper\include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Chimera RenderingD64.lib;Chimera CoreD64.lib;Chimera GridsD64.lib;Chimera InterpolationD64.lib;Chimera AdvectionD64.lib;Chimera CutCellsD64.lib;Chimera Boundary ConditionsD64.lib;Chimera LevelSetsD64.lib;Chimera MeshesD64.lib;Chimera ParticlesD64.lib;Chimera PoissonD64.lib;Chimera ResourcesD64.lib;Chimera SolversD64.lib;Chimera SolidsD64.lib;Chimera WindowsD64.lib;Chimera IOD64.lib;Chimera EigenWrapperD64.lib;Chimera CGALWrapperD64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\common\lib\$(PlatformName)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/VERBOSE %(AdditionalOptions)</AdditionalOptions>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\include;..\..\ChimeraCore\include;..\..\ChimeraMath\include;..\..\ChimeraRendering\include;..\..\ChimeraData\include;..\..\NxuStream2\include;$(PHYSX_SDK)\Foundation\include;$(PHYSX_SDK)\Foundation\include\win;$(PHYSX_SDK)\Physics\include;$(PHYSX_SDK)\PhysXLoader\include;$(PHYSX_SDK)\Cooking\include;$(NVSDKCOMPUTE_ROOT)\C\Common\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OpenMPSupport>true</OpenMPSupport>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\common\lib\$(PlatformName)\;$(PHYSX_SDK)\lib\$(PlatformName)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Chimera Data.lib;Chimera Rendering.lib;Chimera Math.lib;Chimera Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\include\;..\..\ChimeraCore\include;..\..\ChimeraPoisson\include;..\..\ChimeraMesh\include;..\..\ChimeraGrids\include;..\..\ChimeraCutCells\include;..\..\ChimeraAdvection\include;..\..\ChimeraSolvers\include;..\..\ChimeraParticles\include;..\..\ChimeraInterpolation\include;..\..\ChimeraBoundaryConditions\include;..\..\ChimeraRendering\include;..\..\ChimeraResources\include;..\..\ChimeraLevelSets\include;..\..\ChimeraWindows\include;..\..\ChimeraSolids\include;..\..\ChimeraEigenWrapper\include;..\..\ChimeraIO\include;..\..\ChimeraCGALWrapper\include</AdditionalIncludeDirectories>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OpenMPSupport>false</OpenMPSupport>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <BrowseInformation>true</BrowseInformation>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\common\lib\$(PlatformName)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Chimera Rendering64.lib;Chimera Core64.lib;Chimera Grids64.lib;Chimera Interpolation64.lib;Chimera Advection64.lib;Chimera CutCells64.lib;Chimera Boundary Conditions64.lib;Chimera LevelSets64.lib;Chimera Meshes64.lib;Chimera Particles64.lib;Chimera Poisson64.lib;Chimera Resources64.lib;Chimera Solvers64.lib;Chimera Solids64.lib;Chimera Windows64.lib;Chimera IO64.lib;Chimera EigenWrapper64.lib;Chimera CGALWrapper64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\Applications\Application2D.h" />
+    <ClInclude Include="..\include\Applications\PrecomputedAnimation2D.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\Applications\Application2D.cpp" />
+    <ClCompile Include="..\src\Applications\PrecomputedAnimation2D.cpp" />
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\Rendering\GLRenderer2D.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\common\bin64\Boundary Conditions\2D\allFreeSlip.bc" />
+    <None Include="..\..\common\bin64\Boundary Conditions\2D\allOutflow.bc" />
+    <None Include="..\..\common\bin64\Boundary Conditions\2D\bottomInflow.bc" />
+    <None Include="..\..\common\bin64\Boundary Conditions\2D\leftInflow.bc" />
+    <None Include="..\..\common\bin64\Boundary Conditions\2D\leftRightInflow.bc" />
+    <None Include="..\..\common\bin64\Boundary Conditions\2D\leftRightOutflow.bc" />
+    <None Include="..\..\common\bin64\Configuration\2D\ChimeraCFG.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="..\..\common\bin64\Configuration\2D\Cutcells\Horizontal Lines.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="..\..\common\bin64\Configuration\2D\Cutcells\Pipe Complex.xml" />
+    <None Include="..\..\common\bin64\Configuration\2D\Cutcells\Pipe Subdivision.xml" />
+    <None Include="..\..\common\bin64\Configuration\2D\Cutcells\Single Line.xml" />
+    <None Include="..\..\common\bin64\Configuration\2D\Cutcells\Single Vase.xml" />
+    <None Include="..\..\common\bin64\Configuration\2D\Cutcells\Translating Lines.xml" />
+    <None Include="..\..\common\bin64\Configuration\2D\Cutcells\Vertical Lines Opposing.xml" />
+    <None Include="..\..\common\bin64\Configuration\2D\Cutcells\Vertical Lines.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\..\common\bin64\Configuration\2D\APIC\Channel.xml" />
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Buyoancy.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Circle Vortices.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Circles - Coarse.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Circles.xml" />
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Diagonal Flow.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Gear Channel.xml" />
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Gear.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Jagged Line.xml" />
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Many Lines x1.xml" />
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Many Lines x16.xml" />
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Many Lines x2.xml" />
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Many Lines x64.xml" />
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Many Lines x8.xml" />
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Maze5x5 Coarse.xml" />
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Maze5x5.xml" />
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Moving Circle.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Obstacle Circles.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Pipe Simple.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Rotating Gear.xml" />
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Rotating Line.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Simple Circle.xml" />
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Simple Line.xml" />
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Sine Lines.xml" />
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Single Circle.xml" />
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Stirring.xml" />
+    <Xml Include="..\..\common\bin64\Configuration\2D\Cutcells\Test Line.xml" />
+    <Xml Include="..\..\common\bin64\Configuration\2D\Liquids\WaterCircle.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Liquids\WaterColumn.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Precomputed Animation\Box Single Vortex.xml" />
+    <Xml Include="..\..\common\bin64\Configuration\2D\Precomputed Animation\Double Gyre.xml" />
+    <Xml Include="..\..\common\bin64\Configuration\2D\Precomputed Animation\Zalesask Disk Test.xml" />
+    <Xml Include="..\..\common\bin64\Configuration\2D\Streamfunction\Box Single Vortex.xml" />
+    <Xml Include="..\..\common\bin64\Configuration\2D\Streamfunction\Box.xml" />
+    <Xml Include="..\..\common\bin64\Configuration\2D\Streamfunction\Channel.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

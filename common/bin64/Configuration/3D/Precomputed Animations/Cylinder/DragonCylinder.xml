@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>precomputedAnimation</SimulationType>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0" z ="0.0"/>
+    <FinalPoint x="12.00" y="12.00" z ="12.00"/>
+    <Spacing>1</Spacing>
+  </Grid>
+  <Animations>
+    <NumFrames>240</NumFrames>
+    <PolygonMeshes>
+      <BaseFilename>dragonFreeSlipCells</BaseFilename>
+      <LinearInterpolationMethod>
+        <UseParticlesCache>false</UseParticlesCache>
+        <UseCGALAcceleration>false</UseCGALAcceleration>
+        <InterpolationType>sbc</InterpolationType>
+      </LinearInterpolationMethod>
+    </PolygonMeshes>
+    <VelocityFile>dragonFreeSlip</VelocityFile>
+  </Animations>
+  <Objects>
+    <ParticleSystem>
+      <Emitter>
+        <Rectangle px="7.35" py="3.40" pz="5.40" sx="0.25" sy="0.15" sz="0.25"></Rectangle>
+      </Emitter>
+      <MinBounds px="0.0" py="0.0" pz="0.0"></MinBounds>
+      <MaxBounds px="12.75" py="12.75" pz="12.75"></MaxBounds>
+      <ParticlesProperties>
+        <MaxAmount>13000</MaxAmount>
+        <InitialAmount>100</InitialAmount>
+        <SpawnRatio>1000</SpawnRatio>
+        <LifeTime>9999</LifeTime>
+        <LifeVariance>0.0</LifeVariance>
+      </ParticlesProperties>
+      <RenderingProperties>
+        <ColorScheme>jet</ColorScheme>
+        <VisualizeVectors>true</VisualizeVectors>
+      </RenderingProperties>
+    </ParticleSystem>
+    <CGALObjMesh>
+      <Filename>cylinderDragonThin2.obj</Filename>
+      <Scale x="1.0" y="1.0" z="1.0"></Scale>
+      <!--<position x="4.5" y="4.5" z="4.5"/>-->
+      <position x="6.15" y="4.25" z="5.25"/>
+    </CGALObjMesh>
+  </Objects>
+</ChimeraConfig>
+

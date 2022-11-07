@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>precomputedAnimation</SimulationType>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0"/>
+    <FinalPoint x="2" y="2"/>
+    <!--Final point is an approximation, since it can be modified to suit grid spacing-->
+    <Spacing>0.0625</Spacing>
+  </Grid>
+  <Animations>
+    <Timestep>0.01</Timestep>
+    <Framerate>30</Framerate>
+    <NumFrames>10</NumFrames>
+    <LoadPerFrame>true</LoadPerFrame>
+    <RotationalVelocityField>
+      <position x="1.0" y="1.0"></position>
+      <MinRadius>0</MinRadius>
+      <MaxRadius>0.80</MaxRadius>
+      <Orientation>1</Orientation>
+      <Strength>5</Strength>
+    </RotationalVelocityField>
+  </Animations>
+  <VelocityInterpolant>
+    <Type>BilinearStaggered</Type>
+  </VelocityInterpolant>
+  <ParticleSystem>
+    <Emitter>
+      <Rectangle px="0.0626" py="0.0626" sx="1.8" sy="1.8"></Rectangle>
+    </Emitter>
+    <ParticlesProperties>
+      <MaxAmount>80000</MaxAmount>
+      <InitialAmount>80000</InitialAmount>
+      <SpawnRatio>0</SpawnRatio>
+      <LifeTime>9999</LifeTime>
+      <LifeVariance>0.0</LifeVariance>
+    </ParticlesProperties>
+  </ParticleSystem>
+</ChimeraConfig>

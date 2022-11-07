@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>realTimeSimulation</SimulationType>
+  <boundaryConditionsFile>Boundary Conditions/2D/leftInflow.bc</boundaryConditionsFile>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0"/>
+    <FinalPoint x="2.0" y="2.0"/> <!--Final point is an approximation, since it can be modified to suit grid spacing-->
+    <Spacing>0.00390625</Spacing>
+  </Grid>
+  <SimulationConfig>
+    <TotalTime value="50"></TotalTime>
+    <!--<Logging>
+      <Framerate>100</Framerate>
+      <LogScreenshot>singleCircleObstacle_mvc</LogScreenshot>
+    </Logging>-->
+  </SimulationConfig>
+  <Objects>
+    <RigidObject>
+      <position x="0.97" y="0.98"></position>
+      <Geometry>
+        <numSubdivisions>50</numSubdivisions>
+        <CircularLine>
+          <Radius>0.25</Radius>
+        </CircularLine>
+      </Geometry>
+    </RigidObject>
+  </Objects>
+  <FlowSolverConfig>
+    <FlowSolverType>CutCellSo</FlowSolverType>
+    <SolidWallType>
+      <!--<FreeSlip></FreeSlip>-->
+      <NoSlip></NoSlip>
+    </SolidWallType>
+    <AdvectionMethod>
+      <ParticleBasedAdvection>
+        <PositionIntegration>
+          <Method>rungeKutta2</Method>
+        </PositionIntegration>
+        <GridToParticle>
+          <Method mixPIC="0.0001">FLIP</Method>
+        </GridToParticle>
+        <ParticleToGrid>
+          <GridArrangement>Nodal</GridArrangement>
+          <Kernel>bilinear</Kernel>
+        </ParticleToGrid>
+        <Sampler>
+          <ParticlesPerCell>16</ParticlesPerCell>
+          <Type>Poisson</Type>
+          <ResampleParticles>true</ResampleParticles>
+        </Sampler>
+      </ParticleBasedAdvection>
+    </AdvectionMethod>
+    <PressureMethod>
+      <ConjugateGradient>
+        <Platform>CPU</Platform>
+        <Tolerance>0.00001</Tolerance>
+        <MaxIterations>3000</MaxIterations>
+        <Preconditioner>NoPreconditioner</Preconditioner>
+      </ConjugateGradient>
+    </PressureMethod>
+  </FlowSolverConfig>
+</ChimeraConfig>
+

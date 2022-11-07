@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <!--Simulation types:
+        realTimeSimulation
+        offlineSimulation
+        precomputedSimulation
+        fetchBoundaryConditions -->
+  <SimulationType>realTimeSimulation</SimulationType>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0" z ="0.0"/>
+    <FinalPoint x="10.00" y="10.00" z ="10.00"/>
+    <Spacing>0.125</Spacing>
+  </Grid>
+  <boundaryConditionsFile>Boundary Conditions/3D/leftInflow.bc</boundaryConditionsFile>
+  <SimulationConfig>
+    <Logging>
+      <LogCutCells>torusFreeSlipCells</LogCutCells>
+      <LogVelocity>torusFreeSlip</LogVelocity>
+    </Logging>
+    <TotalTime value="10"></TotalTime>
+  </SimulationConfig>
+  <Objects>
+    <Mesh>
+      <Filename>torus1.obj</Filename>
+      <Scale x="1.0" y="1.0" z="1.0"></Scale>
+      <position x="4.01" y="4.01" z="4.01"/>
+    </Mesh>
+    <Mesh>
+      <Filename>torus2.obj</Filename>
+      <Scale x="1.0" y="1.0" z="1.0"></Scale>
+      <position x="5.1123" y="4.0123" z="4.0123"/>
+    </Mesh>
+  </Objects>
+  <RenderingOptions>
+    <VisualizeGrid>true</VisualizeGrid>
+  </RenderingOptions>
+  <FlowSolverConfig>
+    <FlowSolverType>CutCell</FlowSolverType>
+    <LinearInterpolationMethod>
+      <UseParticlesCache>true</UseParticlesCache>
+      <UseCGALAcceleration>false</UseCGALAcceleration>
+      <InterpolationType>mvc</InterpolationType>
+    </LinearInterpolationMethod>
+    <SolidWallType>
+      <FreeSlip>
+        <MixNodeInterpolation>WeightedNoExtraDimensions</MixNodeInterpolation>
+      </FreeSlip>
+      <!--<NoSlip></NoSlip>-->
+    </SolidWallType>
+    <AdvectionMethod>
+      <FLIP>
+        <PositionIntegration>rungeKutta2</PositionIntegration>
+        <ResampleParticlesCloseToMesh>false</ResampleParticlesCloseToMesh>
+        <ResamplingFactor>0.001</ResamplingFactor>
+        <FixParticlesSampling>
+          <FineGridResampling>
+            <Subdivisions>2</Subdivisions>
+          </FineGridResampling>
+          <CellResamplingThreshold>1.05</CellResamplingThreshold>
+        </FixParticlesSampling>
+        <VelocityUpdate>FLIP</VelocityUpdate>
+        <ParticleDensity>64</ParticleDensity>
+        <ParticleToGridTransferring>SPH</ParticleToGridTransferring>
+        <ParticleToGridTransferringDC>SPH</ParticleToGridTransferringDC>
+        <WiderTransferring>false</WiderTransferring>
+        <CollisionDetectionMethod>cgalSegmentIntersection</CollisionDetectionMethod>
+        <UseFLIPOnCutcells>false</UseFLIPOnCutcells>
+      </FLIP>
+      <ParticleBasedAdvection>
+        <PositionIntegration>
+          <Method>rungeKutta2</Method>
+        </PositionIntegration>
+        <GridToParticle>
+          <Method>FLIP</Method>
+        </GridToParticle>
+        <ParticleToGrid>
+          <GridArrangement>Staggered</GridArrangement>
+          <Kernel>SPH</Kernel>
+          <KernelDanglingCells>??</KernelDanglingCells>
+        </ParticleToGrid>
+        <Sampler>
+          <ParticlesPerCell>256</ParticlesPerCell>
+          <Type>Stratified</Type>
+          <ResampleParticles>true</ResampleParticles>
+        </Sampler>
+      </ParticleBasedAdvection>
+    </AdvectionMethod>
+    <ProjectionMethod>
+      <Platform>CPU</Platform>
+    </ProjectionMethod>
+    <PressureMethod>
+      <ConjugateGradient>
+        <Platform>GPU</Platform>
+        <Tolerance>0.0001</Tolerance>
+        <MaxIterations>1000</MaxIterations>
+        <Preconditioner>NoPreconditioner</Preconditioner>
+      </ConjugateGradient>
+    </PressureMethod>
+  </FlowSolverConfig>
+</ChimeraConfig>

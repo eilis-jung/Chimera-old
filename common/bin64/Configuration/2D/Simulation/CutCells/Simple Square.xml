@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>realTimeSimulation</SimulationType>
+  <boundaryConditionsFile>Boundary Conditions/2D/leftInflow.bc</boundaryConditionsFile>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0"/>
+    <FinalPoint x="4.0" y="3.0"/>
+    <!--Final point is an approximation, since it can be modified to suit grid spacing-->
+    <Spacing>0.125</Spacing>
+  </Grid>
+  <SimulationConfig>
+    <TotalTime value="3.125"></TotalTime>
+  </SimulationConfig>
+  <Objects>
+    <RigidObject>
+      <position x="0.5725" y="1.0625"></position>
+      <Geometry>
+        <File>square.dat</File>
+      </Geometry>
+    </RigidObject>
+  </Objects>
+  <FlowSolverConfig>
+    <FlowSolverType>CutCell</FlowSolverType>
+    <SolidWallType>
+      <!--<FreeSlip></FreeSlip>-->
+      <NoSlip></NoSlip>
+    </SolidWallType>
+    <AdvectionMethod>
+      <ParticleBasedAdvection>
+        <PositionIntegration>
+          <Method>rungeKutta2</Method>
+        </PositionIntegration>
+        <GridToParticle>
+          <Method>FLIP</Method>
+        </GridToParticle>
+        <ParticleToGrid>
+          <GridArrangement>Nodal</GridArrangement>
+          <Kernel>SPH</Kernel>
+        </ParticleToGrid>
+        <Sampler>
+          <ParticlesPerCell>16</ParticlesPerCell>
+          <Type>Poisson</Type>
+          <ResampleParticles>true</ResampleParticles>
+        </Sampler>
+      </ParticleBasedAdvection>
+    </AdvectionMethod>
+    <PressureMethod>
+      <ConjugateGradient>
+        <Platform>GPU</Platform>
+        <Tolerance>0.0001</Tolerance>
+        <MaxIterations>10000</MaxIterations>
+        <Preconditioner>NoPreconditioner</Preconditioner>
+      </ConjugateGradient>
+    </PressureMethod>
+  </FlowSolverConfig>
+</ChimeraConfig>
+

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>realTimeSimulation</SimulationType>
+  <boundaryConditionsFile>Boundary Conditions/2D/topOutflow.bc</boundaryConditionsFile>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0"/>
+    <FinalPoint x="3" y="3"/> <!--Final point is an approximation, since it can be modified to suit grid spacing-->
+    <Spacing>0.0625</Spacing>
+  </Grid>
+  <LiquidObject>
+    <position x="1.5" y="1.505"></position>
+    <Geometry>
+      <numSubdivisions>50</numSubdivisions>
+      <CircularLine>
+        <Radius>0.28125</Radius>
+      </CircularLine>
+    </Geometry>
+  </LiquidObject>
+  <SimulationConfig>
+    <TotalTime value="10"></TotalTime>
+  </SimulationConfig>
+  <FlowSolverConfig>
+    <FlowSolverType>GhostLiquids</FlowSolverType>
+    <SolidWallType>
+      <FreeSlip></FreeSlip>
+      <!--<NoSlip></NoSlip>-->
+    </SolidWallType>
+    <AdvectionMethod>
+      <ParticleBasedAdvection>
+        <PositionIntegration>
+          <Method>rungeKutta2</Method>
+        </PositionIntegration>
+        <GridToParticle>
+          <Method>FLIP</Method>
+        </GridToParticle>
+        <ParticleToGrid>
+          <GridArrangement>Staggered</GridArrangement>
+          <Kernel>bilinear</Kernel>
+          <KernelDanglingCells>??</KernelDanglingCells>
+        </ParticleToGrid>
+        <Sampler>
+          <ParticlesPerCell>32</ParticlesPerCell>
+          <Type>Stratified</Type>
+          <ResampleParticles>true</ResampleParticles>
+        </Sampler>
+      </ParticleBasedAdvection>
+    </AdvectionMethod>
+    <ProjectionMethod>
+      <Platform>CPU</Platform>
+    </ProjectionMethod>
+    <FarFieldMethod>
+      <Standard></Standard>
+    </FarFieldMethod>
+    <PressureMethod>
+      <ConjugateGradient>
+        <Platform>GPU</Platform>
+        <Tolerance>0.001</Tolerance>
+        <MaxIterations>1000</MaxIterations>
+        <Preconditioner>NoPreconditioner</Preconditioner>
+      </ConjugateGradient>
+    </PressureMethod>
+  </FlowSolverConfig>
+</ChimeraConfig>
+

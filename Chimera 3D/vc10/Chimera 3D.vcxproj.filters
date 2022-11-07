@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{e40fef9a-c481-4351-a843-277f41766483}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{bd74fbf5-3c02-4162-b8ac-976aac7ec55d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{f84ff4ba-e5da-46b9-ac8f-d60b2a625762}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Boundary Conditions">
+      <UniqueIdentifier>{d49b38ad-6172-4925-b66e-b0eabf80ef27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration">
+      <UniqueIdentifier>{5fec66cc-5f4d-47f9-a091-01f8b688ab5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Applications">
+      <UniqueIdentifier>{64b79835-e7c2-4206-b8fe-239dd5d1e513}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Applications">
+      <UniqueIdentifier>{2c91c99c-8bac-442e-b05c-a0b71da8e107}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Rendering">
+      <UniqueIdentifier>{73e95623-e8e4-4a0d-a134-85215d3e3401}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Rendering">
+      <UniqueIdentifier>{ec50b717-fb8d-4b44-b092-902481d29e20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\Regular">
+      <UniqueIdentifier>{a017d720-02cd-439c-a809-c004db7d5548}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\CutCells">
+      <UniqueIdentifier>{434f313e-e9d1-457b-a930-0a99238e31c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\PrecomputedAnimation">
+      <UniqueIdentifier>{a3a48f7b-759d-4680-966c-43d5c5091246}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\CutCells\Planes">
+      <UniqueIdentifier>{d92e46f0-3c6c-4247-9b6c-dfb04fdabc2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\PrecomputedAnimation\Planes">
+      <UniqueIdentifier>{cc57b027-12a9-42c0-b08d-14656e98cdf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\MeshCutter">
+      <UniqueIdentifier>{0e20da7f-5984-470b-83a3-f3b23bda52bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders">
+      <UniqueIdentifier>{e2640e8f-355d-4ffc-aabd-1b0adccc0000}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\CutCells\Mesh">
+      <UniqueIdentifier>{ebd1ab96-6953-4bde-9b17-622721ff93c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\InterpolationTest">
+      <UniqueIdentifier>{5b08c32a-6e82-4415-a865-5b54098d501e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\CutCells\Dragon">
+      <UniqueIdentifier>{d6867063-3110-4e42-bed1-941f2e48bf68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\CutCells\Bowl">
+      <UniqueIdentifier>{038257e9-2dc9-4954-8faf-f2a25b08eb92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\CutCells\Bunny">
+      <UniqueIdentifier>{b52f40d7-3684-4cf6-aab4-96ba73b142a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\PrecomputedAnimation\Bunny">
+      <UniqueIdentifier>{fa3ebbc1-e804-4e71-9bac-452f09848025}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\CutCells\Thin Plate">
+      <UniqueIdentifier>{b19d4b15-e569-4b16-ade2-28e91392899c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\PrecomputedAnimation\Thin Plate">
+      <UniqueIdentifier>{f5ca31c1-b897-40f2-804b-60929327b95d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\PrecomputedAnimation\Dragon">
+      <UniqueIdentifier>{0d7e52d8-c5bd-4dab-87fc-008892820170}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\CutCells\Cylinder">
+      <UniqueIdentifier>{587de68f-df29-4de2-8873-b6c78a60b3dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\PrecomputedAnimation\Cylinder">
+      <UniqueIdentifier>{a8273233-51df-44c8-b6f7-3c682886bdf9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\PrecomputedAnimation\Torus">
+      <UniqueIdentifier>{0988161d-50c8-4dd7-b7e3-54d0eec4ebb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\CutCells\Paddle">
+      <UniqueIdentifier>{5605101c-a9fb-4e7e-aad7-1e0c54ac52d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\CutCells\Torus">
+      <UniqueIdentifier>{9f0bd13e-de36-4081-b5ca-ce00175b9f55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\CutCells\Spheres">
+      <UniqueIdentifier>{d494e5e2-51e7-4d5f-a681-0ad6ab837141}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\PrecomputedAnimation\Spheres">
+      <UniqueIdentifier>{6c70575c-167f-4e9b-b91d-b263f6c6a47a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\PrecomputedAnimation\Paddle">
+      <UniqueIdentifier>{30b37d40-1d50-45ab-b697-94a9eb47cb4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\CutCells\Bunny\Shifted">
+      <UniqueIdentifier>{58b92313-e8dc-4a47-bb20-a1b9b77f2889}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\PrecomputedAnimation\Bunny\Shifted">
+      <UniqueIdentifier>{4e1bf0d0-30de-4351-93e1-95fb212b4ec3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\Streamfunction">
+      <UniqueIdentifier>{33d99b54-4492-46f0-a7c9-ed4400f748a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Exporter">
+      <UniqueIdentifier>{b940980e-a7be-4562-a149-9be4b3b1866e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\PrecomputedAnimation\Regular">
+      <UniqueIdentifier>{0b024c6a-76a8-4562-9d1a-528859161d0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\CutCells\Test">
+      <UniqueIdentifier>{5abc001a-ef98-407e-840d-b70bb159a2cf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SceneLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Rendering\GLRenderer3D.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Applications\Application3D.cpp">
+      <Filter>Source Files\Applications</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Applications\PrecomputedAnimation3D.cpp">
+      <Filter>Source Files\Applications</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Applications\MeshCutterApplication.cpp">
+      <Filter>Source Files\Applications</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Applications\VoxelCutterApplication.cpp">
+      <Filter>Source Files\Applications</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Applications\InterpolationTestApplication.cpp">
+      <Filter>Source Files\Applications</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\SceneLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SceneObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Rendering\GLRenderer3D.h">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Applications\Application3D.h">
+      <Filter>Header Files\Applications</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Applications\PrecomputedAnimation3D.h">
+      <Filter>Header Files\Applications</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Rendering\ParticleSystem3D.h">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Applications\MeshCutterApplication.h">
+      <Filter>Header Files\Applications</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Applications\VoxelCutterApplication.h">
+      <Filter>Header Files\Applications</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Applications\InterpolationTestApplication.h">
+      <Filter>Header Files\Applications</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Exporter\DataExporter3D.h">
+      <Filter>Header Files\Exporter</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\common\bin64\Boundary Conditions\3D\leftInflow.bc">
+      <Filter>Resource Files\Boundary Conditions</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Boundary Conditions\3D\leftRightOutflow.bc">
+      <Filter>Resource Files\Boundary Conditions</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Boundary Conditions\3D\downInflow.bc">
+      <Filter>Resource Files\Boundary Conditions</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Boundary Conditions\3D\topInflow.bc">
+      <Filter>Resource Files\Boundary Conditions</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Shaders\3D\AddVectors.glsl">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Shaders\3D\VectorArrow.glsl">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Shaders\3D\WireframeEdges.frag">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Shaders\3D\WireframeEdges.glsl">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Boundary Conditions\3D\bottomTopOutflow.bc">
+      <Filter>Resource Files\Boundary Conditions</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Boundary Conditions\3D\allFreeSlip.bc">
+      <Filter>Resource Files\Boundary Conditions</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Boundary Conditions\3D\jetInflow.bc">
+      <Filter>Resource Files\Boundary Conditions</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Shaders\3D\PhongShading.frag">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Shaders\3D\PhongShading.glsl">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Shaders\3D\PhongShadingWireframe.frag">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Precomputed Animations\Opposing Paddles.xml">
+      <Filter>Resource Files\Configuration\PrecomputedAnimation</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Precomputed Animations\Translating Paddle - Ref.xml">
+      <Filter>Resource Files\Configuration\PrecomputedAnimation</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Precomputed Animations\Translating Paddle.xml">
+      <Filter>Resource Files\Configuration\PrecomputedAnimation</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\ChimeraCFG.xml">
+      <Filter>Resource Files\Configuration</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Planes\Inclined Plane - Regular.xml">
+      <Filter>Resource Files\Configuration\CutCells\Planes</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Planes\Inclined Plane.xml">
+      <Filter>Resource Files\Configuration\CutCells\Planes</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Precomputed Animations\Planes\Inclined Plane - Regular.xml">
+      <Filter>Resource Files\Configuration\PrecomputedAnimation\Planes</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Precomputed Animations\Planes\Inclined Plane.xml">
+      <Filter>Resource Files\Configuration\PrecomputedAnimation\Planes</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Planes\Translating Paddle.xml">
+      <Filter>Resource Files\Configuration\CutCells\Planes</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\MeshCutter\Dragon.xml">
+      <Filter>Resource Files\Configuration\MeshCutter</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\InterpolationTest\CubeCylinder.xml">
+      <Filter>Resource Files\Configuration\InterpolationTest</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\InterpolationTest\Tetrahedron.xml">
+      <Filter>Resource Files\Configuration\InterpolationTest</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Precomputed Animations\Static Bunny.xml">
+      <Filter>Resource Files\Configuration\PrecomputedAnimation</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Triangle Meshes\Translating Thin Plate.xml">
+      <Filter>Resource Files\Configuration\CutCells\Mesh</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Triangle Meshes\Cube.xml">
+      <Filter>Resource Files\Configuration\CutCells\Mesh</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Triangle Meshes\Multiple Torus.xml">
+      <Filter>Resource Files\Configuration\CutCells\Mesh</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Triangle Meshes\Translating Bunny.xml">
+      <Filter>Resource Files\Configuration\CutCells\Mesh</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Triangle Meshes\Bunny.xml">
+      <Filter>Resource Files\Configuration\CutCells\Mesh</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Triangle Meshes\Single-Sided test.xml">
+      <Filter>Resource Files\Configuration\CutCells\Mesh</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Triangle Meshes\Bunny HighRes.xml">
+      <Filter>Resource Files\Configuration\CutCells\Mesh</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Triangle Meshes\Cylinder.xml">
+      <Filter>Resource Files\Configuration\CutCells\Mesh</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Triangle Meshes\Torus.xml">
+      <Filter>Resource Files\Configuration\CutCells\Mesh</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Dragon\Dragon Coarse.xml">
+      <Filter>Resource Files\Configuration\CutCells\Dragon</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Dragon\Dragon Fine.xml">
+      <Filter>Resource Files\Configuration\CutCells\Dragon</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Dragon\Dragon.xml">
+      <Filter>Resource Files\Configuration\CutCells\Dragon</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Bowl\Bowl.xml">
+      <Filter>Resource Files\Configuration\CutCells\Bowl</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Bunny\Bunny Fine.xml">
+      <Filter>Resource Files\Configuration\CutCells\Bunny</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Bunny\Bunny.xml">
+      <Filter>Resource Files\Configuration\CutCells\Bunny</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Precomputed Animations\Bunny\Bunny.xml">
+      <Filter>Resource Files\Configuration\PrecomputedAnimation\Bunny</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\InterpolationTest\CubeCylinder - SBC.xml">
+      <Filter>Resource Files\Configuration\InterpolationTest</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Thin plate\Thin Plate.xml">
+      <Filter>Resource Files\Configuration\CutCells\Thin Plate</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Precomputed Animations\Thin Plate\Thin Plate.xml">
+      <Filter>Resource Files\Configuration\PrecomputedAnimation\Thin Plate</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Precomputed Animations\Dragon\Dragon.xml">
+      <Filter>Resource Files\Configuration\PrecomputedAnimation\Dragon</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Cylinder\Cylinder.xml">
+      <Filter>Resource Files\Configuration\CutCells\Cylinder</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Cylinder\DragonCylinder.xml">
+      <Filter>Resource Files\Configuration\CutCells\Cylinder</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Precomputed Animations\Cylinder\DragonCylinder.xml">
+      <Filter>Resource Files\Configuration\PrecomputedAnimation\Cylinder</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Paddle\Rotating Paddle.xml">
+      <Filter>Resource Files\Configuration\CutCells\Paddle</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Precomputed Animations\Torus\Torus.xml">
+      <Filter>Resource Files\Configuration\PrecomputedAnimation\Torus</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Torus\Torus.xml">
+      <Filter>Resource Files\Configuration\CutCells\Torus</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Precomputed Animations\Dragon\Dragon Fine.xml">
+      <Filter>Resource Files\Configuration\PrecomputedAnimation\Dragon</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Spheres\Spheres.xml">
+      <Filter>Resource Files\Configuration\CutCells\Spheres</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Precomputed Animations\Spheres\Spheres.xml">
+      <Filter>Resource Files\Configuration\PrecomputedAnimation\Spheres</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Paddle\Static Paddle.xml">
+      <Filter>Resource Files\Configuration\CutCells\Paddle</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Paddle\Static CD.xml">
+      <Filter>Resource Files\Configuration\CutCells\Paddle</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Precomputed Animations\Paddle\Rotating Paddle.xml">
+      <Filter>Resource Files\Configuration\PrecomputedAnimation\Paddle</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Precomputed Animations\Paddle\Static CD.xml">
+      <Filter>Resource Files\Configuration\PrecomputedAnimation\Paddle</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Paddle\Moving CD.xml">
+      <Filter>Resource Files\Configuration\CutCells\Paddle</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Precomputed Animations\Paddle\Moving CD.xml">
+      <Filter>Resource Files\Configuration\PrecomputedAnimation\Paddle</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Precomputed Animations\Bunny\Bunny Creepy.xml">
+      <Filter>Resource Files\Configuration\PrecomputedAnimation\Bunny</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Dragon\Dragon Finer.xml">
+      <Filter>Resource Files\Configuration\CutCells\Dragon</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Spheres\Spheres Tubes.xml">
+      <Filter>Resource Files\Configuration\CutCells\Spheres</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Bunny\Bunny x2.xml">
+      <Filter>Resource Files\Configuration\CutCells\Bunny</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Bunny\Bunny x4.xml">
+      <Filter>Resource Files\Configuration\CutCells\Bunny</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Bunny\Bunny x8.xml">
+      <Filter>Resource Files\Configuration\CutCells\Bunny</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Bunny\Bunny x16.xml">
+      <Filter>Resource Files\Configuration\CutCells\Bunny</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Bunny\Bunny x32.xml">
+      <Filter>Resource Files\Configuration\CutCells\Bunny</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\CutCellTest.xml">
+      <Filter>Resource Files\Configuration\CutCells</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Precomputed Animations\Bunny\Bunny x2.xml">
+      <Filter>Resource Files\Configuration\PrecomputedAnimation\Bunny</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Bunny\[S] Bunny x2.xml">
+      <Filter>Resource Files\Configuration\CutCells\Bunny\Shifted</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Bunny\[S] Bunny.xml">
+      <Filter>Resource Files\Configuration\CutCells\Bunny\Shifted</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Bunny\[S] Bunny x4.xml">
+      <Filter>Resource Files\Configuration\CutCells\Bunny\Shifted</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Bunny\[S] Bunny x8.xml">
+      <Filter>Resource Files\Configuration\CutCells\Bunny\Shifted</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Bunny\[S] Bunny x16.xml">
+      <Filter>Resource Files\Configuration\CutCells\Bunny\Shifted</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Precomputed Animations\Bunny\[S] Bunny x2.xml">
+      <Filter>Resource Files\Configuration\PrecomputedAnimation\Bunny\Shifted</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Precomputed Animations\Bunny\[S] Bunny.xml">
+      <Filter>Resource Files\Configuration\PrecomputedAnimation\Bunny\Shifted</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Bunny\[S] Bunny x32.xml">
+      <Filter>Resource Files\Configuration\CutCells\Bunny\Shifted</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Precomputed Animations\Bunny\[S] Bunny x4.xml">
+      <Filter>Resource Files\Configuration\PrecomputedAnimation\Bunny\Shifted</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Precomputed Animations\Bunny\[S] Bunny x8.xml">
+      <Filter>Resource Files\Configuration\PrecomputedAnimation\Bunny\Shifted</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Precomputed Animations\Bunny\[S] Bunny x16.xml">
+      <Filter>Resource Files\Configuration\PrecomputedAnimation\Bunny\Shifted</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Spheres\Sphere Holes.xml">
+      <Filter>Resource Files\Configuration\CutCells\Spheres</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Precomputed Animations\Spheres\Sphere Holes.xml">
+      <Filter>Resource Files\Configuration\PrecomputedAnimation\Spheres</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Streamfunction\SmokeRising.xml">
+      <Filter>Resource Files\Configuration\Streamfunction</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\MeshCutter\Bunny.xml">
+      <Filter>Resource Files\Configuration\MeshCutter</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Regular\Channel.xml">
+      <Filter>Resource Files\Configuration\Regular</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Precomputed Animations\Regular\Channel.xml">
+      <Filter>Resource Files\Configuration\PrecomputedAnimation\Regular</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Regular\Box.xml">
+      <Filter>Resource Files\Configuration\Regular</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\MeshCutter\Cube.xml">
+      <Filter>Resource Files\Configuration\MeshCutter</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Test\Cube.xml">
+      <Filter>Resource Files\Configuration\CutCells\Test</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\MeshCutter\Torus.xml">
+      <Filter>Resource Files\Configuration\MeshCutter</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\3D\Cutcells\Torus\Torus High-resolution.xml">
+      <Filter>Resource Files\Configuration\CutCells\Torus</Filter>
+    </Xml>
+  </ItemGroup>
+</Project>

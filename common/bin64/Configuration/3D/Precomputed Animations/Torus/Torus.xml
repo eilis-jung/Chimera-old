@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>precomputedAnimation</SimulationType>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0" z ="0.0"/>
+    <FinalPoint x="10.00" y="10.00" z ="10.00"/>
+    <Spacing>1</Spacing>
+  </Grid>
+  <Animations>
+    <ExportObjFiles>true</ExportObjFiles>
+    <LoadPerFrame>true</LoadPerFrame>
+    <NumFrames>300</NumFrames>
+    <PolygonMeshes>
+      <BaseFilename>cubeFreeSlipCells</BaseFilename>
+      <LinearInterpolationMethod>
+        <UseParticlesCache>false</UseParticlesCache>
+        <UseCGALAcceleration>false</UseCGALAcceleration>
+        <InterpolationType>mvc</InterpolationType>
+        <PosterioriProjection>false</PosterioriProjection>
+      </LinearInterpolationMethod>
+    </PolygonMeshes>
+    <VelocityFile>cubeFreeSlip</VelocityFile>
+    <CollisionDetectionMethod>cgalSegmentIntersection</CollisionDetectionMethod>
+  </Animations>
+  <Objects>
+    <ParticleSystem>
+      <Emitter>
+        <Sphere px="6.1123" py="4.0123" pz="4.0123" radius="0.34"></Sphere>
+        <!--<Rectangle px="5.5" py="5" pz="3.75" sx="0.5" sy="0.25" sz="0.5"></Rectangle>-->
+        <MaxAmount>202000</MaxAmount>
+        <InitialAmount>2000</InitialAmount>
+        <SpawnRatio>20000</SpawnRatio>
+        <LifeTime>9999</LifeTime>
+        <LifeVariance>0.0</LifeVariance>
+      </Emitter>
+      <Emitter>
+        <Sphere px="3.201" py="4.01" pz="4.126" radius="0.34"></Sphere>
+        <MaxAmount>202000</MaxAmount>
+        <InitialAmount>2000</InitialAmount>
+        <SpawnRatio>20000</SpawnRatio>
+        <LifeTime>9999</LifeTime>
+        <LifeVariance>0.0</LifeVariance>
+      </Emitter>
+      <MinBounds px="0.0" py="0.0" pz="0.0"></MinBounds>
+      <MaxBounds px="12.75" py="12.75" pz="12.75"></MaxBounds>
+      <RenderingProperties>
+        <ColorScheme>jet</ColorScheme>
+        <VisualizeVectors>true</VisualizeVectors>
+      </RenderingProperties>
+    </ParticleSystem>
+    <CGALObjMesh>
+      <Filename>torus1.obj</Filename>
+      <Scale x="1.0" y="1.0" z="1.0"></Scale>
+      <position x="4.201" y="4.01" z="4.101"/>
+    </CGALObjMesh>
+    <CGALObjMesh>
+      <Filename>torus2.obj</Filename>
+      <Scale x="1.0" y="1.0" z="1.0"></Scale>
+      <position x="5.1123" y="4.0123" z="4.0123"/>
+    </CGALObjMesh>
+  </Objects>
+</ChimeraConfig>
+

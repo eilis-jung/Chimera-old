@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{66838a45-636f-4b55-be51-a009d532b5c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{56d6e207-7d90-45e8-8826-653a46e5988b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Boundary Conditions">
+      <UniqueIdentifier>{0c795d7b-5abe-4a85-8172-17b13a6fea22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Boundary Conditions">
+      <UniqueIdentifier>{7f9afa68-0732-4b15-81c2-f1b555970b4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Boundary Conditions\2D">
+      <UniqueIdentifier>{abcf8fd2-5862-43d5-8097-07b1d2086711}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Boundary Conditions\3D">
+      <UniqueIdentifier>{86630be3-c337-4ebb-b356-1b4165b01fd4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\Boundary Conditions\BoundaryCondition.h">
+      <Filter>Header Files\Boundary Conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Boundary Conditions\BoundaryConditionFactory.h">
+      <Filter>Header Files\Boundary Conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Boundary Conditions\FarFieldBC.h">
+      <Filter>Header Files\Boundary Conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Boundary Conditions\FreeSlipBC.h">
+      <Filter>Header Files\Boundary Conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Boundary Conditions\InflowBC.h">
+      <Filter>Header Files\Boundary Conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Boundary Conditions\JetBC.h">
+      <Filter>Header Files\Boundary Conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Boundary Conditions\NoSlipBC.h">
+      <Filter>Header Files\Boundary Conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Boundary Conditions\OutflowBC.h">
+      <Filter>Header Files\Boundary Conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Boundary Conditions\PeriodicBC.h">
+      <Filter>Header Files\Boundary Conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ChimeraBoundaryConditions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\Boundary Conditions\BoundaryConditionFactory.cpp">
+      <Filter>Source Files\Boundary Conditions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Boundary Conditions\BoundaryCondition2D.cpp">
+      <Filter>Source Files\Boundary Conditions\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Boundary Conditions\Farfield2DBC.cpp">
+      <Filter>Source Files\Boundary Conditions\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Boundary Conditions\FreeSlip2DBC.cpp">
+      <Filter>Source Files\Boundary Conditions\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Boundary Conditions\Inflow2DBC.cpp">
+      <Filter>Source Files\Boundary Conditions\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Boundary Conditions\JetBC2D.cpp">
+      <Filter>Source Files\Boundary Conditions\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Boundary Conditions\NoSlipBC2D.cpp">
+      <Filter>Source Files\Boundary Conditions\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Boundary Conditions\Outflow2DBC.cpp">
+      <Filter>Source Files\Boundary Conditions\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Boundary Conditions\Periodic2DBC.cpp">
+      <Filter>Source Files\Boundary Conditions\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Boundary Conditions\FreeSlip3DBC.cpp">
+      <Filter>Source Files\Boundary Conditions\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Boundary Conditions\Inflow3DBC.cpp">
+      <Filter>Source Files\Boundary Conditions\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Boundary Conditions\JetBC3D.cpp">
+      <Filter>Source Files\Boundary Conditions\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Boundary Conditions\NoSlipBC3D.cpp">
+      <Filter>Source Files\Boundary Conditions\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Boundary Conditions\Outflow3DBC.cpp">
+      <Filter>Source Files\Boundary Conditions\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Boundary Conditions\Periodic3DBC.cpp">
+      <Filter>Source Files\Boundary Conditions\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Boundary Conditions\BoundaryCondition3D.cpp">
+      <Filter>Source Files\Boundary Conditions\3D</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

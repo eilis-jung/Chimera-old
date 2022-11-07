@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\BaseGLRenderer.h" />
+    <ClInclude Include="..\include\CGAL\MeshPatchMapSplitter.h" />
+    <ClInclude Include="..\include\CGAL\PolygonSurface.h" />
+    <ClInclude Include="..\include\ChimeraRendering.h" />
+    <ClInclude Include="..\include\ChimeraRenderingCore.h" />
+    <ClInclude Include="..\include\GLRenderer2D.h" />
+    <ClInclude Include="..\include\GLRenderer3D.h" />
+    <ClInclude Include="..\include\Particles\ParticlesRenderer.h" />
+    <ClInclude Include="..\include\Particles\ParticleSystem2D.h" />
+    <ClInclude Include="..\include\Particles\ParticleSystem3D.h" />
+    <ClInclude Include="..\include\Primitives\Camera.h" />
+    <ClInclude Include="..\include\Primitives\Circle.h" />
+    <ClInclude Include="..\include\Primitives\Light.h" />
+    <ClInclude Include="..\include\Primitives\Line.h" />
+    <ClInclude Include="..\include\Primitives\Plane.h" />
+    <ClInclude Include="..\include\Primitives\Sphere.h" />
+    <ClInclude Include="..\include\RenderingUtils.h" />
+    <ClInclude Include="..\include\Visualization\CutCellsRenderer3D.h" />
+    <ClInclude Include="..\include\Visualization\CutCellsVelocityRenderer2D.h" />
+    <ClInclude Include="..\include\Visualization\CutVoxelRenderer3D.h" />
+    <ClInclude Include="..\include\Visualization\CutVoxelsVelocityRenderer3D.h" />
+    <ClInclude Include="..\include\Visualization\LineMeshRenderer.h" />
+    <ClInclude Include="..\include\Visualization\MeshRenderer.h" />
+    <ClInclude Include="..\include\Visualization\MeshRenderer3D.h" />
+    <ClInclude Include="..\include\Visualization\PolygonMeshRenderer.h" />
+    <ClInclude Include="..\include\Visualization\RaycastRenderer2D.h" />
+    <ClInclude Include="..\include\Visualization\ScalarFieldRenderer.h" />
+    <ClInclude Include="..\include\Visualization\GridRenderer.h" />
+    <ClInclude Include="..\include\Visualization\HexaGridRenderer.h" />
+    <ClInclude Include="..\include\Visualization\IsocontourRenderer.h" />
+    <ClInclude Include="..\include\Visualization\QuadGridRenderer.h" />
+    <ClInclude Include="..\include\Visualization\CutCellsRenderer2D.h" />
+    <ClInclude Include="..\include\Visualization\VectorFieldRenderer.h" />
+    <ClInclude Include="..\include\Visualization\VolumeMeshRenderer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\BaseGLRenderer.cpp" />
+    <ClCompile Include="..\src\CGAL\MeshPatchMapSplitter.cpp" />
+    <ClCompile Include="..\src\CGAL\PolygonSurface.cpp" />
+    <ClCompile Include="..\src\GLRenderer2D.cpp" />
+    <ClCompile Include="..\src\GLRenderer3D.cpp" />
+    <ClCompile Include="..\src\Particles\ParticlesRenderer.cpp" />
+    <ClCompile Include="..\src\Particles\ParticleSystem2D.cpp" />
+    <ClCompile Include="..\src\Particles\ParticleSystem3D.cpp" />
+    <ClCompile Include="..\src\Primitives\Camera.cpp" />
+    <ClCompile Include="..\src\Primitives\Circle.cpp" />
+    <ClCompile Include="..\src\Primitives\Light.cpp" />
+    <ClCompile Include="..\src\Primitives\Line.cpp" />
+    <ClCompile Include="..\src\Primitives\Plane.cpp" />
+    <ClCompile Include="..\src\Primitives\Sphere.cpp" />
+    <ClCompile Include="..\src\RenderingUtils.cpp" />
+    <ClCompile Include="..\src\Visualization\CutCellsRenderer3D.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\src\Visualization\CutCellsVelocityRenderer2D.cpp" />
+    <ClCompile Include="..\src\Visualization\CutVoxelRenderer3D.cpp" />
+    <ClCompile Include="..\src\Visualization\CutVoxelsVelocityRenderer3D.cpp" />
+    <ClCompile Include="..\src\Visualization\LineMeshRenderer.cpp" />
+    <ClCompile Include="..\src\Visualization\MeshRenderer.cpp" />
+    <ClCompile Include="..\src\Visualization\MeshRenderer3D.cpp" />
+    <ClCompile Include="..\src\Visualization\PolygonMeshRenderer.cpp" />
+    <ClCompile Include="..\src\Visualization\RaycastRenderer2D.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\src\Visualization\ScalarFieldRenderer.cpp" />
+    <ClCompile Include="..\src\Visualization\GridRenderer.cpp" />
+    <ClCompile Include="..\src\Visualization\HexaGridRenderer.cpp" />
+    <ClCompile Include="..\src\Visualization\IsocontourRenderer.cpp" />
+    <ClCompile Include="..\src\Visualization\QuadGridRenderer.cpp" />
+    <ClCompile Include="..\src\Visualization\CutCellsRenderer2D.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\src\Visualization\VectorFieldRenderer.cpp" />
+    <ClCompile Include="..\src\Visualization\VolumeMeshRenderer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\common\bin64\Shaders\2D\FiftyShadersOfGray.frag" />
+    <None Include="..\..\common\bin64\Shaders\2D\FiftyShadersOfGray.glsl" />
+    <None Include="..\..\common\bin64\Shaders\3D\AddVectors.glsl" />
+    <None Include="..\..\common\bin64\Shaders\3D\PhongShading.frag" />
+    <None Include="..\..\common\bin64\Shaders\3D\PhongShading.glsl" />
+    <None Include="..\..\common\bin64\Shaders\3D\VectorArrow.glsl" />
+    <None Include="..\..\common\bin\Shaders\2D\ScalarColor - grayscale.glsl">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\common\bin\Shaders\2D\ScalarColor - wavelength.glsl">
+      <FileType>Document</FileType>
+    </None>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{244C09EB-50A2-470E-863C-D9F1BD6285C2}</ProjectGuid>
+    <RootNamespace>ChimeraMath</RootNamespace>
+    <ProjectName>Chimera Rendering</ProjectName>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\..\common\lib\$(PlatformName)\</OutDir>
+    <IncludePath>D:\boost_1_49_0;$(IncludePath)</IncludePath>
+    <TargetName>$(ProjectName)D</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\..\common\lib\$(PlatformName)\</OutDir>
+    <TargetName>$(ProjectName)D64</TargetName>
+    <IntDir>..\..\Intermediate\x64\Debug\</IntDir>
+    <IncludePath>$(Boost_INCLUDEDIR);$(IncludePath)</IncludePath>
+    <LibraryPath>$(Boost_LIBRARYDIR);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\..\common\lib\$(PlatformName)\</OutDir>
+    <IncludePath>D:\boost_1_49_0;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\..\common\lib\$(PlatformName)\</OutDir>
+    <TargetName>$(ProjectName)64</TargetName>
+    <IntDir>..\..\Intermediate\x64\Release\</IntDir>
+    <IncludePath>$(Boost_INCLUDEDIR);$(IncludePath)</IncludePath>
+    <LibraryPath>$(Boost_LIBRARYDIR);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\include;..\..\ChimeraMath\include;..\..\ChimeraCore\include;..\..\ChimeraData\include;$(PHYSX_SDK)\Foundation\include;$(PHYSX_SDK)\Foundation\include\win;$(PHYSX_SDK)\Physics\include;$(PHYSX_SDK)\PhysXLoader\include;$(CUDA_INC_PATH);$(CG_INC_PATH);$(NVSDKCOMPUTE_ROOT)\C\Common\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <FloatingPointModel>Strict</FloatingPointModel>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)\$(ProjectName)D.lib</OutputFile>
+      <AdditionalDependencies>AntTweakBar.lib;cg.lib;cggl.lib;glew32.lib;freeglut.lib;SDL.lib;SDL_image.lib;SDLmain.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\common\lib\$(PlatformName)\;$(CG_LIB_PATH);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\Users\appce\source\repos\boost_1_80_0;..\include;..\..\ChimeraWindows\include;..\..\ChimeraCore\include;..\..\ChimeraGrids\include;..\..\ChimeraCGALWrapper\include;..\..\ChimeraCutCells\include;..\..\ChimeraResources\include;..\..\ChimeraLevelSets\include;..\..\ChimeraSolvers\include;..\..\ChimeraAdvection\include;..\..\ChimeraParticles\include;..\..\ChimeraInterpolation\include;..\..\ChimeraPoisson\include;..\..\ChimeraBoundaryConditions\include;..\..\ChimeraSolids\include;..\..\ChimeraMesh\include;..\..\ChimeraEigenWrapper\include;%(AdditionalIncludeDirectories);;../../../boost_1_60_0/;</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>false</OpenMPSupport>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)\$(ProjectName)D64.lib</OutputFile>
+      <AdditionalDependencies>AntTweakBar64.lib;glew64.lib;freeglut.lib;SDL2.lib;SDL_image64.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\common\lib\$(PlatformName)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
+      <TargetMachine>MachineX64</TargetMachine>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\include;..\..\ChimeraMath\include;..\..\ChimeraCore\include;..\..\ChimeraData\include;$(PHYSX_SDK)\Foundation\include;$(PHYSX_SDK)\Foundation\include\win;$(PHYSX_SDK)\Physics\include;$(PHYSX_SDK)\PhysXLoader\include;$(CUDA_INC_PATH);$(CG_INC_PATH);$(NVSDKCOMPUTE_ROOT)\C\Common\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)\$(ProjectName).lib</OutputFile>
+      <AdditionalDependencies>AntTweakBar.lib;glew32s.lib;freeglut.lib;SDL.lib;SDL_image.lib;SDLmain.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\common\lib\$(PlatformName)\;$(CG_LIB_PATH);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\include;..\..\ChimeraWindows\include;..\..\ChimeraCore\include;..\..\ChimeraGrids\include;..\..\ChimeraCGALWrapper\include;..\..\ChimeraCutCells\include;..\..\ChimeraResources\include;..\..\ChimeraLevelSets\include;..\..\ChimeraSolvers\include;..\..\ChimeraAdvection\include;..\..\ChimeraParticles\include;..\..\ChimeraInterpolation\include;..\..\ChimeraPoisson\include;..\..\ChimeraBoundaryConditions\include;..\..\ChimeraSolids\include;..\..\ChimeraMesh\include;..\..\ChimeraEigenWrapper\include;%(AdditionalIncludeDirectories);../../../boost_1_60_0/;</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <OpenMPSupport>false</OpenMPSupport>
+      <BrowseInformation>true</BrowseInformation>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)\$(ProjectName)64.lib</OutputFile>
+      <AdditionalDependencies>AntTweakBar64.lib;glew64.lib;freeglut.lib;SDL2.lib;SDL_image64.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\common\lib\$(PlatformName)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <TargetMachine>MachineX64</TargetMachine>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

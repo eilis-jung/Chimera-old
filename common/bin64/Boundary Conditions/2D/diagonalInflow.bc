@@ -1,0 +1,5 @@
+numBoundaryConditions 4
+allEast inflow 1 1
+allWest inflow 1 1
+allSouth inflow 1 1
+allNorth inflow 1 1

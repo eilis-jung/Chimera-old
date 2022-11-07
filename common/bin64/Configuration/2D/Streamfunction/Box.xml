@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>realTimeSimulation</SimulationType>
+  <boundaryConditionsFile>Boundary Conditions/2D/allFreeSlip.bc</boundaryConditionsFile>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0"/>
+    <FinalPoint x="2" y="2"/> <!--Final point is an approximation, since it can be modified to suit grid spacing-->
+    <Spacing>0.0625</Spacing>
+  </Grid>
+  <SimulationConfig>
+    <TotalTime value="10"></TotalTime>
+    <RotationalVelocityField>
+      <position x="0.5" y="0.5"></position>
+      <MinRadius>0</MinRadius>
+      <MaxRadius>0.5</MaxRadius>
+      <Orientation>1</Orientation>
+      <Strength>2</Strength>
+    </RotationalVelocityField>
+    <RotationalVelocityField>
+      <position x="1.5" y="1.5"></position>
+      <MinRadius>0</MinRadius>
+      <MaxRadius>0.5</MaxRadius>
+      <Orientation>1</Orientation>
+      <Strength>2</Strength>
+    </RotationalVelocityField>
+    <RotationalVelocityField>
+      <position x="1.5" y="0.5"></position>
+      <MinRadius>0</MinRadius>
+      <MaxRadius>0.5</MaxRadius>
+      <Orientation>-1</Orientation>
+      <Strength>2</Strength>
+    </RotationalVelocityField>
+    <RotationalVelocityField>
+      <position x="0.5" y="1.5"></position>
+      <MinRadius>0</MinRadius>
+      <MaxRadius>0.5</MaxRadius>
+      <Orientation>-1</Orientation>
+      <Strength>2</Strength>
+    </RotationalVelocityField>
+    <RotationalVelocityField>
+        <position x="1.0" y="1.0"></position>
+        <MinRadius>0</MinRadius>
+        <MaxRadius>0.25</MaxRadius>
+        <Orientation>-1</Orientation>
+        <Strength>2</Strength>
+    </RotationalVelocityField>
+  </SimulationConfig>
+  <Objects>
+    <TemperatureField>
+      <position px="1" py="0"></position>
+      <Value>100</Value>
+      <Circle>        
+        <Radius>0.25</Radius>
+      </Circle>
+    </TemperatureField>
+    <DensityField>
+      <Rectangle px="0.875" py="0" sx="0.2" sy="0.4"></Rectangle >
+    </DensityField>
+    <!--<WindForce>
+      <position px="0.1875" py="1.0625"></position>
+      <size x="0.0625" y="1.5"></size>
+      <strength x="0" y="2.0"></strength>
+    </WindForce>-->
+  </Objects>
+  <FlowSolverConfig>
+    <!--<FlowSolverType>StreamfunctionTurbulence</FlowSolverType>-->
+    <FlowSolverType>Regular</FlowSolverType>
+    <SolidWallType>
+      <FreeSlip></FreeSlip>
+      <!--<NoSlip></NoSlip>-->
+    </SolidWallType>
+    <AdvectionMethod>
+      <ParticleBasedAdvection>
+        <PositionIntegration>
+          <Method>rungeKutta2</Method>
+          <Interpolant>
+            <Method>CubicStreamfunction</Method>
+          </Interpolant>
+        </PositionIntegration>
+        <GridToParticle>
+          <Method>FLIP</Method>
+        </GridToParticle>
+        <ParticleToGrid>
+          <GridArrangement>Staggered</GridArrangement>
+          <Kernel>bilinear</Kernel>
+          <KernelDanglingCells>??</KernelDanglingCells>
+        </ParticleToGrid>
+        <Sampler>
+          <ParticlesPerCell>16</ParticlesPerCell>
+          <Type>Stratified</Type>
+          <ResampleParticles>true</ResampleParticles>
+        </Sampler>
+      </ParticleBasedAdvection>
+    </AdvectionMethod>
+    <ProjectionMethod>
+      <Platform>CPU</Platform>
+    </ProjectionMethod>
+    <FarFieldMethod>
+      <Standard></Standard>
+    </FarFieldMethod>
+    <PressureMethod>
+      <ConjugateGradient>
+        <Platform>CPU</Platform>
+        <Tolerance>0.0001</Tolerance>
+        <MaxIterations>200</MaxIterations>
+        <Preconditioner>NoPreconditioner</Preconditioner>
+      </ConjugateGradient>
+    </PressureMethod>
+  </FlowSolverConfig>
+</ChimeraConfig>
+

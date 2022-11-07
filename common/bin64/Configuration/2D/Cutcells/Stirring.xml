@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>realTimeSimulation</SimulationType>
+  <boundaryConditionsFile>Boundary Conditions/2D/allFreeSlip.bc</boundaryConditionsFile>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0"/>
+    <FinalPoint x="3" y="3"/> <!--Final point is an approximation, since it can be modified to suit grid spacing-->
+    <Spacing>0.125</Spacing>
+  </Grid>
+  <RigidObject>
+    <position x="1.0" y="1.0"></position>
+    <Geometry>
+      <File>Circles/openCircle45Degrees.dat</File>
+      <ExtrudeAlongNormalsSize>0.001</ExtrudeAlongNormalsSize>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.9898654" y="0.987423"></position>
+    <Geometry>
+      <File>line45Degrees.dat</File>
+      <ExtrudeAlongNormalsSize>0.001</ExtrudeAlongNormalsSize>
+    </Geometry>
+    <PositionUpdate>
+      <Path amplitude="1.0">
+        <File>line45DegreesPath.dat</File>
+      </Path>
+    </PositionUpdate>
+    <RotationUpdate>
+      <Alternating>
+        <MinAngle>-9</MinAngle>
+        <MaxAngle>9</MaxAngle>
+      </Alternating>
+      <AngularSpeed>5.0</AngularSpeed>
+      <AngularAcceleration>0.1</AngularAcceleration>
+      <StartingTime>1.5</StartingTime>
+    </RotationUpdate>
+  </RigidObject>
+  <SimulationConfig>
+    <TotalTime value="5"></TotalTime>
+  </SimulationConfig>
+  <FlowSolverConfig>
+    <FlowSolverType>CutCell</FlowSolverType>
+    <SolidWallType>
+      <FreeSlip></FreeSlip>
+      <!--<NoSlip></NoSlip>-->
+    </SolidWallType>
+    <AdvectionMethod>
+      <ParticleBasedAdvection>
+        <PositionIntegration>
+          <Method>rungeKutta2</Method>
+        </PositionIntegration>
+        <GridToParticle>
+          <Method>FLIP</Method>
+        </GridToParticle>
+        <ParticleToGrid>
+          <GridArrangement>Staggered</GridArrangement>
+          <Kernel>SPH</Kernel>
+          <KernelDanglingCells>??</KernelDanglingCells>
+        </ParticleToGrid>
+        <Sampler>
+          <ParticlesPerCell>32</ParticlesPerCell>
+          <Type>Stratified</Type>
+          <ResampleParticles>true</ResampleParticles>
+        </Sampler>
+      </ParticleBasedAdvection>
+    </AdvectionMethod>
+    <ProjectionMethod>
+      <Platform>CPU</Platform>
+    </ProjectionMethod>
+    <FarFieldMethod>
+      <Standard></Standard>
+    </FarFieldMethod>
+    <PressureMethod>
+      <ConjugateGradient>
+        <Platform>GPU</Platform>
+        <Tolerance>0.001</Tolerance>
+        <MaxIterations>2000</MaxIterations>
+        <Preconditioner>NoPreconditioner</Preconditioner>
+      </ConjugateGradient>
+    </PressureMethod>
+  </FlowSolverConfig>
+</ChimeraConfig>
+

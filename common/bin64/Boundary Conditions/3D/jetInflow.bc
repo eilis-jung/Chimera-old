@@ -1,0 +1,7 @@
+numBoundaryConditions 6
+allEast freeSlip
+allWest freeSlip
+allSouth jet 0 0.5 0 size 0.5 density 1 beta 0 minDensity 0.85 minTemperature 0.85
+allFront freeSlip
+allBack freeSlip
+allNorth outflow 0

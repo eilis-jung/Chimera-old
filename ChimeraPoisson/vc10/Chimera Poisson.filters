@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Matrix">
+      <UniqueIdentifier>{782b2d56-75a1-493d-bbc5-5f2c9194bbcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Matrix">
+      <UniqueIdentifier>{8bed46d2-b60d-499a-8091-65303e0bcbc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Base">
+      <UniqueIdentifier>{ff17b4c3-aa17-4fcf-b175-0cddc00d1401}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Solver">
+      <UniqueIdentifier>{3dc7f451-128f-469c-8c67-bb785fc96f86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Solver">
+      <UniqueIdentifier>{58b2fc54-6d69-488b-a089-1448fc180847}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Interpolation">
+      <UniqueIdentifier>{3af3cc67-2958-47f7-b355-29df18e4a5f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Interpolation">
+      <UniqueIdentifier>{f55bf7f3-d34c-444e-970c-41fcb3493e52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cuda Files">
+      <UniqueIdentifier>{15a7d80e-8dbe-4d6f-b217-cdfd6d31a373}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cuda Files\Solver">
+      <UniqueIdentifier>{edecf76d-5b7a-4c15-a981-9cdd84344593}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cuda Files\Matrix">
+      <UniqueIdentifier>{86b23124-98e1-4a0a-9940-869005b5ee8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utils">
+      <UniqueIdentifier>{02c7de1d-e210-459b-bec0-1e565f015b51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utils">
+      <UniqueIdentifier>{6766dc1c-967b-4a0b-91eb-082cd870900d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Solver\Multigrid">
+      <UniqueIdentifier>{86155414-c7ce-4fc4-9afd-e1e6d30b5065}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Solver\Multigrid">
+      <UniqueIdentifier>{c3a769f2-9fb2-4a7c-8642-852faffc827d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Base">
+      <UniqueIdentifier>{12a6e748-9433-47d9-8d61-a5c9a250efd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Integration">
+      <UniqueIdentifier>{7f8321a3-5b67-4d7f-bb0b-b71aeb94136b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Integration">
+      <UniqueIdentifier>{6af343d0-c157-482a-a085-68fb96c42eb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Interpolation\3D">
+      <UniqueIdentifier>{ed466357-1366-4bd1-b575-3a1c6736c487}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Interpolation\3D">
+      <UniqueIdentifier>{b0650b61-984d-4516-8049-c47db4aa4040}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Interpolation\2D">
+      <UniqueIdentifier>{6b472b4b-8920-4645-982e-0eb13e0ef4f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Interpolation\2D">
+      <UniqueIdentifier>{0541b987-2c33-4c3c-892d-cc50e72feb6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Interpolation\Deprecated">
+      <UniqueIdentifier>{cead75a3-26fc-481f-8290-b7ecd727578b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Interpolation\Deprecated">
+      <UniqueIdentifier>{d847d57e-bac8-4458-8534-0dea36e8a65b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Integration\Eulerian">
+      <UniqueIdentifier>{72b1933e-2ff2-45f5-b8db-b8420505fb0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Integration\Lagrangian">
+      <UniqueIdentifier>{25487f12-3273-48ed-91bb-25227b41e73e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Integration\Eulerian">
+      <UniqueIdentifier>{314c02d1-d6c1-43a3-9c95-6985c5756a95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Integration\Lagrangian">
+      <UniqueIdentifier>{7ac8a4dd-ce09-426e-9d92-82dbc5eac040}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Interpolation\2D\NewFilter1">
+      <UniqueIdentifier>{fbfe4ae5-b503-41b6-b8de-7dd891076177}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\Matrix\Matrix2x2.h">
+      <Filter>Header Files\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Matrix\Matrix3x3.h">
+      <Filter>Header Files\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Matrix\MatrixNxN.h">
+      <Filter>Header Files\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Matrix\PoissonMatrix.h">
+      <Filter>Header Files\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Matrix\Quaternion.h">
+      <Filter>Header Files\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Base\DoubleScalar.h">
+      <Filter>Header Files\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Base\Integer.h">
+      <Filter>Header Files\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Base\Scalar.h">
+      <Filter>Header Files\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Base\Vector2.h">
+      <Filter>Header Files\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Base\Vector3.h">
+      <Filter>Header Files\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Solver\PoissonSolver.h">
+      <Filter>Header Files\Solver</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Solver\ConjugateGradient.h">
+      <Filter>Header Files\Solver</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Solver\TDMA.h">
+      <Filter>Header Files\Solver</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MathUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Solver\GaussSeidel.h">
+      <Filter>Header Files\Solver</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Utils\TrajectoryIntegrators.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Utils\MathUtilsCore.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Solver\Multigrid.h">
+      <Filter>Header Files\Solver\Multigrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Solver\Multigrid2D.h">
+      <Filter>Header Files\Solver\Multigrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Solver\Multigrid3D.h">
+      <Filter>Header Files\Solver\Multigrid</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ChimeraMath.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Utils\SpaceTransforms.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Integration\TrajectoryIntegrators.h">
+      <Filter>Header Files\Integration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Utils\CollisionQueries.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Utils\ArbitraryPrecisionPredicates.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Base\Vector3d.h">
+      <Filter>Header Files\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Base\Vector2d.h">
+      <Filter>Header Files\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Matrix\Matrix3x3d.h">
+      <Filter>Header Files\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Matrix\MatrixNxNd.h">
+      <Filter>Header Files\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\MeanValueInterpolation3D.h">
+      <Filter>Header Files\Interpolation\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\SphericalBarycentricInterpolation3D.h">
+      <Filter>Header Files\Interpolation\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\LinearInterpolant3D.h">
+      <Filter>Header Files\Interpolation\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CubicMVCs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\StaggeredInterpolation3D.h">
+      <Filter>Header Files\Interpolation\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\StreamfunctionInterpolant3D.h">
+      <Filter>Header Files\Interpolation\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\Interpolant.h">
+      <Filter>Header Files\Interpolation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\BilinearStaggeredInterpolant2D.h">
+      <Filter>Header Files\Interpolation\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\BilinearNodalInterpolant2D.h">
+      <Filter>Header Files\Interpolation\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\CubicInterpolation2D.h">
+      <Filter>Header Files\Interpolation\Deprecated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\CubicSpline.h">
+      <Filter>Header Files\Interpolation\Deprecated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\LinearInterpolation2D.h">
+      <Filter>Header Files\Interpolation\Deprecated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\LinearInterpolation3D.h">
+      <Filter>Header Files\Interpolation\Deprecated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\SphInterpolation.h">
+      <Filter>Header Files\Interpolation\Deprecated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\RBF.h">
+      <Filter>Header Files\Interpolation\Deprecated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\CubicSpline1D.h">
+      <Filter>Header Files\Interpolation\Deprecated</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Integration\SemiLagrangianIntegrator.h">
+      <Filter>Header Files\Integration\Eulerian</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Integration\AdvectionIntegrator.h">
+      <Filter>Header Files\Integration\Eulerian</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Integration\MacCormackIntegrator.h">
+      <Filter>Header Files\Integration\Eulerian</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Integration\ParticlesPositionIntegrator.h">
+      <Filter>Header Files\Integration\Lagrangian</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Integration\UpwindGradientIntegrator.h">
+      <Filter>Header Files\Integration\Eulerian</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Integration\ForwardEulerParticlesIntegrator.h">
+      <Filter>Header Files\Integration\Lagrangian</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Integration\RungeKutta2ParticlesIntegrator.h">
+      <Filter>Header Files\Integration\Lagrangian</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\MeanValueInterpolant2D.h">
+      <Filter>Header Files\Interpolation\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\BilinearStreamfunctionInterpolant2D.h">
+      <Filter>Header Files\Interpolation\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\CubicStreamfunctionInterpolant2D.h">
+      <Filter>Header Files\Interpolation\2D</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\Matrix\PoissonMatrix.cpp">
+      <Filter>Source Files\Matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Matrix\Quaternion.cpp">
+      <Filter>Source Files\Matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Matrix\MatrixNxN.cpp">
+      <Filter>Source Files\Matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Solver\PoissonSolver.cpp">
+      <Filter>Source Files\Solver</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Solver\TDMA.cpp">
+      <Filter>Source Files\Solver</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Solver\ConjugateGradient.cpp">
+      <Filter>Source Files\Solver</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MathUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Solver\GaussSeidel.cpp">
+      <Filter>Source Files\Solver</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Utils\MathUtilsCore.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Solver\Multigrid3D.cpp">
+      <Filter>Source Files\Solver\Multigrid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Solver\Multigrid.cpp">
+      <Filter>Source Files\Solver\Multigrid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Solver\Multigrid2D.cpp">
+      <Filter>Source Files\Solver\Multigrid</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Utils\SpaceTransforms.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Utils\CollisionQueries.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Utils\ArbitraryPrecisionPredicates.c">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Utils\ArbitraryPrecisionPredicates.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Matrix\MatrixNxNd.cpp">
+      <Filter>Source Files\Matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Interpolation\MeanValueInterpolation3D.cpp">
+      <Filter>Source Files\Interpolation\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Interpolation\SphericalBarycentricInterpolation3D.cpp">
+      <Filter>Source Files\Interpolation\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Interpolation\LinearInterpolant3D.cpp">
+      <Filter>Source Files\Interpolation\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CubicMVCs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Interpolation\StreamfunctionInterpolant3D.cpp">
+      <Filter>Source Files\Interpolation\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Interpolation\StaggeredInterpolation3D.cpp">
+      <Filter>Source Files\Interpolation\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Interpolation\BilinearStaggeredInterpolant2D.cpp">
+      <Filter>Source Files\Interpolation\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Interpolation\BilinearNodalInterpolant2D.cpp">
+      <Filter>Source Files\Interpolation\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Interpolation\CubicInterpolation2D.cpp">
+      <Filter>Source Files\Interpolation\Deprecated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Interpolation\CubicSpline.cpp">
+      <Filter>Source Files\Interpolation\Deprecated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Interpolation\LinearInterpolation2D.cpp">
+      <Filter>Source Files\Interpolation\Deprecated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Interpolation\LinearInterpolation3D.cpp">
+      <Filter>Source Files\Interpolation\Deprecated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Interpolation\RBF.cpp">
+      <Filter>Source Files\Interpolation\Deprecated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Interpolation\SphInterpolation.cpp">
+      <Filter>Source Files\Interpolation\Deprecated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Interpolation\CubicSpline1D.cpp">
+      <Filter>Source Files\Interpolation\Deprecated</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Integration\AdvectionIntegrator.cpp">
+      <Filter>Source Files\Integration\Eulerian</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Integration\MacCormackIntegrator.cpp">
+      <Filter>Source Files\Integration\Eulerian</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Integration\SemiLagrangianIntegrator.cpp">
+      <Filter>Source Files\Integration\Eulerian</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Integration\TrajectoryIntegrators.cpp">
+      <Filter>Source Files\Integration\Eulerian</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Integration\UpwindGradientIntegrator.cpp">
+      <Filter>Source Files\Integration\Eulerian</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Integration\ForwardEulerParticlesIntegrator.cpp">
+      <Filter>Source Files\Integration\Lagrangian</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Integration\RungeKutta2ParticlesIntegrator.cpp">
+      <Filter>Source Files\Integration\Lagrangian</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Interpolation\MeanValueInterpolant2D.cpp">
+      <Filter>Source Files\Interpolation\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Interpolation\BilinearStreamfunctionInterpolant2D.cpp">
+      <Filter>Source Files\Interpolation\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Interpolation\CubicStreamfunctionInterpolant2D.cpp">
+      <Filter>Source Files\Interpolation\2D</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="..\cuda\Matrix\PoissonMatrix.cu">
+      <Filter>Cuda Files\Matrix</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\cuda\Solver\ConjugateGradient.cu">
+      <Filter>Cuda Files\Solver</Filter>
+    </CudaCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <!--Simulation types:
+        realTimeSimulation
+        offlineSimulation
+        precomputedSimulation
+        fetchBoundaryConditions -->
+  <SimulationType>realTimeSimulation</SimulationType>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0" z ="0.0"/>
+    <FinalPoint x="10" y="10" z ="10"/>
+    <Spacing>0.0625</Spacing>
+  </Grid>
+  <boundaryConditionsFile>Boundary Conditions/3D/leftInflow.bc</boundaryConditionsFile>
+  <SimulationConfig>
+    <Logging>
+      <LogCutCells>cutCellTest</LogCutCells>
+      <LogVelocity>cutCellFreeSlip</LogVelocity>
+    </Logging>
+    <TotalTime value="12"></TotalTime>
+  </SimulationConfig>
+  <Objects>
+    <CGALObjMesh>
+      <Filename>cubeEdgeSub.obj</Filename>
+      <Scale x="1.0" y="1.0" z="1.0"></Scale>
+      <position x="5.0" y="5.0" z="5.0"/>
+    </CGALObjMesh>
+  </Objects>
+  <FlowSolverConfig>
+    <FlowSolverType>CutCell</FlowSolverType>
+    <LinearInterpolationMethod>
+      <UseParticlesCache>true</UseParticlesCache>
+      <UseCGALAcceleration>false</UseCGALAcceleration>
+      <InterpolationType>mvc</InterpolationType>
+      <PosterioriProjection>false</PosterioriProjection>
+    </LinearInterpolationMethod>
+    <SolidWallType>
+      <!--<FreeSlip>
+        <MixNodeInterpolation>WeightedExtraDimensions</MixNodeInterpolation>
+      </FreeSlip>-->
+      <NoSlip></NoSlip>
+    </SolidWallType>
+    <AdvectionMethod>
+      <FLIP>
+        <PositionIntegration>rungeKutta2</PositionIntegration>
+        <ResampleParticlesCloseToMesh>false</ResampleParticlesCloseToMesh>
+        <ResamplingFactor>0.001</ResamplingFactor>
+        <FixParticlesSampling>
+          <FineGridResampling>
+            <Subdivisions>1</Subdivisions>
+          </FineGridResampling>
+          <CellResamplingThreshold>1.05</CellResamplingThreshold>
+        </FixParticlesSampling>
+        <VelocityUpdate>FLIP</VelocityUpdate>
+        <ParticleDensity>16</ParticleDensity>
+        <VisualizeVelocities>true</VisualizeVelocities>
+        <!--<CollisionDetectionMethod>cgalSegmentIntersection</CollisionDetectionMethod>-->
+        <!--<CollisionDetectionMethod>ccdBrochu</CollisionDetectionMethod>-->
+      </FLIP>
+    </AdvectionMethod>
+    <ProjectionMethod>
+      <Platform>CPU</Platform>
+    </ProjectionMethod>
+    <PressureMethod>
+      <ConjugateGradient>
+        <Platform>CPU</Platform>
+        <Tolerance>0.0001</Tolerance>
+        <MaxIterations>1000</MaxIterations>
+        <Preconditioner>NoPreconditioner</Preconditioner>
+      </ConjugateGradient>
+    </PressureMethod>
+  </FlowSolverConfig>
+</ChimeraConfig>

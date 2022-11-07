@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>precomputedAnimation</SimulationType>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0" z ="0.0"/>
+    <FinalPoint x="6.50" y="5.00" z ="7.50"/>
+    <Spacing>0.25</Spacing>
+  </Grid>
+  <Animations>
+    <NumFrames>45</NumFrames>
+    <PolygonMeshes>
+      <BaseFilename>bunnyCreepyCells</BaseFilename>
+      <LinearInterpolationMethod>
+        <UseParticlesCache>false</UseParticlesCache>
+        <UseCGALAcceleration>false</UseCGALAcceleration>
+        <InterpolationType>mvc</InterpolationType>
+        <PosterioriProjection>false</PosterioriProjection>
+      </LinearInterpolationMethod>
+    </PolygonMeshes>
+    <VelocityFile>bunnyCreepy</VelocityFile>
+  </Animations>
+  <Objects>
+    <ParticleSystem>
+      <Emitter>
+        <!--<Rectangle px="1" py="4" pz="3.5" sx="0.25" sy="1" sz="1"></Rectangle>-->
+        <!--<Rectangle px="1" py="1" pz="1" sx="1.25" sy="6" sz="6"></Rectangle>-->
+        <!--<Rectangle px="3.5" py="2.9" pz="3.75" sx="0.35" sy="0.15" sz="0.35"></Rectangle>-->
+        <Sphere px="1.25" py="2.75" pz="2.25" radius="0.25"></Sphere>
+        <!--<Rectangle px="4.95" py="2.65" pz="4.0" sx="0.25" sy="0.15" sz="0.25"></Rectangle>-->
+        <MaxAmount>192000</MaxAmount>
+        <InitialAmount>2000</InitialAmount>
+        <SpawnRatio>0</SpawnRatio>
+        <LifeTime>9999</LifeTime>
+        <LifeVariance>0.0</LifeVariance>
+      </Emitter>
+      <MinBounds px="0.0" py="0.0" pz="0.0"></MinBounds>
+      <MaxBounds px="9.75" py="9.75" pz="9.75"></MaxBounds>
+      <RenderingProperties>
+        <ColorScheme>jet</ColorScheme>
+        <VisualizeVectors>true</VisualizeVectors>
+      </RenderingProperties>
+    </ParticleSystem>
+    <CGALObjMesh>
+      <Filename>bunnyCreepy.obj</Filename>
+      <Scale x="1.0" y="1.0" z="1.0"></Scale>
+      <position x="2.75" y="1.55" z="1.85"/>
+      <!--<position x="4.0" y="3.75" z="4.0"/>-->
+    </CGALObjMesh>
+  </Objects>
+</ChimeraConfig>
+

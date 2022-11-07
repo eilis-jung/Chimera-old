@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <!--Simulation types:
+        realTimeSimulation
+        offlineSimulation
+        precomputedSimulation
+        fetchBoundaryConditions -->
+  <SimulationType>realTimeSimulation</SimulationType>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0" z ="0.0"/>
+    <FinalPoint x="9" y="9" z ="9"/>
+    <Spacing>1</Spacing>
+  </Grid>
+  <boundaryConditionsFile>Boundary Conditions/3D/leftInflow.bc</boundaryConditionsFile>
+  <SimulationConfig>
+    <TotalTime value="12"></TotalTime>
+  </SimulationConfig>
+  <Objects>
+    <Mesh>
+      <Filename>CubeTriangle.obj</Filename>
+      <Scale x="1.0" y="1.0" z="1.0"></Scale>
+      <position x="4.25" y="4.25" z="4.25"/>
+    </Mesh>
+  </Objects>
+  <FlowSolverConfig>
+    <FlowSolverType>CutCell</FlowSolverType>
+    <SolidWallType>
+      <!--<FreeSlip></FreeSlip>-->
+      <NoSlip></NoSlip>
+    </SolidWallType>
+    <AdvectionMethod>
+      <ParticleBasedAdvection>
+        <PositionIntegration>
+          <Method>rungeKutta2</Method>
+          <Interpolant>
+            <Method>CubicStreamfunction</Method>
+          </Interpolant>
+          <Interpolant>
+            <Method>SubdivisionStreamfunction</Method>
+          </Interpolant>
+        </PositionIntegration>
+        <GridToParticle>
+          <Method>FLIP</Method>
+        </GridToParticle>
+        <ParticleToGrid>
+          <GridArrangement>Nodal</GridArrangement>
+          <Kernel>bilinear</Kernel>
+        </ParticleToGrid>
+        <Sampler>
+          <ParticlesPerCell>8</ParticlesPerCell>
+          <Type>Stratified</Type>
+          <ResampleParticles>true</ResampleParticles>
+        </Sampler>
+      </ParticleBasedAdvection>
+    </AdvectionMethod>
+    <ProjectionMethod>
+      <Platform>CPU</Platform>
+    </ProjectionMethod>
+    <PressureMethod>
+      <ConjugateGradient>
+        <Platform>CPU</Platform>
+        <Tolerance>0.0001</Tolerance>
+        <MaxIterations>1000</MaxIterations>
+        <Preconditioner>NoPreconditioner</Preconditioner>
+      </ConjugateGradient>
+    </PressureMethod>
+  </FlowSolverConfig>
+</ChimeraConfig>

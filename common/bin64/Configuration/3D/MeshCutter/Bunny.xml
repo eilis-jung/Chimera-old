@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>meshCutter</SimulationType>
+  <CuttingPlane>
+    <Position x="1.06" y="1.390625" z="0.21875"></Position>
+    <UpVector x="0" y="1" z="0"></UpVector>
+  </CuttingPlane>
+  <Objects>
+    <Grid>
+      <InitialPoint x="0.0" y="0.0" z ="0.0"/>
+      <FinalPoint x="8" y="8" z ="8"/>
+      <Spacing>1</Spacing>
+    </Grid>
+    <Mesh>
+      <Filename>BunnyClosed.obj</Filename>
+      <Scale x="1.0" y="1.0" z="1.0"></Scale>
+      <position x="3.75" y="3.25" z="4.5"/>
+    </Mesh>
+    <Plane>
+      <Position x="-2.0" y="0.5" z="-2.0"></Position>
+      <UpVector x="0.0" y="2.5" z="1.0"></UpVector>
+      <!--<PlaneSize x="4.00" y="2.0"></PlaneSize>-->
+      <PlaneSize x="4.00" y="4.0"></PlaneSize>
+      <Scale>0.03125</Scale>
+    </Plane>
+  </Objects>
+</ChimeraConfig>

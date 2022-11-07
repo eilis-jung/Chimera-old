@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>precomputedAnimation</SimulationType>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0" z ="0.0"/>
+    <FinalPoint x="10.00" y="10.00" z ="10.00"/>
+    <Spacing>1</Spacing>
+  </Grid>
+  <Animations>
+    <NumFrames>60</NumFrames>
+    <TriangleMeshes>
+      <BaseFilename>bunnyFreeSlipCellsShort</BaseFilename>
+    </TriangleMeshes>
+    <VelocityFile>bunnyFreeSlipShort</VelocityFile>
+  </Animations>
+  <Objects>
+    <ParticleSystem>
+      <Emitter>
+        <!--<Rectangle px="1" py="4" pz="3.5" sx="0.25" sy="1" sz="1"></Rectangle>-->
+        <!--<Rectangle px="1" py="1" pz="1" sx="1.25" sy="6" sz="6"></Rectangle>-->
+        <!--<Rectangle px="3.5" py="2.9" pz="3.75" sx="0.35" sy="0.15" sz="0.35"></Rectangle>-->
+        <Rectangle px="4.95" py="2.65" pz="4.0" sx="0.25" sy="0.15" sz="0.25"></Rectangle>
+      </Emitter>
+      <MinBounds px="0.0" py="0.0" pz="0.0"></MinBounds>
+      <MaxBounds px="9.75" py="9.75" pz="9.75"></MaxBounds>
+      <ParticlesProperties>
+        <MaxAmount>1000</MaxAmount>
+        <InitialAmount>1000</InitialAmount>
+        <SpawnRatio>20000</SpawnRatio>
+        <LifeTime>9999</LifeTime>
+        <LifeVariance>0.0</LifeVariance>
+      </ParticlesProperties>
+      <RenderingProperties>
+        <ColorScheme>jet</ColorScheme>
+      </RenderingProperties>
+    </ParticleSystem>
+    <CGALObjMesh>
+      <Filename>bunnyRefined2.obj</Filename>
+      <Scale x="1.0" y="1.0" z="1.0"></Scale>
+      <position x="4.01" y="3.751" z="4.11"/>
+    </CGALObjMesh>
+  </Objects>
+</ChimeraConfig>
+

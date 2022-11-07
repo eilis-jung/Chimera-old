@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>realTimeSimulation</SimulationType>
+  <boundaryConditionsFile>Boundary Conditions/2D/leftInflow.bc</boundaryConditionsFile>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0"/>
+    <FinalPoint x="2.0" y="1.25"/> <!--Final point is an approximation, since it can be modified to suit grid spacing-->
+    <Spacing>0.125</Spacing>
+  </Grid>
+  <RigidObject>
+    <position x="0.93125" y="0.501923077"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.503846154"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.505769231"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject> 
+  <RigidObject>
+    <position x="0.93125" y="0.507692308"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.509615385"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.511538462"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.513461538"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.515384615"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.517307692"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.519230769"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.521153846"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.523076923"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    0.5882352 + 
+    <position x="0.93125" y="0.525"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.526923077"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.528846154"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.530769231"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.532692308"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.534615385"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.536538462"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.538461538"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.540384615"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.542307692"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.544230769"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.546153846"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.548076923"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.55"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.551923077"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.553846154"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    0.5882352 +
+    <position x="0.93125" y="0.555769231"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.557692308"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.559615385"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.561538462"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <!--32 mark-->
+  <RigidObject>
+    <position x="0.93125" y="0.563461538"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.565384615"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.567307692"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.569230769"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.571153846"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.544117"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.573076923"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.575"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.576923077"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.578846154"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.580769231"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.582692308"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    0.5882352 +
+    <position x="0.93125" y="0.584615385"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.586538462"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.588461538"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.590384615"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.592307692"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.594230769"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.596153846"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.598076923"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.6"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.601923077"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.603846154"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.605769231"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.607692308"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.609615385"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.611538462"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.613461538"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    0.5882352 +
+    <position x="0.93125" y="0.615384615"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.617307692"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.619230769"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.621153846"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.93125" y="0.623076923"></position>
+    <Geometry>
+      <lengthSize>0.5</lengthSize>
+      <numSubdivisions>2</numSubdivisions>
+      <HorizontalLine></HorizontalLine>
+    </Geometry>
+  </RigidObject>
+  <SimulationConfig>
+    <TotalTime value="10"></TotalTime>
+  </SimulationConfig>
+  <FlowSolverConfig>
+    <FlowSolverType>CutCell</FlowSolverType>
+    <SolidWallType>
+      <FreeSlip></FreeSlip>
+      <!--<NoSlip></NoSlip>-->
+    </SolidWallType>
+    <AdvectionMethod>
+      <ParticleBasedAdvection>
+        <PositionIntegration>
+          <Method>rungeKutta2</Method>
+          <!--<Interpolant>
+            <Method>CubicStreamfunction</Method>
+          </Interpolant>-->
+        </PositionIntegration>
+        <GridToParticle>
+          <Method>FLIP</Method>
+        </GridToParticle>
+        <ParticleToGrid>
+          <GridArrangement>Staggered</GridArrangement>
+          <Kernel>SPH</Kernel>
+        </ParticleToGrid>
+        <Sampler>
+          <ParticlesPerCell>512</ParticlesPerCell>
+          <Type>Stratified</Type>
+          <ResampleParticles>true</ResampleParticles>
+        </Sampler>
+      </ParticleBasedAdvection>
+    </AdvectionMethod>
+    <ProjectionMethod>
+      <Platform>CPU</Platform>
+    </ProjectionMethod>
+    <FarFieldMethod>
+      <Standard></Standard>
+    </FarFieldMethod>
+    <PressureMethod>
+      <ConjugateGradient>
+        <Platform>GPU</Platform>
+        <Tolerance>0.001</Tolerance>
+        <MaxIterations>2000</MaxIterations>
+        <Preconditioner>NoPreconditioner</Preconditioner>
+      </ConjugateGradient>
+    </PressureMethod>
+  </FlowSolverConfig>
+</ChimeraConfig>
+

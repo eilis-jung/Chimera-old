@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{e40fef9a-c481-4351-a843-277f41766483}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{bd74fbf5-3c02-4162-b8ac-976aac7ec55d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{f84ff4ba-e5da-46b9-ac8f-d60b2a625762}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Boundary Conditions">
+      <UniqueIdentifier>{d49b38ad-6172-4925-b66e-b0eabf80ef27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Boundary Conditions\3D">
+      <UniqueIdentifier>{988d5986-f0c7-434a-a9a0-a250a03fbd83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration">
+      <UniqueIdentifier>{5fec66cc-5f4d-47f9-a091-01f8b688ab5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\2D">
+      <UniqueIdentifier>{edcc9bb7-f15d-42e6-b8eb-b8d8b8f47965}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\2D\Simulation">
+      <UniqueIdentifier>{4daad12a-3e19-403b-b5ed-6aff41e6988e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\2D\Simulation\Regular">
+      <UniqueIdentifier>{63adf1d5-242d-4d6d-9e27-a31b02870f33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\2D\Simulation\CutCells">
+      <UniqueIdentifier>{fe9acf48-6f38-4ab8-a2dd-e883617c5fec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Boundary Conditions\2D">
+      <UniqueIdentifier>{eb622931-6162-4126-b86c-23f0a4f0a781}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\2D\Simulation\CutCells\Lines">
+      <UniqueIdentifier>{d18a9cb2-b7e9-4e05-b670-f9bc30202a3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\2D\Simulation\CutCells\Gears">
+      <UniqueIdentifier>{03895106-fa1d-46b5-a7e1-6b1fa6218637}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\2D\Simulation\CutCells\Pipes">
+      <UniqueIdentifier>{fdf2a689-40b0-4f44-85b8-b052a367cac8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\2D\Simulation\CutCells\Mazes">
+      <UniqueIdentifier>{8b979bad-693c-4ed3-9d53-1d016f511d07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\2D\Simulation\CutCells\Tests">
+      <UniqueIdentifier>{3b0ddd5a-c390-4554-9b85-218493e13c5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\2D\Simulation\CutCells\Circles">
+      <UniqueIdentifier>{7d76a199-c86e-4376-b4b7-87357fd9db5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\3D">
+      <UniqueIdentifier>{5b34bd61-0985-46b8-bc79-f40f28bd0ed2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\3D\Simulation">
+      <UniqueIdentifier>{b9ba61f7-4677-4c6c-a1c1-e226ad9affa3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Configuration\2D\Simulation\Liquids">
+      <UniqueIdentifier>{51ff17e2-2ff6-478b-8d89-2a6634860fc5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\common\bin64\Boundary Conditions\3D\allFreeSlip.bc">
+      <Filter>Resource Files\Boundary Conditions\3D</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Boundary Conditions\3D\bottomTopOutflow.bc">
+      <Filter>Resource Files\Boundary Conditions\3D</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Boundary Conditions\3D\downInflow.bc">
+      <Filter>Resource Files\Boundary Conditions\3D</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Boundary Conditions\3D\jetInflow.bc">
+      <Filter>Resource Files\Boundary Conditions\3D</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Boundary Conditions\3D\leftInflow.bc">
+      <Filter>Resource Files\Boundary Conditions\3D</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Boundary Conditions\3D\leftRightOutflow.bc">
+      <Filter>Resource Files\Boundary Conditions\3D</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Boundary Conditions\3D\topInflow.bc">
+      <Filter>Resource Files\Boundary Conditions\3D</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Boundary Conditions\2D\jetBottomInflow.bc">
+      <Filter>Resource Files\Boundary Conditions\2D</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Boundary Conditions\2D\allFreeSlip.bc">
+      <Filter>Resource Files\Boundary Conditions\2D</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Boundary Conditions\2D\allOutflow.bc">
+      <Filter>Resource Files\Boundary Conditions\2D</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Boundary Conditions\2D\bottomInflow.bc">
+      <Filter>Resource Files\Boundary Conditions\2D</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Boundary Conditions\2D\diagonalInflow.bc">
+      <Filter>Resource Files\Boundary Conditions\2D</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Boundary Conditions\2D\leftInflow.bc">
+      <Filter>Resource Files\Boundary Conditions\2D</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Boundary Conditions\2D\leftRightInflow.bc">
+      <Filter>Resource Files\Boundary Conditions\2D</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Boundary Conditions\2D\leftRightOutflow.bc">
+      <Filter>Resource Files\Boundary Conditions\2D</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Boundary Conditions\2D\slidingLid.bc">
+      <Filter>Resource Files\Boundary Conditions\2D</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Boundary Conditions\2D\topOutflow.bc">
+      <Filter>Resource Files\Boundary Conditions\2D</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\..\common\bin64\Configuration\ChimeraCFG.xml">
+      <Filter>Resource Files</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Simulation\Regular\Smoke Buoyancy.xml">
+      <Filter>Resource Files\Configuration\2D\Simulation\Regular</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Simulation\Regular\Box Sliding Lid.xml">
+      <Filter>Resource Files\Configuration\2D\Simulation\Regular</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Simulation\Cutcells\Diagonal Flow.xml">
+      <Filter>Resource Files\Configuration\2D\Simulation\CutCells\Lines</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Simulation\Cutcells\Many Lines x1.xml">
+      <Filter>Resource Files\Configuration\2D\Simulation\CutCells\Lines</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Simulation\Cutcells\Many Lines x2.xml">
+      <Filter>Resource Files\Configuration\2D\Simulation\CutCells\Lines</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Simulation\Cutcells\Many Lines x8.xml">
+      <Filter>Resource Files\Configuration\2D\Simulation\CutCells\Lines</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Simulation\Cutcells\Many Lines x16.xml">
+      <Filter>Resource Files\Configuration\2D\Simulation\CutCells\Lines</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Simulation\Cutcells\Many Lines x64.xml">
+      <Filter>Resource Files\Configuration\2D\Simulation\CutCells\Lines</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Simulation\Cutcells\Vertical Lines Opposing.xml">
+      <Filter>Resource Files\Configuration\2D\Simulation\CutCells\Lines</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Simulation\Cutcells\Vertical Lines.xml">
+      <Filter>Resource Files\Configuration\2D\Simulation\CutCells\Lines</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Simulation\Cutcells\Gear Channel.xml">
+      <Filter>Resource Files\Configuration\2D\Simulation\CutCells\Gears</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Simulation\Cutcells\Gear.xml">
+      <Filter>Resource Files\Configuration\2D\Simulation\CutCells\Gears</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Simulation\Cutcells\Rotating Gear.xml">
+      <Filter>Resource Files\Configuration\2D\Simulation\CutCells\Gears</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Simulation\Cutcells\Pipe Complex.xml">
+      <Filter>Resource Files\Configuration\2D\Simulation\CutCells\Pipes</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Simulation\Cutcells\Pipe Subdivision.xml">
+      <Filter>Resource Files\Configuration\2D\Simulation\CutCells\Pipes</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Simulation\Cutcells\Maze5x5 Coarse.xml">
+      <Filter>Resource Files\Configuration\2D\Simulation\CutCells\Mazes</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Simulation\Cutcells\Maze5x5.xml">
+      <Filter>Resource Files\Configuration\2D\Simulation\CutCells\Mazes</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Simulation\Cutcells\Simple Circle.xml">
+      <Filter>Resource Files\Configuration\2D\Simulation\CutCells\Tests</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Simulation\Cutcells\Simple Line.xml">
+      <Filter>Resource Files\Configuration\2D\Simulation\CutCells\Tests</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Simulation\Cutcells\Circles - Coarse.xml">
+      <Filter>Resource Files\Configuration\2D\Simulation\CutCells\Circles</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Simulation\Cutcells\Circles.xml">
+      <Filter>Resource Files\Configuration\2D\Simulation\CutCells\Circles</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Simulation\Cutcells\Rotating Line.xml">
+      <Filter>Resource Files\Configuration\2D\Simulation\CutCells\Lines</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Simulation\CutCells\Moving Circle.xml">
+      <Filter>Resource Files\Configuration\2D\Simulation\CutCells\Circles</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Simulation\CutCells\Obstacle Circles.xml">
+      <Filter>Resource Files\Configuration\2D\Simulation\CutCells\Circles</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Simulation\Regular\Colliding Jets.xml">
+      <Filter>Resource Files\Configuration\2D\Simulation\Regular</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Simulation\Liquids\WaterCircle.xml">
+      <Filter>Resource Files\Configuration\2D\Simulation\Liquids</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Simulation\CutCells\Simple Square.xml">
+      <Filter>Resource Files\Configuration\2D\Simulation\CutCells\Tests</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Simulation\CutCells\Couette.xml">
+      <Filter>Resource Files\Configuration\2D\Simulation\CutCells\Tests</Filter>
+    </Xml>
+    <Xml Include="..\..\common\bin64\Configuration\2D\Simulation\CutCells\Taylor Couette.xml">
+      <Filter>Resource Files\Configuration\2D\Simulation\CutCells\Tests</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

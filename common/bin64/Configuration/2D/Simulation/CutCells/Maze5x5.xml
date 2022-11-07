@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>realTimeSimulation</SimulationType>
+  <boundaryConditionsFile>Boundary Conditions/2D/allOutflow.bc</boundaryConditionsFile>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0"/>
+    <FinalPoint x="8.0" y="8.0"/>
+    <!--Final point is an approximation, since it can be modified to suit grid spacing-->
+    <Spacing>0.5</Spacing>
+  </Grid>
+  <Objects>
+    <RigidObject>
+      <position x="1.75" y="-0.25"></position>
+      <Geometry>
+        <File>mazes/mazeBottom.dat</File>
+        <ExtrudeAlongNormalsSize>0.001</ExtrudeAlongNormalsSize>
+      </Geometry>
+    </RigidObject>
+    <RigidObject>
+      <position x="1.75" y="-0.25"></position>
+      <Geometry>
+        <File>mazes/mazeTop.dat</File>
+        <ExtrudeAlongNormalsSize>0.001</ExtrudeAlongNormalsSize>
+      </Geometry>
+    </RigidObject>
+    <RigidObject>
+      <position x="1.28" y="5.45"></position>
+      <Geometry>
+        <File>pacman/ghost3.dat</File>
+        <ClosedMesh>true</ClosedMesh>
+      </Geometry>
+      <PositionUpdate>
+        <Path amplitude="2.0">
+          <File>pacman/ghostPath.dat</File>
+        </Path>
+      </PositionUpdate>
+    </RigidObject>
+  </Objects>
+  <SimulationConfig>
+    <Logging>
+      <LogVelocity>true</LogVelocity>
+      <LogPressure>true</LogPressure>
+    </Logging>
+    <TotalTime value="5.125"></TotalTime>
+  </SimulationConfig>
+  <FlowSolverConfig>
+    <FlowSolverType>CutCell</FlowSolverType>
+    <SolidWallType>
+      <FreeSlip></FreeSlip>
+      <!--<NoSlip></NoSlip>-->
+    </SolidWallType>
+    <AdvectionMethod>
+      <ParticleBasedAdvection>
+        <PositionIntegration>
+          <Method>rungeKutta2</Method>
+        </PositionIntegration>
+        <GridToParticle>
+          <Method mixPIC="0.01">FLIP</Method>
+        </GridToParticle>
+        <ParticleToGrid>
+          <GridArrangement>Nodal</GridArrangement>
+          <Kernel>bilinear</Kernel>
+        </ParticleToGrid>
+        <Sampler>
+          <ParticlesPerCell>32</ParticlesPerCell>
+          <Type>Poisson</Type>
+          <ResampleParticles>true</ResampleParticles>
+        </Sampler>
+      </ParticleBasedAdvection>
+    </AdvectionMethod>
+    <PressureMethod>
+      <ConjugateGradient>
+        <Platform>GPU</Platform>
+        <Tolerance>0.000001</Tolerance>
+        <MaxIterations>150</MaxIterations>
+        <Preconditioner>NoPreconditioner</Preconditioner>
+      </ConjugateGradient>
+    </PressureMethod>
+  </FlowSolverConfig>
+</ChimeraConfig>

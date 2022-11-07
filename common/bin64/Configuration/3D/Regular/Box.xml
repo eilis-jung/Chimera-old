@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <!--Simulation types:
+        realTimeSimulation
+        offlineSimulation
+        precomputedSimulation
+        fetchBoundaryConditions -->
+  <SimulationType>realTimeSimulation</SimulationType>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0" z ="0.0"/>
+    <FinalPoint x="4" y="4" z ="4"/>
+    <Spacing>0.25</Spacing>
+  </Grid>
+  <boundaryConditionsFile>Boundary Conditions/3D/leftInflow.bc</boundaryConditionsFile>
+  <SimulationConfig>
+    <!--<Logging>
+      <LogVelocity>jetChannel</LogVelocity>
+    </Logging>-->
+    <TotalTime value="6"></TotalTime>
+  </SimulationConfig>
+  <DensityField>
+    <Cube px="1.75" py ="0.75" pz="1.75" sx="0.5" sy="0.5" sz="0.5" />
+  </DensityField>
+  <FlowSolverConfig>
+    <FlowSolverType>Regular</FlowSolverType>
+    <AdvectionMethod>
+      <FLIP>
+        <PositionIntegration>rungeKutta2</PositionIntegration>
+        <ResampleParticlesCloseToMesh>false</ResampleParticlesCloseToMesh>
+        <ResamplingFactor>0.001</ResamplingFactor>
+        <FixParticlesSampling>
+          <FineGridResampling>
+            <Subdivisions>1</Subdivisions>
+          </FineGridResampling>
+          <CellResamplingThreshold>1.05</CellResamplingThreshold>
+        </FixParticlesSampling>
+        <VelocityUpdate>FLIP</VelocityUpdate>
+        <ParticleDensity>64</ParticleDensity>
+        <VisualizeVelocities>true</VisualizeVelocities>
+      </FLIP>
+    </AdvectionMethod>
+    <ProjectionMethod>
+      <Platform>CPU</Platform>
+    </ProjectionMethod>
+    <PressureMethod>
+      <ConjugateGradient>
+        <Platform>CPU</Platform>
+        <Tolerance>0.0001</Tolerance>
+        <MaxIterations>1000</MaxIterations>
+        <Preconditioner>NoPreconditioner</Preconditioner>
+      </ConjugateGradient>
+    </PressureMethod>
+  </FlowSolverConfig>
+</ChimeraConfig>

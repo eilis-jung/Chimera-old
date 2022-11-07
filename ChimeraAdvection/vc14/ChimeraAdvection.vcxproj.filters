@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{53f32fcd-8e2d-432f-bc97-017fee57e090}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{9b4dcff2-ff59-4346-acf3-7218d061b8ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Particle Based Advection">
+      <UniqueIdentifier>{b333bcd7-52a9-44f0-a079-ec0450d328b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Grid Based Advection">
+      <UniqueIdentifier>{24381b5b-80a7-4cbd-a502-f9c8c6896cf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Integration">
+      <UniqueIdentifier>{fdcd678b-b5ce-4d4d-9bc7-43c730492843}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Grid Based Advection">
+      <UniqueIdentifier>{ac28cbba-09c4-47b6-95aa-8863c4896c60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Particle Based Advection">
+      <UniqueIdentifier>{4cbd27d0-987b-4108-965c-a1b37e5bfe62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Integration">
+      <UniqueIdentifier>{38840f3b-d6f9-49e3-b442-a3daaf477905}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Kernels">
+      <UniqueIdentifier>{678a3d52-9e20-4ec8-a0ce-9c955bfe2752}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Kernels">
+      <UniqueIdentifier>{aa1b0c46-4064-42eb-ac22-ba2d18b83893}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Particle Based Advection\2D">
+      <UniqueIdentifier>{13a0d1d4-e7bf-4c5b-9fae-cde44ea9aa1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Particle Based Advection\Base">
+      <UniqueIdentifier>{394b8076-a6da-4c59-9af4-7cf50968c739}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Particle Based Advection\Base">
+      <UniqueIdentifier>{031b8644-a64d-4004-bc86-138d4b315cf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Particle Based Advection\2D">
+      <UniqueIdentifier>{390bfdd4-c90f-42b1-8964-182253eb8af1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Particle Based Advection\3D">
+      <UniqueIdentifier>{4b987bc3-7dca-4270-b411-9e62fbe72fe8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Particle Based Advection\3D">
+      <UniqueIdentifier>{051c83b5-9386-4910-8092-4107112238e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Base">
+      <UniqueIdentifier>{cacd1e50-82b9-4091-9124-1b6d27cbb2da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Particle Based Advection\2D\Experimental">
+      <UniqueIdentifier>{939fd8c5-3f41-44ab-a134-8ba74f23a2fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Particle Based Advection\2D\Experimental">
+      <UniqueIdentifier>{61fb502b-9854-400a-9711-c750c71bc42f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\Integration\TrajectoryIntegrators.h">
+      <Filter>Header Files\Integration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Integration\UpwindGradientIntegrator.h">
+      <Filter>Header Files\Integration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Integration\PositionIntegrator.h">
+      <Filter>Header Files\Integration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Integration\ForwardEulerIntegrator.h">
+      <Filter>Header Files\Integration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Integration\RungeKutta2Integrator.h">
+      <Filter>Header Files\Integration</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ChimeraAdvection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Kernels\TransferKernel.h">
+      <Filter>Header Files\Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ParticleBased\GridToParticlesFLIP2D.h">
+      <Filter>Header Files\Particle Based Advection\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ParticleBased\ParticlesToStaggeredGrid2D.h">
+      <Filter>Header Files\Particle Based Advection\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ParticleBased\GridToParticles.h">
+      <Filter>Header Files\Particle Based Advection\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ParticleBased\ParticleBasedAdvection.h">
+      <Filter>Header Files\Particle Based Advection\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ParticleBased\ParticlesToGrid.h">
+      <Filter>Header Files\Particle Based Advection\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ParticleBased\ParticlesToNodalGrid2D.h">
+      <Filter>Header Files\Particle Based Advection\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ParticleBased\GridToParticlesFLIP3D.h">
+      <Filter>Header Files\Particle Based Advection\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ParticleBased\ParticlesToStaggeredGrid3D.h">
+      <Filter>Header Files\Particle Based Advection\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Kernels\BilinearKernel.h">
+      <Filter>Header Files\Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Kernels\SPHKernel.h">
+      <Filter>Header Files\Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\AdvectionBase.h">
+      <Filter>Header Files\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ParticleBased\ParticlesToNodalGrid3D.h">
+      <Filter>Header Files\Particle Based Advection\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GridBased\SemiLagrangianAdvection.h">
+      <Filter>Header Files\Grid Based Advection</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ParticleBased\GridToParticlesAPIC2D.h">
+      <Filter>Header Files\Particle Based Advection\2D\Experimental</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ParticleBased\GridToParticlesRPIC2D.h">
+      <Filter>Header Files\Particle Based Advection\2D\Experimental</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ParticleBased\GridToParticlesTurbulent2D.h">
+      <Filter>Header Files\Particle Based Advection\2D\Experimental</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ParticleBased\ParticlesToStaggeredGridAPIC2D.h">
+      <Filter>Header Files\Particle Based Advection\2D\Experimental</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ParticleBased\ParticlesToStaggeredGridRPIC2D.h">
+      <Filter>Header Files\Particle Based Advection\2D\Experimental</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ParticleBased\TurbulentParticlesToGrid2D.h">
+      <Filter>Header Files\Particle Based Advection\2D\Experimental</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GridBased\MacCormackAdvection.h">
+      <Filter>Header Files\Grid Based Advection</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Kernels\InverseDistanceKernel.h">
+      <Filter>Header Files\Kernels</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\Integration\TrajectoryIntegrators.cpp">
+      <Filter>Source Files\Integration</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Integration\UpwindGradientIntegrator.cpp">
+      <Filter>Source Files\Integration</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Integration\ForwardEulerIntegrator.cpp">
+      <Filter>Source Files\Integration</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Integration\RungeKutta2Integrator.cpp">
+      <Filter>Source Files\Integration</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Kernels\TransferKernel.cpp">
+      <Filter>Source Files\Kernels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ParticleBased\ParticleBasedAdvection.cpp">
+      <Filter>Source Files\Particle Based Advection\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ParticleBased\ParticlesToGrid.cpp">
+      <Filter>Source Files\Particle Based Advection\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ParticleBased\GridToParticlesFLIP2D.cpp">
+      <Filter>Source Files\Particle Based Advection\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ParticleBased\ParticlesToStaggeredGrid2D.cpp">
+      <Filter>Source Files\Particle Based Advection\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ParticleBased\ParticlesToNodalGrid2D.cpp">
+      <Filter>Source Files\Particle Based Advection\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Integration\PositionIntegrator.cpp">
+      <Filter>Header Files\Integration</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ParticleBased\GridToParticlesFLIP3D.cpp">
+      <Filter>Source Files\Particle Based Advection\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ParticleBased\ParticlesToStaggeredGrid3D.cpp">
+      <Filter>Source Files\Particle Based Advection\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Kernels\BilinearKernel.cpp">
+      <Filter>Source Files\Kernels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Kernels\SPHKernel.cpp">
+      <Filter>Source Files\Kernels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ParticleBased\ParticlesToNodalGrid3D.cpp">
+      <Filter>Source Files\Particle Based Advection\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GridBased\SemiLagrangianAdvection.cpp">
+      <Filter>Source Files\Grid Based Advection</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ParticleBased\GridToParticlesAPIC2D.cpp">
+      <Filter>Source Files\Particle Based Advection\2D\Experimental</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ParticleBased\GridToParticlesRPIC2D.cpp">
+      <Filter>Source Files\Particle Based Advection\2D\Experimental</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ParticleBased\GridToParticlesTurbulent2D.cpp">
+      <Filter>Source Files\Particle Based Advection\2D\Experimental</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ParticleBased\ParticlesToStaggeredGridAPIC2D.cpp">
+      <Filter>Source Files\Particle Based Advection\2D\Experimental</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ParticleBased\ParticlesToStaggeredGridRPIC2D.cpp">
+      <Filter>Source Files\Particle Based Advection\2D\Experimental</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ParticleBased\TurbulentParticlesToGrid2D.cpp">
+      <Filter>Source Files\Particle Based Advection\2D\Experimental</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GridBased\MacCormackAdvection.cpp">
+      <Filter>Source Files\Grid Based Advection</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Kernels\InverseDistanceKernel.cpp">
+      <Filter>Source Files\Kernels</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

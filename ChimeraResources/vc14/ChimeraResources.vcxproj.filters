@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{c31b399f-bf74-48e3-ac79-49348f5fb6d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{24e8ff2e-6534-4091-8570-c96486a3e76f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Resources">
+      <UniqueIdentifier>{9901b307-dbca-44e4-9a54-14b02fe32598}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Resources">
+      <UniqueIdentifier>{3618953d-30ed-4217-a4e0-217b03c7ea63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Resources\Shaders">
+      <UniqueIdentifier>{bd934045-f882-470b-bfb8-3569bf5e74d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Resources\Shaders">
+      <UniqueIdentifier>{a2ecbda7-4a4c-414c-9250-6a54fcd7a7c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Resources\TinyXML">
+      <UniqueIdentifier>{d9d64bda-2097-4075-8501-ee839bd3d54d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\Resources\Image.h">
+      <Filter>Header Files\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Resources\Material.h">
+      <Filter>Header Files\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Resources\Resource.h">
+      <Filter>Header Files\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Resources\ResourceManager.h">
+      <Filter>Header Files\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Resources\Texture.h">
+      <Filter>Header Files\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Resources\XMLDoc.h">
+      <Filter>Header Files\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Resources\Shaders\GLSLShader.h">
+      <Filter>Header Files\Resources\Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ChimeraResources.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\Resources\Image.cpp">
+      <Filter>Source Files\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Resources\Resource.cpp">
+      <Filter>Source Files\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Resources\ResourceManager.cpp">
+      <Filter>Source Files\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Resources\Texture.cpp">
+      <Filter>Source Files\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Resources\XMLDoc.cpp">
+      <Filter>Source Files\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Resources\Shaders\GLSLShader.cpp">
+      <Filter>Source Files\Resources\Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TinyXML\tinystr.cpp">
+      <Filter>Source Files\Resources\TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TinyXML\tinyxml.cpp">
+      <Filter>Source Files\Resources\TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TinyXML\tinyxmlerror.cpp">
+      <Filter>Source Files\Resources\TinyXML</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TinyXML\tinyxmlparser.cpp">
+      <Filter>Source Files\Resources\TinyXML</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

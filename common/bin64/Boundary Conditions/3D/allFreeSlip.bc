@@ -1,0 +1,7 @@
+numBoundaryConditions 6
+allEast freeSlip
+allWest freeSlip
+allSouth freeSlip
+allFront freeSlip
+allBack freeSlip
+allNorth noSlip

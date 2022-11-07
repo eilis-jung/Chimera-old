@@ -1,0 +1,7 @@
+numBoundaryConditions 6
+allSouth outflow 0
+allNorth outflow 0
+allEast freeSlip
+allFront freeSlip
+allBack freeSlip
+allWest freeSlip

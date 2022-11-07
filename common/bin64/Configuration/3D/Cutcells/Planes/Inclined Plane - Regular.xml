@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <!--Simulation types:
+        realTimeSimulation
+        offlineSimulation
+        precomputedSimulation
+        fetchBoundaryConditions -->
+  <SimulationType>realTimeSimulation</SimulationType>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0" z ="0.0"/>
+    <FinalPoint x="6.0" y="3.0" z ="0.75"/>
+    <!--Final point is an approximation, since it can be modified to suit grid spacing-->
+    <Spacing>0.0625</Spacing>
+  </Grid>
+  <boundaryConditionsFile>Boundary Conditions/3D/leftInflow.bc</boundaryConditionsFile>
+  <SimulationConfig>
+    <Logging>
+      <LogVelocity>Inclined Plane - Regular</LogVelocity>
+    </Logging>
+    <TotalTime value="4.0"></TotalTime>
+  </SimulationConfig>
+  <Objects>
+    <Plane>
+      <Position x="1.034375" y="1.390625" z="0.21875"></Position>
+      <UpVector x="-0.99" y="0.01" z="0"></UpVector>
+      <PlaneSize x="2.00" y="0.328125"></PlaneSize>
+      <Scale>0.03125</Scale>
+    </Plane>
+  </Objects>
+  <FlowSolverConfig>
+    <FlowSolverType>Regular</FlowSolverType>
+    <SolidWallType>
+      <!--<FreeSlip></FreeSlip>-->
+      <NoSlip></NoSlip>
+    </SolidWallType>
+    <AdvectionMethod>
+      <!--<SemiLagrangian></SemiLagrangian>-->
+      <FLIP>
+        <PositionIntegration>rungeKutta2</PositionIntegration>
+        <ResampleParticlesCloseToMesh>false</ResampleParticlesCloseToMesh>
+        <ResamplingFactor>0.001</ResamplingFactor>
+        <FixParticlesSampling>false</FixParticlesSampling>
+        <VelocityUpdate>FLIP</VelocityUpdate>
+        <ParticleDensity>128</ParticleDensity>
+      </FLIP>
+      <!--<ModifiedMacCormack></ModifiedMacCormack>-->
+    </AdvectionMethod>
+    <ProjectionMethod>
+      <Platform>CPU</Platform>
+    </ProjectionMethod>
+    <FarFieldMethod>
+      <Standard></Standard>
+    </FarFieldMethod>
+    <PressureMethod>
+      <ConjugateGradient>
+        <Platform>GPU</Platform>
+        <Tolerance>0.001</Tolerance>
+        <MaxIterations>2000</MaxIterations>
+        <Preconditioner>NoPreconditioner</Preconditioner>
+      </ConjugateGradient>
+    </PressureMethod>
+  </FlowSolverConfig>
+</ChimeraConfig>

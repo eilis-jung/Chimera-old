@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{8cea3197-ee6d-413c-812c-ca666c1ed40f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{3c07858e-11ae-4d8d-913d-dfaf06323c40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Primitives">
+      <UniqueIdentifier>{f8ecbf08-e84f-45b4-b603-0c2fbdd9d674}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Primitives">
+      <UniqueIdentifier>{c19e4def-b2ef-4915-a1b3-57fd2ff73241}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Visualization">
+      <UniqueIdentifier>{2b3f6fbc-3934-4dfc-b7c7-1b17416a680e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Visualization">
+      <UniqueIdentifier>{4b034ddd-39dc-475a-ae29-5c55dd8d07d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Particles">
+      <UniqueIdentifier>{a48a590d-f405-45b7-aaed-552424a2f954}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Particles">
+      <UniqueIdentifier>{374eab49-03de-485c-92f9-c25ff78dc8b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Visualization\CutCells">
+      <UniqueIdentifier>{93b8e287-b3fd-4f35-bb62-70dd4242bc15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Visualization\Regular Grids">
+      <UniqueIdentifier>{783a6cc3-641d-49ba-8042-faacd8d31602}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Visualization\Utils">
+      <UniqueIdentifier>{c35471a3-4e10-4140-98ec-c106e78e7e5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Visualization\CutCells">
+      <UniqueIdentifier>{5a1dc04d-ff92-40cf-b437-ff14e2e339ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Visualization\Utils">
+      <UniqueIdentifier>{68df9750-6593-41cb-b953-fa65223951e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Visualization\Regular Grids">
+      <UniqueIdentifier>{b83969d9-9b32-47b0-9387-9f5d64f237d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{6d39e45f-6b71-439d-a199-b7560c8ca80b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders">
+      <UniqueIdentifier>{6ad06c4e-dc5d-4523-8b73-d843b1d69165}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\Coloring shaders">
+      <UniqueIdentifier>{5653d446-6143-44f6-97ee-bdd9487aa38e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\Geometry Shaders">
+      <UniqueIdentifier>{5a480e12-ebab-4a10-84ec-80c36b38fb6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CGAL">
+      <UniqueIdentifier>{f759beda-2e1c-41be-b36c-329a05232bd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CGAL">
+      <UniqueIdentifier>{a10071ab-8aa0-457b-a487-4b5066cc4a9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Visualization\Mesh">
+      <UniqueIdentifier>{1c5f4eb3-d0a2-49c9-9e90-62a7a1c38787}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Visualization\Mesh">
+      <UniqueIdentifier>{25fea32b-322d-4ef4-aa23-50fec6b5fe05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Shaders\Lighting Shaders">
+      <UniqueIdentifier>{568495dc-d4a3-4326-b2f8-9699ae36c726}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Visualization\Regular Grids\Raycast">
+      <UniqueIdentifier>{80ef3ce3-dc02-4f6e-a6e2-660161ed1e46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Renderers">
+      <UniqueIdentifier>{18e5b0a6-d9b6-4f08-a26c-8e52ec4f0b6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Renderers">
+      <UniqueIdentifier>{dd0b0c29-7cf1-49a9-9895-0a8f807de2bd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\ChimeraRenderingCore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Primitives\Camera.h">
+      <Filter>Header Files\Primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Primitives\Light.h">
+      <Filter>Header Files\Primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\RenderingUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ChimeraRendering.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Particles\ParticleSystem2D.h">
+      <Filter>Header Files\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Particles\ParticleSystem3D.h">
+      <Filter>Header Files\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Visualization\CutCellsRenderer2D.h">
+      <Filter>Header Files\Visualization\CutCells</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Visualization\CutCellsRenderer3D.h">
+      <Filter>Header Files\Visualization\CutCells</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Visualization\IsocontourRenderer.h">
+      <Filter>Header Files\Visualization\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Visualization\GridRenderer.h">
+      <Filter>Header Files\Visualization\Regular Grids</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Visualization\HexaGridRenderer.h">
+      <Filter>Header Files\Visualization\Regular Grids</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Visualization\QuadGridRenderer.h">
+      <Filter>Header Files\Visualization\Regular Grids</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Primitives\Plane.h">
+      <Filter>Header Files\Primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Visualization\ScalarFieldRenderer.h">
+      <Filter>Header Files\Visualization\Regular Grids</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Visualization\VectorFieldRenderer.h">
+      <Filter>Header Files\Visualization\Regular Grids</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CGAL\PolygonSurface.h">
+      <Filter>Header Files\CGAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Primitives\Sphere.h">
+      <Filter>Header Files\Primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CGAL\MeshPatchMapSplitter.h">
+      <Filter>Header Files\CGAL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Visualization\CutVoxelRenderer3D.h">
+      <Filter>Header Files\Visualization\CutCells</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Visualization\RaycastRenderer2D.h">
+      <Filter>Header Files\Visualization\CutCells</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Primitives\Circle.h">
+      <Filter>Header Files\Primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Primitives\Line.h">
+      <Filter>Header Files\Primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Visualization\MeshRenderer3D.h">
+      <Filter>Header Files\Visualization\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Visualization\MeshRenderer.h">
+      <Filter>Header Files\Visualization\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Visualization\CutCellsVelocityRenderer2D.h">
+      <Filter>Header Files\Visualization\CutCells</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Visualization\VolumeMeshRenderer.h">
+      <Filter>Header Files\Visualization\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Visualization\PolygonMeshRenderer.h">
+      <Filter>Header Files\Visualization\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Visualization\LineMeshRenderer.h">
+      <Filter>Header Files\Visualization\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Visualization\CutVoxelsVelocityRenderer3D.h">
+      <Filter>Header Files\Visualization\CutCells</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Particles\ParticlesRenderer.h">
+      <Filter>Header Files\Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\BaseGLRenderer.h">
+      <Filter>Header Files\Renderers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GLRenderer3D.h">
+      <Filter>Header Files\Renderers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\GLRenderer2D.h">
+      <Filter>Header Files\Renderers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\Primitives\Camera.cpp">
+      <Filter>Source Files\Primitives</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Primitives\Light.cpp">
+      <Filter>Source Files\Primitives</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\RenderingUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Particles\ParticleSystem2D.cpp">
+      <Filter>Source Files\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Particles\ParticleSystem3D.cpp">
+      <Filter>Source Files\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Visualization\CutCellsRenderer2D.cpp">
+      <Filter>Source Files\Visualization\CutCells</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Visualization\CutCellsRenderer3D.cpp">
+      <Filter>Source Files\Visualization\CutCells</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Visualization\GridRenderer.cpp">
+      <Filter>Source Files\Visualization\Regular Grids</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Visualization\HexaGridRenderer.cpp">
+      <Filter>Source Files\Visualization\Regular Grids</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Visualization\QuadGridRenderer.cpp">
+      <Filter>Source Files\Visualization\Regular Grids</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Visualization\IsocontourRenderer.cpp">
+      <Filter>Source Files\Visualization\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Primitives\Plane.cpp">
+      <Filter>Source Files\Primitives</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Visualization\ScalarFieldRenderer.cpp">
+      <Filter>Source Files\Visualization\Regular Grids</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Visualization\VectorFieldRenderer.cpp">
+      <Filter>Source Files\Visualization\Regular Grids</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CGAL\PolygonSurface.cpp">
+      <Filter>Source Files\CGAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Primitives\Sphere.cpp">
+      <Filter>Source Files\Primitives</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CGAL\MeshPatchMapSplitter.cpp">
+      <Filter>Source Files\CGAL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Visualization\CutVoxelRenderer3D.cpp">
+      <Filter>Source Files\Visualization\CutCells</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Visualization\RaycastRenderer2D.cpp">
+      <Filter>Source Files\Visualization\Regular Grids\Raycast</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Primitives\Circle.cpp">
+      <Filter>Source Files\Primitives</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Primitives\Line.cpp">
+      <Filter>Source Files\Primitives</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Visualization\MeshRenderer3D.cpp">
+      <Filter>Source Files\Visualization\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Visualization\MeshRenderer.cpp">
+      <Filter>Source Files\Visualization\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Visualization\LineMeshRenderer.cpp">
+      <Filter>Source Files\Visualization\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Visualization\CutCellsVelocityRenderer2D.cpp">
+      <Filter>Source Files\Visualization\CutCells</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Visualization\VolumeMeshRenderer.cpp">
+      <Filter>Source Files\Visualization\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Visualization\PolygonMeshRenderer.cpp">
+      <Filter>Source Files\Visualization\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Visualization\CutVoxelsVelocityRenderer3D.cpp">
+      <Filter>Source Files\Visualization\CutCells</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Particles\ParticlesRenderer.cpp">
+      <Filter>Source Files\Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLRenderer2D.cpp">
+      <Filter>Source Files\Renderers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GLRenderer3D.cpp">
+      <Filter>Source Files\Renderers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\BaseGLRenderer.cpp">
+      <Filter>Source Files\Renderers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\common\bin64\Shaders\2D\FiftyShadersOfGray.frag">
+      <Filter>Resource Files\Shaders\Coloring shaders</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Shaders\2D\FiftyShadersOfGray.glsl">
+      <Filter>Resource Files\Shaders\Coloring shaders</Filter>
+    </None>
+    <None Include="..\..\common\bin\Shaders\2D\ScalarColor - grayscale.glsl">
+      <Filter>Resource Files\Shaders\Coloring shaders</Filter>
+    </None>
+    <None Include="..\..\common\bin\Shaders\2D\ScalarColor - wavelength.glsl">
+      <Filter>Resource Files\Shaders\Coloring shaders</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Shaders\3D\VectorArrow.glsl">
+      <Filter>Resource Files\Shaders\Geometry Shaders</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Shaders\3D\AddVectors.glsl">
+      <Filter>Resource Files\Shaders\Geometry Shaders</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Shaders\3D\PhongShading.frag">
+      <Filter>Resource Files\Shaders\Lighting Shaders</Filter>
+    </None>
+    <None Include="..\..\common\bin64\Shaders\3D\PhongShading.glsl">
+      <Filter>Resource Files\Shaders\Lighting Shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>

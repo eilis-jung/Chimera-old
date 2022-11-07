@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{cf39d6e3-11c6-49e2-9213-2b06c53b5039}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{74902763-1d12-4daf-a83b-bb0f5672e405}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CutCells">
+      <UniqueIdentifier>{dc46569f-175c-460a-9c37-b77f93b85910}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CutCells">
+      <UniqueIdentifier>{18eb0ac4-e0c5-48da-bb3d-545d5018da83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CutCells\Auxiliary">
+      <UniqueIdentifier>{d6b0dee6-4faa-42ae-bbe0-ab12ce64cf10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CutCells\2D">
+      <UniqueIdentifier>{8febd58c-5f92-496c-b002-466c45bb732c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CutCells\3D">
+      <UniqueIdentifier>{5464131e-7c61-49f9-ae6e-7efba178ffef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CutCells\3D">
+      <UniqueIdentifier>{8e9a1c11-3633-4c03-b3a8-d0a2f9bccaf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CutCells\2D">
+      <UniqueIdentifier>{43f5c5a0-3dca-46ec-9e2d-003362ea3ffe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CutCells\Auxiliary">
+      <UniqueIdentifier>{b45ec1bf-0e82-44fa-a556-b266b87a4d52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\CutCells\Base">
+      <UniqueIdentifier>{59ba7fc2-356a-490c-89a6-3019412980cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CutCells\Base">
+      <UniqueIdentifier>{9d963c68-59cd-4389-a804-9c3a1e67cb04}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\CutCells\Crossing.h">
+      <Filter>Header Files\CutCells\Auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CutCells\CutSlice3D.h">
+      <Filter>Header Files\CutCells\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CutCells\CutVoxel.h">
+      <Filter>Header Files\CutCells\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CutCells\CutCellsVelocities2D.h">
+      <Filter>Header Files\CutCells\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CutCells\CutCellsVelocities.h">
+      <Filter>Header Files\CutCells\Auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CutCells\CutCells2D.h">
+      <Filter>Header Files\CutCells\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CutCells\CutCells3D_old.h">
+      <Filter>Header Files\CutCells\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CutCells\CutCellsBase.h">
+      <Filter>Header Files\CutCells\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CutCells\CutVoxels3D.h">
+      <Filter>Header Files\CutCells\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CutCells\CutCells3D.h">
+      <Filter>Header Files\CutCells\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\CutCells\CutVoxelsVelocities3D.h">
+      <Filter>Header Files\CutCells\Auxiliary</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ChimeraCutCells.h">
+      <Filter>Source Files\CutCells</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\TriangleHalfVolume.h">
+      <Filter>Header Files\CutCells\3D</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\CutSlice3D.cpp">
+      <Filter>Source Files\CutCells\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CutVoxel.cpp">
+      <Filter>Source Files\CutCells\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CutFace.cpp">
+      <Filter>Source Files\CutCells\Auxiliary</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CutEdge.cpp">
+      <Filter>Source Files\CutCells\Auxiliary</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CutCellsVelocities2D.cpp">
+      <Filter>Source Files\CutCells\Auxiliary</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CutCells2D.cpp">
+      <Filter>Source Files\CutCells\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CutCells3D_old.cpp">
+      <Filter>Source Files\CutCells\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CutCellsBase.cpp">
+      <Filter>Source Files\CutCells\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CutVoxels3D.cpp">
+      <Filter>Source Files\CutCells\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CutCells3D.cpp">
+      <Filter>Source Files\CutCells\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CutVoxelsVelocities3D.cpp">
+      <Filter>Source Files\CutCells\Auxiliary</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TriangleHalfVolume.cpp">
+      <Filter>Source Files\CutCells\Auxiliary</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

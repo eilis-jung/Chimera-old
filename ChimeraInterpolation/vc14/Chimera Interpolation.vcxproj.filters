@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source Files\2D">
+      <UniqueIdentifier>{0c638f91-f388-4506-a7ab-5e9046e5fd16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\2D">
+      <UniqueIdentifier>{a64888d7-dc5b-44f2-9b90-868be5e4a3d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\3D">
+      <UniqueIdentifier>{b993a7b1-6f37-4d80-92f0-4aefd4e6bf73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\3D">
+      <UniqueIdentifier>{df1c15c3-6475-458b-9a28-40cb190827b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\2D\Streamfunction">
+      <UniqueIdentifier>{b1699d66-00cf-4894-8efb-f1423a9584c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\2D\Streamfunction">
+      <UniqueIdentifier>{a4b1bbb0-4378-44f8-be89-4a4f82b2a4b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\2D\Experimental">
+      <UniqueIdentifier>{c9864d45-a6e3-450e-a7a4-084cd69369a1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\Interpolation\BilinearNodalInterpolant2D.h">
+      <Filter>Header Files\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\BilinearStaggeredInterpolant2D.h">
+      <Filter>Header Files\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\MeanValueInterpolant2D.h">
+      <Filter>Header Files\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\Interpolant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ChimeraInterpolation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\BilinearStaggeredInterpolant3D.h">
+      <Filter>Header Files\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\BilinearNodalInterpolant3D.h">
+      <Filter>Header Files\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\MeanValueInterpolant3D.h">
+      <Filter>Header Files\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\CubicStreamfunctionInterpolant2D.h">
+      <Filter>Header Files\2D\Streamfunction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\CubicMVCs.h">
+      <Filter>Header Files\2D\Streamfunction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\QuadraticStreamfunctionInterpolant2D.h">
+      <Filter>Header Files\2D\Streamfunction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\BilinearStreamfunctionInterpolant2D.h">
+      <Filter>Header Files\2D\Streamfunction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\SubdivisionStreamfunctionInterpolant2D.h">
+      <Filter>Header Files\2D\Streamfunction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\TurbulenceInterpolant2D.h">
+      <Filter>Header Files\2D\Experimental</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Interpolation\BilinearAPICStaggeredinterpolant2D.h">
+      <Filter>Header Files\2D\Experimental</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\Interpolation\BilinearNodalInterpolant2D.cpp">
+      <Filter>Source Files\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Interpolation\BilinearStaggeredInterpolant2D.cpp">
+      <Filter>Source Files\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Interpolation\MeanValueInterpolant2D.cpp">
+      <Filter>Source Files\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Interpolation\TurbulenceInterpolant2D.cpp">
+      <Filter>Source Files\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Interpolation\BilinearAPICStaggeredinterpolant2D.cpp">
+      <Filter>Source Files\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Interpolation\BilinearStaggeredInterpolant3D.cpp">
+      <Filter>Source Files\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Interpolation\BilinearNodalInterpolant3D.cpp">
+      <Filter>Source Files\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Interpolation\MeanValueInterpolant3D.cpp">
+      <Filter>Source Files\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Interpolation\CubicStreamfunctionInterpolant2D.cpp">
+      <Filter>Source Files\2D\Streamfunction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Interpolation\BilinearStreamfunctionInterpolant2D.cpp">
+      <Filter>Source Files\2D\Streamfunction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Interpolation\QuadraticStreamfunctionInterpolant2D.cpp">
+      <Filter>Source Files\2D\Streamfunction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Interpolation\CubicMVCs.cpp">
+      <Filter>Source Files\2D\Streamfunction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Interpolation\SubdivisionStreamfunctionInterpolant2D.cpp">
+      <Filter>Source Files\2D\Streamfunction</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

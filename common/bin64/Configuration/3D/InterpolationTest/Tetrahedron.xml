@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>interpolationTest</SimulationType>
+  <!--mvc: mean value coordinates
+  sbc: spherical barycentric coordinates-->
+  <InterpolationMethod>mvc</InterpolationMethod>
+  <NumberOfInterpolationPoints>5000</NumberOfInterpolationPoints>
+  <NodeValuesMethod>random</NodeValuesMethod>
+  <InterpolationPointsInsideMesh>true</InterpolationPointsInsideMesh>
+  <Objects>
+    <CGALObjMesh>
+      <Filename>tetrahedron.obj</Filename>
+      <Scale x="1.0" y="1.0" z="1.0"></Scale>
+    </CGALObjMesh>
+  </Objects>
+</ChimeraConfig>

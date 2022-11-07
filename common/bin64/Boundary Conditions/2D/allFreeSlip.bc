@@ -1,0 +1,5 @@
+numBoundaryConditions 4
+allEast freeSlip 
+allWest freeSlip
+allSouth freeSlip
+allNorth freeSlip

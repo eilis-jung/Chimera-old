@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <!--Simulation types:
+        realTimeSimulation
+        offlineSimulation
+        precomputedSimulation
+        fetchBoundaryConditions -->
+  <SimulationType>realTimeSimulation</SimulationType>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0" z ="0.0"/>
+    <FinalPoint x="7.00" y="6.00" z ="4.00"/>
+    <Spacing>0.25</Spacing>
+  </Grid>
+  <boundaryConditionsFile>Boundary Conditions/3D/allFreeSlip.bc</boundaryConditionsFile>
+  <SimulationConfig>
+    <Logging>
+      <LogCutCells>staticCDNoSlipCells</LogCutCells>
+      <LogVelocity>staticCDNoSlip</LogVelocity>
+    </Logging>
+    <TotalTime value="8"></TotalTime>
+  </SimulationConfig>
+  <Objects>
+    <CGALObjMesh>
+      <Filename>cd - centered.obj</Filename>
+      <Scale x="1.0" y="1.0" z="1.0"></Scale>
+      <position x="3.287" y="2.7024" z="2.121"/>
+      <PositionUpdate>
+        <Direction x="1.0" y="-1.0" z="0.0"></Direction>
+        <SinFunction amplitude="3.96" frequency="0.5"/>
+        <EndingTime>4</EndingTime>
+      </PositionUpdate>
+      <RotationUpdate>
+        <InitialAngle>-45</InitialAngle>
+        <Speed>2</Speed>
+        <StartingTime>4</StartingTime>
+      </RotationUpdate>
+    </CGALObjMesh>
+  </Objects>
+  <FlowSolverConfig>
+    <FlowSolverType>CutCell</FlowSolverType>
+    <LinearInterpolationMethod>
+      <UseParticlesCache>false</UseParticlesCache>
+      <UseCGALAcceleration>false</UseCGALAcceleration>
+      <InterpolationType>mvc</InterpolationType>
+    </LinearInterpolationMethod>
+    <SolidWallType>
+      <!--<FreeSlip>
+        <MixNodeInterpolation>WeightedNoExtraDimensions</MixNodeInterpolation>
+      </FreeSlip>-->
+     <NoSlip></NoSlip>
+    </SolidWallType>
+    <AdvectionMethod>
+      <FLIP>
+        <PositionIntegration>rungeKutta2</PositionIntegration>
+        <ResampleParticlesCloseToMesh>false</ResampleParticlesCloseToMesh>
+        <ResamplingFactor>0.001</ResamplingFactor>
+        <FixParticlesSampling>
+          <FineGridResampling>
+            <Subdivisions>2</Subdivisions>
+          </FineGridResampling>
+          <CellResamplingThreshold>1.05</CellResamplingThreshold>
+        </FixParticlesSampling>
+        <VelocityUpdate>FLIP</VelocityUpdate>
+        <ParticleDensity>64</ParticleDensity>
+        <VisualizeVelocities>true</VisualizeVelocities>
+      </FLIP>
+    </AdvectionMethod>
+    <ProjectionMethod>
+      <Platform>CPU</Platform>
+    </ProjectionMethod>
+    <PressureMethod>
+      <ConjugateGradient>
+        <Platform>GPU</Platform>
+        <Tolerance>0.0001</Tolerance>
+        <MaxIterations>1000</MaxIterations>
+        <Preconditioner>NoPreconditioner</Preconditioner>
+      </ConjugateGradient>
+    </PressureMethod>
+  </FlowSolverConfig>
+</ChimeraConfig>

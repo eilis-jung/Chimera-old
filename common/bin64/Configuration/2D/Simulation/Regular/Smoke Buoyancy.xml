@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>realTimeSimulation</SimulationType>
+  <!--<boundaryConditionsFile>Boundary Conditions/2D/jetBottomInflow.bc</boundaryConditionsFile>-->
+  <boundaryConditionsFile>Boundary Conditions/2D/allFreeSlip.bc</boundaryConditionsFile>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0"/>
+    <FinalPoint x="6" y="6"/> <!--Final point is an approximation, since it can be modified to suit grid spacing-->
+    <Spacing>0.0625</Spacing>
+  </Grid>
+  <SimulationConfig>
+    <TotalTime value="8"></TotalTime>
+  </SimulationConfig>
+  <FlowSolverConfig>
+    <FlowSolverType>Regular</FlowSolverType>
+    <SolidWallType>
+      <FreeSlip></FreeSlip>
+    </SolidWallType>
+    <AdvectionMethod>
+      <ParticleBasedAdvection>
+        <PositionIntegration>
+          <Method>rungeKutta2</Method>
+        </PositionIntegration>
+        <GridToParticle>
+          <Method mixPIC="0.005">FLIP</Method>
+        </GridToParticle>
+        <ParticleToGrid>
+          <GridArrangement>Staggered</GridArrangement>
+          <Kernel>bilinear</Kernel>
+        </ParticleToGrid>
+        <Sampler>
+          <ParticlesPerCell>8</ParticlesPerCell>
+          <Type>Poisson</Type>
+          <ResampleParticles>true</ResampleParticles>
+        </Sampler>
+      </ParticleBasedAdvection>
+      <!--<GridBasedAdvection>
+        <Method>MacCormack</Method>
+        <PositionIntegration>
+          <Method>rungeKutta2</Method>
+        </PositionIntegration>
+      </GridBasedAdvection>-->
+    </AdvectionMethod>
+    <PressureMethod>
+      <ConjugateGradient>
+        <Platform>CPU</Platform>
+        <Tolerance>0.001</Tolerance>
+        <MaxIterations>1000</MaxIterations>
+      </ConjugateGradient>
+    </PressureMethod>
+    <ForcingFunctions>
+      <HotSmokeSource>
+        <Position x="3.0" y="0.75"/>
+        <Velocity x="0.0" y="0"/>
+        <Size>0.45</Size>
+        <!--Density configuration-->
+        <DensityValue>1</DensityValue>
+        <DensityVariation>0.0</DensityVariation>
+        <DensityBuoyancyCoefficient>3.5</DensityBuoyancyCoefficient>
+        <!--Temperature configuration-->
+        <TemperatureValue>1</TemperatureValue>
+        <TemperatureVariation>0</TemperatureVariation>
+        <TemperatureBuoyancyCoefficient>7</TemperatureBuoyancyCoefficient>
+      </HotSmokeSource>
+    </ForcingFunctions>
+    <VorticityConfinement strength="0.0"/>
+  </FlowSolverConfig>
+</ChimeraConfig>
+

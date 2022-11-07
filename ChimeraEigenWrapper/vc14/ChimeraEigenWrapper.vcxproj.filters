@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{d866dcdb-9d86-429d-a419-399a5b1391d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{29699aa7-243b-4ade-bc30-c2a18ef56374}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Solver">
+      <UniqueIdentifier>{6f24b91a-19b7-4e0e-a9dc-29fd72720fd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Solver">
+      <UniqueIdentifier>{1c23a9e8-61f2-4484-a706-261863a2e4f0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\ChimeraEigenWrapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Solver\LeastSquaresSolver.h">
+      <Filter>Header Files\Solver</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\Solver\LeastSquaresSolver.cpp">
+      <Filter>Source Files\Solver</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

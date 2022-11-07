@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>realTimeSimulation</SimulationType>
+  <boundaryConditionsFile>Boundary Conditions/2D/allFreeSlip.bc</boundaryConditionsFile>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0"/>
+    <FinalPoint x="4.0" y="2.0"/> <!--Final point is an approximation, since it can be modified to suit grid spacing-->
+    <Spacing>0.0625</Spacing>
+  </Grid>
+  <SimulationConfig>
+    <TotalTime value="10"></TotalTime>
+    <!--<Logging>
+      <Framerate>100</Framerate>
+      <LogScreenshot>singleCircleObstacle_mvc</LogScreenshot>
+    </Logging>-->
+  </SimulationConfig>
+  <Objects>
+    <RigidObject>
+      <position x="2.00001" y="1.0001"></position>
+      <Geometry>
+        <numSubdivisions>100</numSubdivisions>
+        <CircularLine>
+          <Radius>0.20125</Radius>
+        </CircularLine>
+      </Geometry>
+      <PositionUpdate>
+        <SinFunction amplitude="4.00" frequency="1.0"/>
+        <Direction x="-1" y="0"/>
+      </PositionUpdate>
+    </RigidObject>
+  </Objects>
+  <FlowSolverConfig>
+    <FlowSolverType>CutCellSo</FlowSolverType>
+    <SolidWallType>
+      <!--<FreeSlip></FreeSlip>-->
+      <NoSlip></NoSlip>
+    </SolidWallType>
+    <AdvectionMethod>
+      <ParticleBasedAdvection>
+        <PositionIntegration>
+          <Method>rungeKutta2</Method>
+        </PositionIntegration>
+        <GridToParticle>
+          <Method mixPIC="0.01">FLIP</Method>
+        </GridToParticle>
+        <ParticleToGrid>
+          <GridArrangement>Nodal</GridArrangement>
+          <Kernel>bilinear</Kernel>
+        </ParticleToGrid>
+        <Sampler>
+          <ParticlesPerCell>8</ParticlesPerCell>
+          <Type>Poisson</Type>
+          <ResampleParticles>true</ResampleParticles>
+        </Sampler>
+      </ParticleBasedAdvection>
+    </AdvectionMethod>
+    <PressureMethod>
+      <ConjugateGradient>
+        <Platform>CPU</Platform>
+        <Tolerance>0.001</Tolerance>
+        <MaxIterations>2000</MaxIterations>
+        <Preconditioner>NoPreconditioner</Preconditioner>
+      </ConjugateGradient>
+    </PressureMethod>
+  </FlowSolverConfig>
+</ChimeraConfig>
+

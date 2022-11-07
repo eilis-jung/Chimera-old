@@ -1,0 +1,8 @@
+.vs
+Intermediate
+*.db
+*.exe
+*.opendb
+*.pdb
+*.bsc
+*.lib

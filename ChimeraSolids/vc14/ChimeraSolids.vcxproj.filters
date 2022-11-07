@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{f3ea5a1d-4a15-4eba-978c-5513f0ad20d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SourceFiles">
+      <UniqueIdentifier>{d0fca9ed-9de3-4fc5-9897-db6b667c4681}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Rigid">
+      <UniqueIdentifier>{dab1eb1e-cf19-49dd-ac46-27a9ac367c5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SourceFiles\Rigid">
+      <UniqueIdentifier>{48ca4372-fcd3-44ca-ba64-4bb3cf9e8929}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Rigid\2D">
+      <UniqueIdentifier>{bda971a7-5d23-4e34-8641-69ea967e9691}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SourceFiles\Rigid\2D">
+      <UniqueIdentifier>{bb7793e0-d56a-4869-bb27-9aa0dab60382}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\ChimeraSolids.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Rigid\RigidObject2D.h">
+      <Filter>Header Files\Rigid\2D</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\Rigid\RigidObject2D.cpp">
+      <Filter>SourceFiles\Rigid\2D</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

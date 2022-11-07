@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>precomputedAnimation</SimulationType>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0" z ="0.0"/>
+    <FinalPoint x="26.00" y="13.00" z ="9.00"/>
+    <Spacing>1</Spacing>
+  </Grid>
+  <Animations>
+    <ExportObjFiles>true</ExportObjFiles>
+    <LoadPerFrame>true</LoadPerFrame>
+    <NumFrames>240</NumFrames>
+    <PolygonMeshes>
+      <BaseFilename>rotatingPaddleCells</BaseFilename>
+      <LinearInterpolationMethod>
+        <UseParticlesCache>false</UseParticlesCache>
+        <UseCGALAcceleration>false</UseCGALAcceleration>
+        <InterpolationType>mvc</InterpolationType>
+      </LinearInterpolationMethod>
+    </PolygonMeshes>
+    <VelocityFile>rotatingPaddlePartial</VelocityFile>
+    <CollisionDetectionMethod>ccdBrochu</CollisionDetectionMethod>
+  </Animations>
+  <Objects>
+    <ParticleSystem>
+      <Emitter>
+        <!--<Rectangle px="7.55" py="3.75" pz="5.15" sx="0.25" sy="0.15" sz="0.25"></Rectangle>-->
+        <Rectangle px="1" py="1" pz="3.5" sx="23.999" sy="10.9999" sz="0.9999"></Rectangle>
+        <!--<Sphere px="6.75" py="3.75" pz="4.75" radius="0.15"></Sphere>-->
+        <!--<Sphere px="7.0" py="3.45" pz="4.85" radius="0.15"></Sphere>-->
+        <MaxAmount>1300000</MaxAmount>
+        <InitialAmount>1300000</InitialAmount>
+        <SpawnRatio>0</SpawnRatio>
+        <LifeTime>9999</LifeTime>
+        <LifeVariance>0.0</LifeVariance>
+      </Emitter>
+      <MinBounds px="0.0" py="0.0" pz="0.0"></MinBounds>
+      <MaxBounds px="26" py="15" pz="10"></MaxBounds>
+      <RenderingProperties>
+        <ColorScheme>jet</ColorScheme>
+        <VisualizeVectors>true</VisualizeVectors>
+      </RenderingProperties>
+    </ParticleSystem>
+    <CGALObjMesh>
+      <Filename>thinPaddle3.obj</Filename>
+      <Scale x="1.0" y="1.0" z="1.0"></Scale>
+      <position x="12.5" y="6.5" z="4.0"/>
+      <PositionUpdate>
+        <Direction x="1.0" y="0.0" z="0.0"></Direction>
+        <SinFunction amplitude="20" frequency="0.5"/>
+      </PositionUpdate>
+      <RotationUpdate>
+        <Speed>3.2</Speed>
+      </RotationUpdate>
+    </CGALObjMesh>
+  </Objects>
+</ChimeraConfig>
+

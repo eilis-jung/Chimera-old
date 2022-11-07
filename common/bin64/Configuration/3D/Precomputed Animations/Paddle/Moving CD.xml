@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>precomputedAnimation</SimulationType>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0" z ="0.0"/>
+    <FinalPoint x="7.00" y="6.00" z ="4.00"/>
+    <Spacing>0.25</Spacing>
+  </Grid>
+  <Animations>
+    <ExportObjFiles>true</ExportObjFiles>
+    <NumFrames>240</NumFrames>
+    <PolygonMeshes>
+      <BaseFilename>staticCDFreeSlipCells</BaseFilename>
+      <LinearInterpolationMethod>
+        <UseParticlesCache>false</UseParticlesCache>
+        <UseCGALAcceleration>false</UseCGALAcceleration>
+        <InterpolationType>mvc</InterpolationType>
+      </LinearInterpolationMethod>
+    </PolygonMeshes>
+    <VelocityFile>staticCDFreeSlip</VelocityFile>
+  </Animations>
+  <Objects>
+    <ParticleSystem>
+      <Emitter>
+        <Rectangle px="2.25" py="1.75" pz="1" sx="2" sy="2" sz="2.25"></Rectangle>
+        <MaxAmount>10000</MaxAmount>
+        <InitialAmount>10000</InitialAmount>
+        <SpawnRatio>0</SpawnRatio>
+        <LifeTime>9999</LifeTime>
+        <LifeVariance>0.0</LifeVariance>
+      </Emitter>
+      <MinBounds px="0.0" py="0.0" pz="0.0"></MinBounds>
+      <MaxBounds px="26" py="15" pz="10"></MaxBounds>
+      <RenderingProperties>
+        <ColorScheme>jet</ColorScheme>
+        <VisualizeVectors>true</VisualizeVectors>
+      </RenderingProperties>
+    </ParticleSystem>
+    <CGALObjMesh>
+      <Filename>cd - centered.obj</Filename>
+      <Scale x="1.0" y="1.0" z="1.0"></Scale>
+      <position x="1.757" y="4.0024" z="2.121"/>
+      <PositionUpdate>
+        <Direction x="1.0" y="-1.0" z="0.0"></Direction>
+        <SinFunction amplitude="7.92" frequency="0.25"/>
+        <EndingTime>8</EndingTime>
+        <AbsoluteValues>true</AbsoluteValues>
+      </PositionUpdate>
+      <RotationUpdate>
+        <InitialAngle>-45</InitialAngle>
+        <Speed>1.89</Speed>
+        <StartingTime>4</StartingTime>
+      </RotationUpdate>
+    </CGALObjMesh>
+  </Objects>
+</ChimeraConfig>
+

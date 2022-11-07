@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{f4214c7c-1d6f-431c-bbad-bc8e9b55a780}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{9d479d44-7da2-4ce3-ae67-734d9ad23976}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Grids">
+      <UniqueIdentifier>{c5d0eadc-18a6-4d52-93b3-c539e72d50fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Grids\2D">
+      <UniqueIdentifier>{5cc66f4c-0217-4f49-aad4-654a1271ae1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Grids\3D">
+      <UniqueIdentifier>{69f99e10-50ed-458a-8efd-9e4d58eb1835}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Grids">
+      <UniqueIdentifier>{60654694-f582-46c4-a4b5-89977f7a63d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Grids\2D">
+      <UniqueIdentifier>{f42837d8-a102-4b37-99b2-5bda0b08c335}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Grids\3D">
+      <UniqueIdentifier>{6be49a12-59d7-4b47-a785-095788f9d2f4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\Grids\StructuredGrid.h">
+      <Filter>Header Files\Grids</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Grids\Grid.h">
+      <Filter>Header Files\Grids</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Grids\GridData.h">
+      <Filter>Header Files\Grids</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Grids\GridData2D.h">
+      <Filter>Header Files\Grids\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Grids\GridData3D.h">
+      <Filter>Header Files\Grids\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Grids\GridUtils.h">
+      <Filter>Header Files\Grids</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Grids\HexaGrid.h">
+      <Filter>Header Files\Grids\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Grids\QuadGrid.h">
+      <Filter>Header Files\Grids\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ChimeraGrids.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\Grids\GridUtils.cpp">
+      <Filter>Source Files\Grids</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Grids\HexaGrid.cpp">
+      <Filter>Source Files\Grids\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Grids\QuadGrid.cpp">
+      <Filter>Source Files\Grids\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Grids\StructuredGrid.cpp">
+      <Filter>Source Files\Grids</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

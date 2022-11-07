@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{5c7334a9-ba46-4f2a-8925-585cf2f3c7ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{7b7b448c-fd80-4e99-a56c-598e59360562}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\LevelSets">
+      <UniqueIdentifier>{708e4a33-1eb4-4a66-a04c-f1eeccad2aa0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\LevelSets">
+      <UniqueIdentifier>{a4328646-c88c-4d70-854e-26aeb2b2b462}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Liquids">
+      <UniqueIdentifier>{b3bf343b-14e2-4435-bb2a-b2a54138669d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Liquids">
+      <UniqueIdentifier>{32e185ae-72d2-4cb3-8fc0-53dea6c9e5dc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\LevelSets\BVLevelSet2D.h">
+      <Filter>Header Files\LevelSets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\LevelSets\Isocontour.h">
+      <Filter>Header Files\LevelSets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\LevelSets\IVLevelSet2D.h">
+      <Filter>Header Files\LevelSets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\LevelSets\LevelSet2D.h">
+      <Filter>Header Files\LevelSets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ChimeraLevelSets.h" />
+    <ClInclude Include="..\include\Liquids\LiquidRepresentation2D.h">
+      <Filter>Header Files\Liquids</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\LevelSets\BVLevelSet2D.cpp">
+      <Filter>Source Files\LevelSets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\LevelSets\Isocontour.cpp">
+      <Filter>Source Files\LevelSets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\LevelSets\IVLevelSet2D.cpp">
+      <Filter>Source Files\LevelSets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\LevelSets\LevelSet2D.cpp">
+      <Filter>Source Files\LevelSets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Liquids\LiquidRepresentation2D.cpp">
+      <Filter>Source Files\Liquids</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\LevelSets\MarchingSquares.cpp">
+      <Filter>Source Files\LevelSets</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

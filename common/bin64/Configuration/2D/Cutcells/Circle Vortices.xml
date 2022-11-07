@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>realTimeSimulation</SimulationType>
+  <boundaryConditionsFile>Boundary Conditions/2D/allFreeSlip.bc</boundaryConditionsFile>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0"/>
+    <FinalPoint x="2.0" y="2.0"/> <!--Final point is an approximation, since it can be modified to suit grid spacing-->
+    <Spacing>0.0625</Spacing>
+  </Grid>
+  <RigidObject>
+    <position x="1.001" y="1.001"></position>
+    <Geometry>
+      <numSubdivisions>25</numSubdivisions>
+      <CircularLine>
+        <Radius>0.25</Radius>
+      </CircularLine>
+    </Geometry>
+  </RigidObject>
+  <SimulationConfig>
+    <TotalTime value="10"></TotalTime>
+    <!--<VelocityImpulse>
+      <Position x="0.25" y="1.0"></Position>
+      <Velocity x="40.0" y="0"></Velocity>
+    </VelocityImpulse>
+    <VelocityImpulse>
+      <Position x="0.25" y="0.9"></Position>
+      <Velocity x="40.0" y="0"></Velocity>
+    </VelocityImpulse>-->
+    <RotationalVelocityField>
+      <position x="0.5" y="0.5"></position>
+      <MinRadius>0</MinRadius>
+      <MaxRadius>0.45</MaxRadius>
+      <Orientation>1</Orientation>
+      <Strength>4</Strength>
+    </RotationalVelocityField>
+    <RotationalVelocityField>
+      <position x="1.5" y="1.5"></position>
+      <MinRadius>0</MinRadius>
+      <MaxRadius>0.45</MaxRadius>
+      <Orientation>1</Orientation>
+      <Strength>4</Strength>
+    </RotationalVelocityField>
+    <RotationalVelocityField>
+      <position x="1.5" y="0.5"></position>
+      <MinRadius>0</MinRadius>
+      <MaxRadius>0.45</MaxRadius>
+      <Orientation>-1</Orientation>
+      <Strength>4</Strength>
+    </RotationalVelocityField>
+    <RotationalVelocityField>
+      <position x="0.5" y="1.5"></position>
+      <MinRadius>0</MinRadius>
+      <MaxRadius>0.45</MaxRadius>
+      <Orientation>-1</Orientation>
+      <Strength>4</Strength>
+    </RotationalVelocityField>
+    <!--<Logging>
+      <Framerate>100</Framerate>
+      <LogScreenshot>simpleCircle_jet_mvc</LogScreenshot>
+    </Logging>-->
+  </SimulationConfig>
+  <Objects>
+    <DensityField>
+      <Rectangle px="0.0" py="0.93" sx="0.25" sy="0.2"></Rectangle>
+    </DensityField>
+  </Objects>
+  <FlowSolverConfig>
+    <FlowSolverType>CutCell</FlowSolverType>
+    <SolidWallType>
+      <!--<FreeSlip></FreeSlip>-->
+      <NoSlip></NoSlip>
+    </SolidWallType>
+    <AdvectionMethod>
+      <ParticleBasedAdvection>
+        <PositionIntegration>
+          <Method>rungeKutta2</Method>
+          <Interpolant>
+            <Method>CubicStreamfunction</Method>
+          </Interpolant>
+        </PositionIntegration>
+        <GridToParticle>
+          <Method>FLIP</Method>
+        </GridToParticle>
+        <ParticleToGrid>
+          <GridArrangement>Staggered</GridArrangement>
+          <Kernel>SPH</Kernel>
+        </ParticleToGrid>
+        <Sampler>
+          <ParticlesPerCell>16</ParticlesPerCell>
+          <Type>Poisson</Type>
+          <ResampleParticles>true</ResampleParticles>
+        </Sampler>
+      </ParticleBasedAdvection>
+    </AdvectionMethod>
+    <ProjectionMethod>
+      <Platform>CPU</Platform>
+    </ProjectionMethod>
+    <FarFieldMethod>
+      <Standard></Standard>
+    </FarFieldMethod>
+    <PressureMethod>
+      <ConjugateGradient>
+        <Platform>CPU</Platform>
+        <Tolerance>0.001</Tolerance>
+        <MaxIterations>2000</MaxIterations>
+        <Preconditioner>NoPreconditioner</Preconditioner>
+      </ConjugateGradient>
+    </PressureMethod>
+  </FlowSolverConfig>
+</ChimeraConfig>
+

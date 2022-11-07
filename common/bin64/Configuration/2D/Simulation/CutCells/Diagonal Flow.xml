@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>realTimeSimulation</SimulationType>
+  <boundaryConditionsFile>Boundary Conditions/2D/diagonalInflow.bc</boundaryConditionsFile>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0"/>
+    <FinalPoint x="3" y="3"/> <!--Final point is an approximation, since it can be modified to suit grid spacing-->
+    <Spacing>0.0625</Spacing>
+  </Grid>
+  <SimulationConfig>
+    <TotalTime value="8"></TotalTime>
+  </SimulationConfig>
+  <Objects>
+    <RigidObject>
+      <position x="1.03125" y="1.04125"></position>
+      <Geometry>
+        <File>line45Degrees.dat</File>
+        <ExtrudeAlongNormalsSize>0.01</ExtrudeAlongNormalsSize>
+      </Geometry>
+      <RotationUpdate>
+        <Alternating>
+          <MinAngle>-12</MinAngle>
+          <MaxAngle>12</MaxAngle>
+        </Alternating>
+        <AngularSpeed>0.31654</AngularSpeed>
+        <AngularAcceleration>0.0</AngularAcceleration>
+        <StartingTime>1.2</StartingTime>
+      </RotationUpdate>
+    </RigidObject>
+  </Objects>
+  <FlowSolverConfig>
+    <FlowSolverType>CutCellSo</FlowSolverType>
+    <SolidWallType>
+      <!--<FreeSlip></FreeSlip>-->
+      <NoSlip></NoSlip>
+    </SolidWallType>
+    <AdvectionMethod>
+      <ParticleBasedAdvection>
+        <PositionIntegration>
+          <Method>rungeKutta2</Method>
+        </PositionIntegration>
+        <GridToParticle>
+          <Method mixPIC="0.005">FLIP</Method>
+        </GridToParticle>
+        <ParticleToGrid>
+          <GridArrangement>Nodal</GridArrangement>
+          <Kernel>SPH</Kernel>
+          <KernelDanglingCells>??</KernelDanglingCells>
+        </ParticleToGrid>
+        <Sampler>
+          <ParticlesPerCell>32</ParticlesPerCell>
+          <Type>Poisson</Type>
+          <ResampleParticles>true</ResampleParticles>
+        </Sampler>
+      </ParticleBasedAdvection>
+    </AdvectionMethod>
+    <PressureMethod>
+      <ConjugateGradient>
+        <Platform>CPU</Platform>
+        <Tolerance>0.001</Tolerance>
+        <MaxIterations>350</MaxIterations>
+        <Preconditioner>NoPreconditioner</Preconditioner>
+      </ConjugateGradient>
+    </PressureMethod>
+  </FlowSolverConfig>
+</ChimeraConfig>
+

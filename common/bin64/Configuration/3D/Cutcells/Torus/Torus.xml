@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <!--Simulation types:
+        realTimeSimulation
+        offlineSimulation
+        precomputedSimulation
+        fetchBoundaryConditions -->
+  <SimulationType>realTimeSimulation</SimulationType>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0" z ="0.0"/>
+    <FinalPoint x="10.00" y="10.00" z ="10.00"/>
+    <Spacing>1</Spacing>
+  </Grid>
+  <boundaryConditionsFile>Boundary Conditions/3D/leftInflow.bc</boundaryConditionsFile>
+  <SimulationConfig>
+    <!--<CutFaceVelocity>
+      <FaceLocation>BackFace</FaceLocation>
+      <FaceID>2</FaceID>
+      <Velocity x="0.0" y="0.0" z="-2.25"/>
+    </CutFaceVelocity>
+    <CutFaceVelocity>
+      <FaceLocation>BackFace</FaceLocation>
+      <FaceID>6</FaceID>
+      <Velocity x="0.0" y="0.0" z="-2.25"/>
+    </CutFaceVelocity>
+    <CutFaceVelocity>
+      <FaceLocation>BackFace</FaceLocation>
+      <FaceID>13</FaceID>
+      <Velocity x="0.0" y="0.0" z="-2.25"/>
+    </CutFaceVelocity>
+    <CutFaceVelocity>
+      <FaceLocation>BackFace</FaceLocation>
+      <FaceID>20</FaceID>
+      <Velocity x="0.0" y="0.0" z="-2.25"/>
+    </CutFaceVelocity>
+    <CutFaceVelocity>
+      <FaceLocation>BottomFace</FaceLocation>
+      <FaceID>66</FaceID>
+      <Velocity x="0" y="-2.25" z="0.0"/>
+    </CutFaceVelocity>
+    <CutFaceVelocity>
+      <FaceLocation>BottomFace</FaceLocation>
+      <FaceID>69</FaceID>
+      <Velocity x="0" y="-2.25" z="0.0"/>
+    </CutFaceVelocity>
+    <CutFaceVelocity>
+      <FaceLocation>BottomFace</FaceLocation>
+      <FaceID>87</FaceID>
+      <Velocity x="0" y="-2.25" z="0.0"/>
+    </CutFaceVelocity>
+    <CutFaceVelocity>
+      <FaceLocation>BottomFace</FaceLocation>
+      <FaceID>88</FaceID>
+      <Velocity x="0" y="-2.25" z="0.0"/>
+    </CutFaceVelocity>
+    <TorusVelocityField>
+      <position x="4.201" y="4.01" z="4.101"></position>
+      <Radius>1</Radius>
+      <SectionRadius>0.28125</SectionRadius>
+      <UpDirection x="0.0" y="1.0" z="0.0"></UpDirection>
+      <Orientation>1</Orientation>
+      <Strength>2.25</Strength>
+    </TorusVelocityField>
+    <TorusVelocityField>
+      <position x="5.1123" y="4.0123" z="4.0123"></position>
+      <Radius>1</Radius>
+      <SectionRadius>0.28125</SectionRadius>
+      <UpDirection x="0.0" y="0.0" z="1.0"></UpDirection>
+      <Orientation>1</Orientation>
+      <Strength>2.25</Strength>
+    </TorusVelocityField>-->
+    <Logging>
+      <LogCutCells>torusFreeSlipCells</LogCutCells>
+      <LogVelocity>torusFreeSlip</LogVelocity>
+    </Logging>
+    <TotalTime value="10"></TotalTime>
+  </SimulationConfig>
+  <Objects>
+    <Mesh>
+      <Filename>torus1.obj</Filename>
+      <Scale x="1.0" y="1.0" z="1.0"></Scale>
+      <position x="4.01" y="4.01" z="4.01"/>
+    </Mesh>
+    <!--<Mesh>
+      <Filename>torus2.obj</Filename>
+      <Scale x="1.0" y="1.0" z="1.0"></Scale>
+      <position x="5.1123" y="4.0123" z="4.0123"/>
+    </Mesh>-->
+  </Objects>
+  <RenderingOptions>
+    <VisualizeGrid>true</VisualizeGrid>
+  </RenderingOptions>
+  <FlowSolverConfig>
+    <FlowSolverType>CutCell</FlowSolverType>
+    <SolidWallType>
+      <NoSlip>
+        <MixNodeInterpolation>WeightedNoExtraDimensions</MixNodeInterpolation>
+      </NoSlip>
+      <!--<NoSlip></NoSlip>-->
+    </SolidWallType>
+    <AdvectionMethod>
+      <ParticleBasedAdvection>
+        <PositionIntegration>
+          <Method>rungeKutta2</Method>
+        </PositionIntegration>
+        <GridToParticle>
+          <Method>FLIP</Method>
+        </GridToParticle>
+        <ParticleToGrid>
+          <GridArrangement>Nodal</GridArrangement>
+          <Kernel>SPH</Kernel>
+          <KernelDanglingCells>??</KernelDanglingCells>
+        </ParticleToGrid>
+        <Sampler>
+          <ParticlesPerCell>8</ParticlesPerCell>
+          <Type>Stratified</Type>
+          <ResampleParticles>true</ResampleParticles>
+        </Sampler>
+      </ParticleBasedAdvection>
+    </AdvectionMethod>
+    <ProjectionMethod>
+      <Platform>CPU</Platform>
+    </ProjectionMethod>
+    <PressureMethod>
+      <ConjugateGradient>
+        <Platform>CPU</Platform>
+        <Tolerance>0.0001</Tolerance>
+        <MaxIterations>1000</MaxIterations>
+        <Preconditioner>NoPreconditioner</Preconditioner>
+      </ConjugateGradient>
+    </PressureMethod>
+  </FlowSolverConfig>
+</ChimeraConfig>

@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\ChimeraPoisson.h" />
+    <ClInclude Include="..\include\Poisson\ConjugateGradient.h" />
+    <ClInclude Include="..\include\Poisson\EigenConjugateGradient.h" />
+    <ClInclude Include="..\include\Poisson\GaussSeidel.h" />
+    <ClInclude Include="..\include\Poisson\Multigrid.h" />
+    <ClInclude Include="..\include\Poisson\Multigrid2D.h" />
+    <ClInclude Include="..\include\Poisson\Multigrid3D.h" />
+    <ClInclude Include="..\include\Poisson\PoissonMatrix.h" />
+    <ClInclude Include="..\include\Poisson\PoissonSolver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\Poisson\ConjugateGradient.cpp" />
+    <ClCompile Include="..\src\Poisson\EigenConjugateGradient.cpp" />
+    <ClCompile Include="..\src\Poisson\GaussSeidel.cpp" />
+    <ClCompile Include="..\src\Poisson\Multigrid.cpp" />
+    <ClCompile Include="..\src\Poisson\Multigrid2D.cpp" />
+    <ClCompile Include="..\src\Poisson\Multigrid3D.cpp" />
+    <ClCompile Include="..\src\Poisson\PoissonMatrix.cpp" />
+    <ClCompile Include="..\src\Poisson\PoissonSolver.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="..\cuda\ConjugateGradient.cu" />
+    <CudaCompile Include="..\cuda\PoissonMatrix.cu" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{66F8E918-563D-4CC9-ABF4-584B9B4660CB}</ProjectGuid>
+    <RootNamespace>ChimeraMath</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>Chimera Poisson</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 11.8.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>D:\boost_1_49_0;$(IncludePath)</IncludePath>
+    <OutDir>..\..\common\lib\$(PlatformName)\</OutDir>
+    <TargetName>$(ProjectName)D</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>..\..\common\lib\$(PlatformName)\</OutDir>
+    <TargetName>$(ProjectName)D64</TargetName>
+    <IntDir>..\..\Intermediate\x64\Debug\</IntDir>
+    <IncludePath>$(Boost_INCLUDEDIR);$(IncludePath)</IncludePath>
+    <LibraryPath>$(Boost_LIBRARYDIR);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>D:\boost_1_49_0;$(IncludePath)</IncludePath>
+    <OutDir>..\..\common\lib\$(PlatformName)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\..\common\lib\$(PlatformName)\</OutDir>
+    <TargetName>$(ProjectName)64</TargetName>
+    <IntDir>..\..\Intermediate\x64\Release\</IntDir>
+    <IncludePath>$(Boost_INCLUDEDIR);$(IncludePath)</IncludePath>
+    <LibraryPath>$(Boost_LIBRARYDIR);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\include;..\..\ChimeraCore\include;..\..\ChimeraData\include;..\..\ChimeraRendering\include;$(CUDA_INC_PATH);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <OpenMPSupport>true</OpenMPSupport>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)$(ProjectName)D.lib</OutputFile>
+      <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
+      <AdditionalDependencies>cudart.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(CudaToolkitLibDir)</AdditionalLibraryDirectories>
+    </Lib>
+    <CudaCompile>
+      <Include>..\include;..\..\ChimeraCore\include;$(CUDA_INC_PATH);%(AdditionalIncludeDirectories)</Include>
+      <Keep>false</Keep>
+      <NvccCompilation>compile</NvccCompilation>
+      <TargetMachinePlatform>32</TargetMachinePlatform>
+      <CInterleavedPTX>false</CInterleavedPTX>
+      <CodeGeneration>compute_20,sm_21</CodeGeneration>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <MaxRegCount>32</MaxRegCount>
+      <PtxAsOptionV>false</PtxAsOptionV>
+      <Emulation>false</Emulation>
+      <HostDebugInfo>false</HostDebugInfo>
+      <FastMath>false</FastMath>
+      <Optimization>O2</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>Default</RuntimeChecks>
+      <TypeInfo>false</TypeInfo>
+      <Warning>W3</Warning>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\include;..\..\ChimeraCore\include;$(CUDA_INC_PATH);..\..\ChimeraEigenWrapper\include;%(AdditionalIncludeDirectories);;../../../boost_1_60_0/;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <OpenMPSupport>false</OpenMPSupport>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalOptions>/bigobj </AdditionalOptions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)$(ProjectName)D64.lib</OutputFile>
+      <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
+      <AdditionalDependencies>cudart.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(CudaToolkitLibDir)</AdditionalLibraryDirectories>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Lib>
+    <CudaCompile>
+      <Include>..\include;..\..\ChimeraCore\include;..\..\ChimeraMath\include;$(CUDA_INC_PATH);$(NVSDKCOMPUTE_ROOT)\C\common\inc;%(AdditionalIncludeDirectories)</Include>
+      <Keep>false</Keep>
+      <NvccCompilation>compile</NvccCompilation>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <CInterleavedPTX>false</CInterleavedPTX>
+      <CodeGeneration>
+      </CodeGeneration>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <MaxRegCount>32</MaxRegCount>
+      <PtxAsOptionV>false</PtxAsOptionV>
+      <Emulation>false</Emulation>
+      <HostDebugInfo>false</HostDebugInfo>
+      <FastMath>false</FastMath>
+      <Optimization>O2</Optimization>
+      <Runtime>MDd</Runtime>
+      <RuntimeChecks>Default</RuntimeChecks>
+      <TypeInfo>false</TypeInfo>
+      <Warning>W3</Warning>
+      <AdditionalCompilerOptions>/bigobj</AdditionalCompilerOptions>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\include;..\..\ChimeraCore\include;..\..\ChimeraData\include;..\..\ChimeraRendering\include;$(CUDA_INC_PATH);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <OpenMPSupport>true</OpenMPSupport>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
+      <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <AdditionalDependencies>cudart.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(CudaToolkitLibDir)</AdditionalLibraryDirectories>
+    </Lib>
+    <CudaCompile>
+      <Include>..\include;..\..\ChimeraCore\include;$(CUDA_INC_PATH);%(AdditionalIncludeDirectories)</Include>
+      <CodeGeneration>compute_11,sm_11</CodeGeneration>
+      <Runtime>MD</Runtime>
+      <Emulation>false</Emulation>
+      <HostDebugInfo>false</HostDebugInfo>
+      <FastMath>true</FastMath>
+      <Optimization>O2</Optimization>
+      <RuntimeChecks>Default</RuntimeChecks>
+      <TypeInfo>false</TypeInfo>
+      <Warning>W3</Warning>
+      <Keep>false</Keep>
+      <NvccCompilation>compile</NvccCompilation>
+      <TargetMachinePlatform>32</TargetMachinePlatform>
+      <CInterleavedPTX>false</CInterleavedPTX>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <MaxRegCount>32</MaxRegCount>
+      <PtxAsOptionV>false</PtxAsOptionV>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\include;..\..\ChimeraCore\include;$(CUDA_INC_PATH);..\..\ChimeraEigenWrapper\include;%(AdditionalIncludeDirectories);../../../boost_1_60_0/;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <OpenMPSupport>false</OpenMPSupport>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BrowseInformation>true</BrowseInformation>
+      <AdditionalOptions>/bigobj </AdditionalOptions>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)$(ProjectName)64.lib</OutputFile>
+      <LinkTimeCodeGeneration>true</LinkTimeCodeGeneration>
+      <AdditionalLibraryDirectories>$(CudaToolkitLibDir)</AdditionalLibraryDirectories>
+      <TargetMachine>MachineX64</TargetMachine>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <AdditionalDependencies>cudart.lib</AdditionalDependencies>
+    </Lib>
+    <CudaCompile>
+      <Include>..\include;..\..\ChimeraCore\include;..\..\ChimeraMath\include;$(CUDA_INC_PATH);$(NVSDKCOMPUTE_ROOT)\C\common\inc;%(AdditionalIncludeDirectories)</Include>
+      <CodeGeneration>
+      </CodeGeneration>
+      <Runtime>MD</Runtime>
+      <Emulation>false</Emulation>
+      <HostDebugInfo>false</HostDebugInfo>
+      <FastMath>true</FastMath>
+      <Optimization>O2</Optimization>
+      <RuntimeChecks>Default</RuntimeChecks>
+      <TypeInfo>false</TypeInfo>
+      <Warning>W3</Warning>
+      <Keep>false</Keep>
+      <NvccCompilation>compile</NvccCompilation>
+      <TargetMachinePlatform>64</TargetMachinePlatform>
+      <CInterleavedPTX>false</CInterleavedPTX>
+      <GPUDebugInfo>false</GPUDebugInfo>
+      <MaxRegCount>32</MaxRegCount>
+      <PtxAsOptionV>false</PtxAsOptionV>
+      <AdditionalCompilerOptions>/bigobj</AdditionalCompilerOptions>
+    </CudaCompile>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 11.8.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 11.8.props" />
+  </ImportGroup>
+</Project>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>realTimeSimulation</SimulationType>
+  <boundaryConditionsFile>Boundary Conditions/2D/jetBottomInflow.bc</boundaryConditionsFile>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0"/>
+    <FinalPoint x="2" y="5"/> <!--Final point is an approximation, since it can be modified to suit grid spacing-->
+    <Spacing>0.0625</Spacing>
+  </Grid>
+  <SimulationConfig>
+    <TotalTime value="5"></TotalTime>
+  </SimulationConfig>
+  <Objects>
+    <DensityField>
+      <Rectangle px="0.875" py="0" sx="0.2" sy="0.4"></Rectangle >
+    </DensityField>
+  </Objects>
+  <FlowSolverConfig>
+    <FlowSolverType>Regular</FlowSolverType>
+    <SolidWallType>
+      <FreeSlip></FreeSlip>
+    </SolidWallType>
+    <AdvectionMethod>
+      <ParticleBasedAdvection>
+        <PositionIntegration>
+          <Method>rungeKutta2</Method>
+          <!--<Interpolant>
+            <Method>CubicStreamfunction</Method>
+          </Interpolant>
+          <Interpolant>
+            <Method>SubdivisionStreamfunction</Method>
+          </Interpolant>-->
+        </PositionIntegration>
+        <GridToParticle>
+          <Method>FLIP</Method>
+        </GridToParticle>
+        <ParticleToGrid>
+          <GridArrangement>Staggered</GridArrangement>
+          <Kernel>bilinear</Kernel>
+        </ParticleToGrid>
+        <Sampler>
+          <ParticlesPerCell>8</ParticlesPerCell>
+          <Type>Stratified</Type>
+          <ResampleParticles>true</ResampleParticles>
+        </Sampler>
+      </ParticleBasedAdvection>
+      <!--<SemiLagrangian>
+        <Integrator>ForwardEuler</Integrator>
+      </SemiLagrangian>-->
+    </AdvectionMethod>
+    <ProjectionMethod>
+      <Platform>CPU</Platform>
+    </ProjectionMethod>
+    <FarFieldMethod>
+      <Standard></Standard>
+    </FarFieldMethod>
+    <PressureMethod>
+      <EigenConjugateGradient>
+        <Platform>GPU</Platform>
+        <Tolerance>0.01</Tolerance>
+        <MaxIterations>1000</MaxIterations>
+      </EigenConjugateGradient>
+    </PressureMethod>
+  </FlowSolverConfig>
+</ChimeraConfig>
+

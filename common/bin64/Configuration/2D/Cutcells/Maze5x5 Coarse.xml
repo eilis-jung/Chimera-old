@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>realTimeSimulation</SimulationType>
+  <boundaryConditionsFile>Boundary Conditions/2D/allOutflow.bc</boundaryConditionsFile>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0"/>
+    <FinalPoint x="11.0" y="11.0"/>
+    <!--Final point is an approximation, since it can be modified to suit grid spacing-->
+    <Spacing>1.0</Spacing>
+  </Grid>
+  <!--<RigidObject>
+    <position x="2.75" y="6.7"></position>
+    <Geometry>
+      <File>pacman/ghost2.dat</File>
+      <ClosedMesh>true</ClosedMesh>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="3.75" y="6.7"></position>
+    <Geometry>
+      <File>pacman/ghost2.dat</File>
+      <ClosedMesh>true</ClosedMesh>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="3.75" y="5.7"></position>
+    <Geometry>
+      <File>pacman/ghost2.dat</File>
+      <ClosedMesh>true</ClosedMesh>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="3.75" y="4.7"></position>
+    <Geometry>
+      <File>pacman/ghost2.dat</File>
+      <ClosedMesh>true</ClosedMesh>
+    </Geometry>
+  </RigidObject>-->
+  <!--<RigidObject>
+    <position x="3.01" y="5.01"></position>
+    <Geometry>
+      <numSubdivisions>25</numSubdivisions>
+      <CircularLine>
+        <Radius>0.25</Radius>
+      </CircularLine>
+    </Geometry>
+    <PositionUpdate>
+      <Path amplitude="1.0">
+        <position x="3.0" y="1.0"></position>
+        <File>pacman/pacmanPath.dat</File>
+      </Path>
+    </PositionUpdate>
+  </RigidObject>-->
+  <RigidObject>
+    <position x="3.0" y="1.0"></position>
+    <Geometry>
+      <File>mazes/mazeBottom.dat</File>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="3.0" y="1.0"></position>
+    <Geometry>
+      <File>mazes/mazeTop.dat</File>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="2.83" y="6.73"></position>
+    <Geometry>
+      <File>pacman/ghost2.dat</File>
+      <ClosedMesh>true</ClosedMesh>
+    </Geometry>
+    <PositionUpdate>
+      <Path amplitude="2.0">
+        <File>pacman/pacmanPath.dat</File>
+      </Path>
+    </PositionUpdate>>
+  </RigidObject>
+  <SimulationConfig>
+    <TotalTime value="3.125"></TotalTime>
+  </SimulationConfig>
+  <FlowSolverConfig>
+    <FlowSolverType>CutCell</FlowSolverType>
+    <SolidWallType>
+      <FreeSlip></FreeSlip>
+      <!--<NoSlip></NoSlip>-->
+    </SolidWallType>
+    <AdvectionMethod>
+      <ParticleBasedAdvection>
+        <PositionIntegration>
+          <Method>rungeKutta2</Method>
+        </PositionIntegration>
+        <GridToParticle>
+          <Method>FLIP</Method>
+        </GridToParticle>
+        <ParticleToGrid>
+          <GridArrangement>Staggered</GridArrangement>
+          <Kernel>SPH</Kernel>
+          <KernelDanglingCells>??</KernelDanglingCells>
+        </ParticleToGrid>
+        <Sampler>
+          <ParticlesPerCell>32</ParticlesPerCell>
+          <Type>Stratified</Type>
+          <ResampleParticles>true</ResampleParticles>
+        </Sampler>
+      </ParticleBasedAdvection>
+    </AdvectionMethod>
+    <ProjectionMethod>
+      <Platform>CPU</Platform>
+    </ProjectionMethod>
+    <FarFieldMethod>
+      <Standard></Standard>
+    </FarFieldMethod>
+    <PressureMethod>
+      <ConjugateGradient>
+        <Platform>GPU</Platform>
+        <Tolerance>0.000001</Tolerance>
+        <MaxIterations>2000</MaxIterations>
+        <Preconditioner>NoPreconditioner</Preconditioner>
+      </ConjugateGradient>
+    </PressureMethod>
+  </FlowSolverConfig>
+</ChimeraConfig>

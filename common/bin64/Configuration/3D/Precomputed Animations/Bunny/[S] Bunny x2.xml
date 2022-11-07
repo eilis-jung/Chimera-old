@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>precomputedAnimation</SimulationType>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0" z ="0.0"/>
+    <FinalPoint x="9" y="9" z ="9"/>
+    <Spacing>0.5</Spacing>
+  </Grid>
+  <Animations>
+    <NumFrames>360</NumFrames>
+    <LoadPerFrame>true</LoadPerFrame>
+    <PolygonMeshes>
+      <BaseFilename>bunnyFreeSlipX2Cells</BaseFilename>
+      <LinearInterpolationMethod>
+        <UseParticlesCache>true</UseParticlesCache>
+        <UseCGALAcceleration>false</UseCGALAcceleration>
+        <InterpolationType>mvc</InterpolationType>
+        <PosterioriProjection>false</PosterioriProjection>
+      </LinearInterpolationMethod>
+    </PolygonMeshes>
+    <VelocityFile>bunnyFreeSlipX2</VelocityFile>
+  </Animations>
+  <Objects>
+    <ParticleSystem>
+      <Emitter>
+        <Rectangle px="3.25" py="1.0" pz="3.25" sx="0.75" sy="0.15" sz="0.75"></Rectangle>
+        <MaxAmount>252000</MaxAmount>
+        <InitialAmount>2000</InitialAmount>
+        <SpawnRatio>20000</SpawnRatio>
+        <LifeTime>9999</LifeTime>
+        <LifeVariance>0.0</LifeVariance>
+      </Emitter>
+      <MinBounds px="0.0" py="0.0" pz="0.0"></MinBounds>
+      <MaxBounds px="9.75" py="9.75" pz="9.75"></MaxBounds>
+      <RenderingProperties>
+        <ColorScheme>jet</ColorScheme>
+        <VisualizeVectors>true</VisualizeVectors>
+      </RenderingProperties>
+    </ParticleSystem>
+    <CGALObjMesh>
+      <Filename>BunnyClosed.obj</Filename>
+      <Scale x="1.0" y="1.0" z="1.0"></Scale>
+      <position x="3.5" y="3.25" z="3.5"/>
+      <!--<position x="4.75" y="4.25" z="5.5"/>-->
+    </CGALObjMesh>
+  </Objects>
+</ChimeraConfig>
+

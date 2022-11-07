@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{7b6b13e4-5289-4282-807f-5cfd4c3b4231}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{e54c63b2-8d93-4805-aa79-454bad8404a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\IO">
+      <UniqueIdentifier>{b1263cc8-be15-42c3-91a4-5c28e8e2ad07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\IO">
+      <UniqueIdentifier>{157380d3-fc5a-4bfb-b5ca-e1013e03329c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MayaCache">
+      <UniqueIdentifier>{41091790-8c0e-46fb-8184-27a568fc0353}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\IO\MayaCache">
+      <UniqueIdentifier>{ef5d3587-5101-4e7b-be7a-af93c6c35075}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\ChimeraIO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\IO\DataExporter.h">
+      <Filter>Header Files\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MayaCache\XmlWriter.h">
+      <Filter>Header Files\MayaCache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MayaCache\AbstractMemoryWriter.h">
+      <Filter>Header Files\MayaCache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MayaCache\ChannelInfo.h">
+      <Filter>Header Files\MayaCache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MayaCache\InterfaceWriter.h">
+      <Filter>Header Files\MayaCache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MayaCache\MCXMemoryWriter.h">
+      <Filter>Header Files\MayaCache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MayaCache\NParticleExporter.h">
+      <Filter>Header Files\MayaCache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\MayaCache\VelFieldExporter.h">
+      <Filter>Header Files\MayaCache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\IO\ObjMeshImporter.h">
+      <Filter>Header Files\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\IO\AmiraExporter.h">
+      <Filter>Header Files\IO</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\MayaCache\AbstractMemoryWriter.cpp">
+      <Filter>Source Files\IO\MayaCache</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MayaCache\ChannelInfo.cpp">
+      <Filter>Source Files\IO\MayaCache</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MayaCache\MCXMemoryWriter.cpp">
+      <Filter>Source Files\IO\MayaCache</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MayaCache\NParticleExporter.cpp">
+      <Filter>Source Files\IO\MayaCache</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MayaCache\XMLWriter.cpp">
+      <Filter>Source Files\IO\MayaCache</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\IO\DataExporter.cpp">
+      <Filter>Source Files\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\MayaCache\VelFieldExporter.cpp">
+      <Filter>Source Files\IO\MayaCache</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\IO\AmiraExporter.cpp">
+      <Filter>Source Files\IO</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

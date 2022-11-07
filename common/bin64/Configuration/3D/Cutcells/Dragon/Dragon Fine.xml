@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <!--Simulation types:
+        realTimeSimulation
+        offlineSimulation
+        precomputedSimulation
+        fetchBoundaryConditions -->
+  <SimulationType>realTimeSimulation</SimulationType>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0" z ="0.0"/>
+    <FinalPoint x="5.5" y="4.25" z ="3.5"/>
+    <Spacing>0.25</Spacing>
+  </Grid>
+  <boundaryConditionsFile>Boundary Conditions/3D/leftRightOutflow.bc</boundaryConditionsFile>
+  <SimulationConfig>
+    <CutFaceVelocity>
+      <FaceLocation>BottomFace</FaceLocation>
+      <FaceID>1130</FaceID>
+      <Velocity x="0.0" y="-6.0" z="0.0"/>
+    </CutFaceVelocity>
+    <CutFaceVelocity>
+      <FaceLocation>BottomFace</FaceLocation>
+      <FaceID>1132</FaceID>
+      <Velocity x="0.0" y="-6.0" z="0.0"/>
+    </CutFaceVelocity>
+    <CutFaceVelocity>
+      <FaceLocation>BottomFace</FaceLocation>
+      <FaceID>1134</FaceID>
+      <Velocity x="0.0" y="-6.0" z="0.0"/>
+    </CutFaceVelocity>
+    <CutFaceVelocity>
+      <FaceLocation>BottomFace</FaceLocation>
+      <FaceID>1190</FaceID>
+      <Velocity x="0.0" y="-6.0" z="0.0"/>
+    </CutFaceVelocity>
+    <CutFaceVelocity>
+      <FaceLocation>BottomFace</FaceLocation>
+      <FaceID>1191</FaceID>
+      <Velocity x="0.0" y="-6.0" z="0.0"/>
+    </CutFaceVelocity>
+    <CutFaceVelocity>
+      <FaceLocation>BottomFace</FaceLocation>
+      <FaceID>1193</FaceID>
+      <Velocity x="0.0" y="-6.0" z="0.0"/>
+    </CutFaceVelocity>
+    <CutFaceVelocity>
+      <FaceLocation>BottomFace</FaceLocation>
+      <FaceID>1207</FaceID>
+      <Velocity x="0.0" y="-6.0" z="0.0"/>
+    </CutFaceVelocity>
+    <CutFaceVelocity>
+      <FaceLocation>BottomFace</FaceLocation>
+      <FaceID>1208</FaceID>
+      <Velocity x="0.0" y="-6.0" z="0.0"/>
+    </CutFaceVelocity>
+    <Logging>
+      <LogCutCells>dragonFreeSlipFineCells</LogCutCells>
+      <LogVelocity>dragonFreeSlipFine</LogVelocity>
+    </Logging>
+    <TotalTime value="11"></TotalTime>
+  </SimulationConfig>
+  <Objects>
+    <CGALObjMesh>
+      <Filename>DragonLowPolyHole3.obj</Filename>
+      <Scale x="1.0" y="1.0" z="1.0"></Scale>
+      <position x="2.674" y="1.519" z="1.646"/>
+    </CGALObjMesh>
+  </Objects>
+  <FlowSolverConfig>
+    <FlowSolverType>CutCell</FlowSolverType>
+    <LinearInterpolationMethod>
+      <UseParticlesCache>false</UseParticlesCache>
+      <UseCGALAcceleration>false</UseCGALAcceleration>
+      <InterpolationType>mvc</InterpolationType>
+    </LinearInterpolationMethod>
+    <SolidWallType>
+      <FreeSlip>
+        <MixNodeInterpolation>WeightedExtraDimensions</MixNodeInterpolation>
+      </FreeSlip>
+      <!--<NoSlip></NoSlip>-->
+    </SolidWallType>
+    <AdvectionMethod>
+      <FLIP>
+        <PositionIntegration>rungeKutta2</PositionIntegration>
+        <ResampleParticlesCloseToMesh>false</ResampleParticlesCloseToMesh>
+        <ResamplingFactor>0.001</ResamplingFactor>
+        <FixParticlesSampling>
+          <FineGridResampling>
+            <Subdivisions>2</Subdivisions>
+          </FineGridResampling>
+          <CellResamplingThreshold>1.05</CellResamplingThreshold>
+        </FixParticlesSampling>
+        <VelocityUpdate>FLIP</VelocityUpdate>
+        <ParticleDensity>64</ParticleDensity>
+        <VisualizeVelocities>false</VisualizeVelocities>
+      </FLIP>
+      <SemiLagrangian></SemiLagrangian>
+    </AdvectionMethod>
+    <ProjectionMethod>
+      <Platform>CPU</Platform>
+    </ProjectionMethod>
+    <PressureMethod>
+      <ConjugateGradient>
+        <Platform>GPU</Platform>
+        <Tolerance>0.0001</Tolerance>
+        <MaxIterations>1000</MaxIterations>
+        <Preconditioner>NoPreconditioner</Preconditioner>
+      </ConjugateGradient>
+    </PressureMethod>
+  </FlowSolverConfig>
+</ChimeraConfig>

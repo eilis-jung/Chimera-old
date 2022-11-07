@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>realTimeSimulation</SimulationType>
+  <boundaryConditionsFile>Boundary Conditions/2D/leftRightInflow.bc</boundaryConditionsFile>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0"/>
+    <FinalPoint x="0.75" y="0.5"/> <!--Final point is an approximation, since it can be modified to suit grid spacing-->
+    <Spacing>0.03125</Spacing>
+  </Grid>
+  <RigidObject>
+    <position x="0.275625" y="0.2"></position>
+    <Geometry>
+      <File>pipes/pipeTop.dat</File>
+      <ExtrudeAlongNormalsSize>0.001</ExtrudeAlongNormalsSize>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.275625" y="0.2"></position>
+    <Geometry>
+      <File>pipes/pipeBottom.dat</File>
+      <ExtrudeAlongNormalsSize>0.001</ExtrudeAlongNormalsSize>
+    </Geometry>
+  </RigidObject>
+  <RigidObject>
+    <position x="0.24025" y="0.2585"></position>
+    <Geometry>
+      <File>pipes/semiDivision.dat</File>
+      <ExtrudeAlongNormalsSize>0.001</ExtrudeAlongNormalsSize>
+    </Geometry>
+  </RigidObject>
+  <SimulationConfig>
+    <TotalTime value="3.125"></TotalTime>
+  </SimulationConfig>
+  <FlowSolverConfig>
+    <FlowSolverType>CutCell</FlowSolverType>
+    <SolidWallType>
+      <!--<FreeSlip></FreeSlip>-->
+      <NoSlip></NoSlip>
+    </SolidWallType>
+    <AdvectionMethod>
+      <ParticleBasedAdvection>
+        <PositionIntegration>
+          <Method>rungeKutta2</Method>
+          <!--<Interpolant>
+            <Method>CubicStreamfunction</Method>
+          </Interpolant>-->
+        </PositionIntegration>
+        <GridToParticle>
+          <Method>FLIP</Method>
+        </GridToParticle>
+        <ParticleToGrid>
+          <GridArrangement>Staggered</GridArrangement>
+          <Kernel>SPH</Kernel>
+          <KernelDanglingCells>??</KernelDanglingCells>
+        </ParticleToGrid>
+        <Sampler>
+          <ParticlesPerCell>32</ParticlesPerCell>
+          <Type>Stratified</Type>
+          <ResampleParticles>true</ResampleParticles>
+        </Sampler>
+      </ParticleBasedAdvection>
+    </AdvectionMethod>
+    <ProjectionMethod>
+      <Platform>CPU</Platform>
+    </ProjectionMethod>
+    <FarFieldMethod>
+      <Standard></Standard>
+    </FarFieldMethod>
+    <PressureMethod>
+      <ConjugateGradient>
+        <Platform>GPU</Platform>
+        <Tolerance>0.00001</Tolerance>
+        <MaxIterations>2000</MaxIterations>
+        <Preconditioner>NoPreconditioner</Preconditioner>
+      </ConjugateGradient>
+    </PressureMethod>
+  </FlowSolverConfig>
+</ChimeraConfig>
+

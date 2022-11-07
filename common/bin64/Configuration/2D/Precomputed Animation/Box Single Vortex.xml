@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <SimulationType>precomputedAnimation</SimulationType>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0"/>
+    <FinalPoint x="2" y="2"/>
+    <!--Final point is an approximation, since it can be modified to suit grid spacing-->
+    <Spacing>0.0625</Spacing>
+  </Grid>
+  <Animations>
+    <Timestep>0.01</Timestep>
+    <Framerate>30</Framerate>
+    <NumFrames>10</NumFrames>
+    <LoadPerFrame>true</LoadPerFrame>
+    <VelocityFile>singleVortexVelocity</VelocityFile>
+    <PressureFile>singleVortexPressure</PressureFile>
+  </Animations>
+  <VelocityInterpolant>
+    <Type>BilinearStaggered</Type>
+  </VelocityInterpolant>
+  <ParticleSystem>
+    <Emitter>
+      <Rectangle px="0.0626" py="0.0626" sx="1.8" sy="1.8"></Rectangle>
+      <MaxAmount>25200</MaxAmount>
+      <InitialAmount>200</InitialAmount>
+      <SpawnRatio>2000</SpawnRatio>
+      <LifeTime>9999</LifeTime>
+      <LifeVariance>0.0</LifeVariance>
+    </Emitter>
+  </ParticleSystem>
+  <Objects>
+    <ParticleSystem>
+      <Emitter>
+        <Rectangle px="1.25" py="1.0" sx="0.75" sy="0.15"></Rectangle>
+        <MaxAmount>25200</MaxAmount>
+        <InitialAmount>200</InitialAmount>
+        <SpawnRatio>2000</SpawnRatio>
+        <LifeTime>9999</LifeTime>
+        <LifeVariance>0.0</LifeVariance>
+      </Emitter>
+    </ParticleSystem>
+  </Objects>
+</ChimeraConfig>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ChimeraConfig>
+  <!--Simulation types:
+        realTimeSimulation
+        offlineSimulation
+        precomputedSimulation
+        fetchBoundaryConditions -->
+  <SimulationType>realTimeSimulation</SimulationType>
+  <Grid>
+    <InitialPoint x="0.0" y="0.0" z ="0.0"/>
+    <FinalPoint x="4" y="4" z ="4"/>
+    <Spacing>0.125</Spacing>
+  </Grid>
+  <boundaryConditionsFile>Boundary Conditions/3D/jetInflow.bc</boundaryConditionsFile>
+  <SimulationConfig>
+    <!--<Logging>
+      <LogVelocity>jetChannel</LogVelocity>
+    </Logging>-->
+    <TotalTime value="6"></TotalTime>
+  </SimulationConfig>
+  <Objects>
+    <!--<DensityField>
+      <Cube px="1.65" py ="0.0" pz="1.65" sx="0.5" sy="0.75" sz="0.5" />
+    </DensityField>-->
+  </Objects>
+  <FlowSolverConfig>
+    <FlowSolverType>Regular</FlowSolverType>
+    <AdvectionMethod>
+      <ParticleBasedAdvection>
+        <PositionIntegration>
+          <Method>rungeKutta2</Method>
+        </PositionIntegration>
+        <GridToParticle>
+          <Method>FLIP</Method>
+        </GridToParticle>
+        <ParticleToGrid>
+          <GridArrangement>Staggered</GridArrangement>
+          <Kernel>bilinear</Kernel>
+        </ParticleToGrid>
+        <Sampler>
+          <ParticlesPerCell>8</ParticlesPerCell>
+          <Type>Stratified</Type>
+          <ResampleParticles>true</ResampleParticles>
+        </Sampler>
+      </ParticleBasedAdvection>
+      <!--<GridBasedAdvection>
+        <Method>SemiLagrangian</Method>
+        <PositionIntegration>
+          <Method>rungeKutta2</Method>
+        </PositionIntegration>
+      </GridBasedAdvection>-->
+    </AdvectionMethod>
+    <ProjectionMethod>
+      <Platform>CPU</Platform>
+    </ProjectionMethod>
+    <PressureMethod>
+      <ConjugateGradient>
+        <Platform>CPU</Platform>
+        <Tolerance>0.0001</Tolerance>
+        <MaxIterations>1000</MaxIterations>
+        <Preconditioner>NoPreconditioner</Preconditioner>
+      </ConjugateGradient>
+    </PressureMethod>
+  </FlowSolverConfig>
+</ChimeraConfig>

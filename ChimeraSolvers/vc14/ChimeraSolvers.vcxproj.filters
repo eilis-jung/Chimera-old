@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{d866dcdb-9d86-429d-a419-399a5b1391d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Solvers">
+      <UniqueIdentifier>{ef7a665d-4888-420e-84d1-b7538518f9ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Solvers\2D">
+      <UniqueIdentifier>{52e7d9d6-19ac-418a-afd4-74fe5d6044ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Solvers\2D\Boundaries">
+      <UniqueIdentifier>{8283e1b4-649a-401c-82fd-1cc8edf27473}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Solvers\2D\Turbulence">
+      <UniqueIdentifier>{c0186281-b6a7-4dae-bc2d-9f49b491d424}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Solvers\2D\Liquids">
+      <UniqueIdentifier>{2e93fc18-348c-4979-9d12-89ac2906f50c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Solvers\2D\Regular">
+      <UniqueIdentifier>{ac307e6f-55ab-41b3-a4f3-7e8d8d13affa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{29699aa7-243b-4ade-bc30-c2a18ef56374}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Solvers">
+      <UniqueIdentifier>{d6c7959f-40eb-4fe1-bb96-5de4c4f47788}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Solvers\2D">
+      <UniqueIdentifier>{f9629de3-c2bb-44d2-9035-3999fef3d8c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Solvers\2D\Boundaries">
+      <UniqueIdentifier>{a5d94433-19ca-4a3b-9fe2-85b3b099ce3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Solvers\2D\Liquids">
+      <UniqueIdentifier>{b21541fc-99c2-4227-8561-2fe3794ed90b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Solvers\2D\Regular">
+      <UniqueIdentifier>{9edf7694-5e1f-4b39-a952-e738a75811b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Solvers\2D\Turbulence">
+      <UniqueIdentifier>{f5ac2a94-ba04-44c5-b63b-06881f3a004d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Solvers\3D">
+      <UniqueIdentifier>{370f8c96-82ba-4354-b1d2-86c53e839798}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Solvers\3D">
+      <UniqueIdentifier>{198cb0da-5b74-45f2-a0b2-44be6cee582e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\Solvers\FlowSolver.cpp">
+      <Filter>Source Files\Solvers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Solvers\2D\RegularGridSolver2D.cpp">
+      <Filter>Source Files\Solvers\2D\Regular</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Solvers\2D\CutCellSolver2D.cpp">
+      <Filter>Source Files\Solvers\2D\Boundaries</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Solvers\2D\TurbulenceSolver2D.cpp">
+      <Filter>Source Files\Solvers\2D\Turbulence</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Solvers\2D\GhostLiquidSolver2D.cpp">
+      <Filter>Source Files\Solvers\2D\Liquids</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Solvers\2D\LiquidSolver2D.cpp">
+      <Filter>Source Files\Solvers\2D\Liquids</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Solvers\3D\CutVoxelSolver3D.cpp">
+      <Filter>Source Files\Solvers\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Solvers\3D\RegularGridSolver3D.cpp">
+      <Filter>Source Files\Solvers\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Solvers\2D\CutCellSolverSO2D.cpp">
+      <Filter>Source Files\Solvers\2D\Boundaries</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\Solvers\2D\ChimeraSolver2D.h">
+      <Filter>Header Files\Solvers\2D\Boundaries</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Solvers\2D\CurvilinearGridSolver2D.h">
+      <Filter>Header Files\Solvers\2D\Boundaries</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Solvers\2D\CutCellSolver2D.h">
+      <Filter>Header Files\Solvers\2D\Boundaries</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Solvers\2D\CutCellsGhostLiquidSolver2D.h">
+      <Filter>Header Files\Solvers\2D\Liquids</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Solvers\2D\LiquidSolver2D.h">
+      <Filter>Header Files\Solvers\2D\Liquids</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Solvers\2D\GhostLiquidSolver2D.h">
+      <Filter>Header Files\Solvers\2D\Liquids</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Solvers\2D\RaycastSolver2D.h">
+      <Filter>Header Files\Solvers\2D\Boundaries</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Solvers\2D\RegularGridSolver2D.h">
+      <Filter>Header Files\Solvers\2D\Regular</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Solvers\2D\SharpLiquidSolver2D.h">
+      <Filter>Header Files\Solvers\2D\Liquids</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Solvers\2D\TurbulenceSolver2D.h">
+      <Filter>Header Files\Solvers\2D\Turbulence</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ChimeraSolvers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Solvers\FlowSolver.h">
+      <Filter>Header Files\Solvers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Solvers\3D\RegularGridSolver3D.h">
+      <Filter>Header Files\Solvers\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Solvers\3D\CutVoxelSolver3D.h">
+      <Filter>Header Files\Solvers\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Solvers\2D\CutCellSolverSO2D.h">
+      <Filter>Header Files\Solvers\2D\Boundaries</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
