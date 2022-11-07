@@ -1,0 +1,1 @@
+Chimera was(is) a framework for developing and debugging real-time fluid simulation, in both 2D and 3D.
